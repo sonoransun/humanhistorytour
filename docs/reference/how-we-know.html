@@ -1,0 +1,1357 @@
+<!doctype html>
+<html lang="en" class="no-js" data-tour-root="../" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How We Know — Human History Tour</title>
+<meta name="description" content="Where every date on this site comes from: taphonomy and sampling bias, radiocarbon calibration and Bayesian modelling, luminescence, cosmogenic and amino-acid clocks, ancient DNA and proteins, pathogen genomes, lidar, oral tradition, decipherment and machine-read scrolls — plus a register of live debates and the things almost everyone gets wrong.">
+<link rel="canonical" href="https://sonoransun.github.io/humanhistorytour/reference/how-we-know.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How We Know — Human History Tour">
+<meta property="og:description" content="How the field actually knows anything: what survives, how a date is made, what molecules and lasers reveal, and where the arguments still are.">
+<meta property="og:url" content="https://sonoransun.github.io/humanhistorytour/reference/how-we-know.html">
+<meta property="og:image" content="https://sonoransun.github.io/humanhistorytour/assets/img/og/how-we-know.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340..660&family=Source+Serif+4:opsz,wght@8..60,400..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/tour.css">
+<link rel="stylesheet" href="../assets/css/reference.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+<script>
+  (function () { try { var d=document.documentElement; var t=localStorage.getItem('hht-theme'); if(t)d.setAttribute('data-theme',t); if(localStorage.getItem('hht-motion')==='reduce')d.classList.add('reduce-motion'); } catch(e){} document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js'); })();
+</script>
+</head>
+<body>
+
+<div class="skip-links"><a href="#main">Skip to content</a></div>
+
+<header class="site-header">
+  <a class="site-header__brand" href="../index.html">Human&nbsp;<b>History</b>&nbsp;Tour</a>
+  <div class="site-header__spacer"></div>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="../index.html">Home</a>
+    <a class="site-nav__wide" href="master-timeline.html">Timeline</a>
+    <a class="site-nav__wide" href="tech-tree.html">Tech&nbsp;Tree</a>
+    <a class="site-nav__wide" href="civilizations.html">Civilizations</a>
+    <a class="site-nav__wide" href="sources.html">Sources</a>
+  </nav>
+  <button class="iconbtn" data-theme-toggle aria-pressed="false" title="Toggle theme">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M5 5l1.5 1.5M17.5 17.5 19 19M3 12h2M19 12h2M5 19l1.5-1.5M17.5 6.5 19 5"/><circle cx="12" cy="12" r="4"/></svg>
+    <span class="vh">Toggle light or dark theme</span>
+  </button>
+</header>
+
+<div class="grain" aria-hidden="true"></div>
+
+<main id="main" class="doc">
+  <div class="doc__hero">
+    <div class="wrap">
+      <span class="eyebrow">Reference · evidence, dating &amp; the limits of the record</span>
+      <h1>How We Know</h1>
+      <p class="lede">Every date in this tour is an inference. Nobody watched the first fire, signed the first
+        contract, or timestamped the crossing to Australia. What we have instead is a set of instruments and
+        arguments — decay clocks, trapped electrons, damaged DNA, laser survey, sound correspondences, stories held
+        for seven thousand years — and a discipline of checking one against another. This page is the machinery
+        behind the numbers: what survives, how a date is actually made, how wide the error bars really are, and
+        where the field is still arguing.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="doc__layout">
+      <aside class="doc__side">
+        <nav class="toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#evidence">What survives, and what does not</a></li>
+            <li><a href="#dating">How a date is actually made</a></li>
+            <li><a href="#biomolecular">Reading bodies and molecules</a></li>
+            <li><a href="#landscape">Seeing from above and below</a></li>
+            <li><a href="#unwritten">Evidence that is not dug up</a></li>
+            <li><a href="#historiography">How history gets written</a></li>
+            <li><a href="#contested">Live debates</a></li>
+            <li><a href="#misconceptions">Things almost everyone gets wrong</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <div class="doc__main">
+
+        <p>A note on the division of labour: <a href="sources.html#method">Sources &amp; method</a> explains how
+          <i>this site</i> was assembled and what it will not claim. This page is about how the <i>field</i> knows
+          anything at all — the instruments, their failure modes, and the arguments they cannot settle.</p>
+
+        <!-- EVIDENCE -->
+        <section id="evidence">
+          <h2>What survives, and what does not</h2>
+          <p>Archaeology does not study the past. It studies the small, biased, non-random subset of the past that
+            happened to survive burial, decay, scavengers, ploughing, looting, sea-level rise, and two centuries of
+            uneven excavation funding — and then happened to be dug up by someone who recorded where it was. The
+            study of that filter is called <b>taphonomy</b>, from the Greek for "burial laws," and it is the first
+            thing a working archaeologist learns to distrust their own eyes about.</p>
+          <p>The filter is not gentle. Of a hunter-gatherer camp, what typically remains after twenty thousand
+            years is stone. Not the hut, the hide bedding, the netting, the wooden spear shafts, the birch-bark
+            containers, the string, the songs, the kinship rules, or the plant foods that, in many foraging
+            societies outside the Arctic, made up much of the diet. Stone, and sometimes bone, and sometimes ash. From that residue the field
+            reconstructs a way of life — carefully, and with the constant risk of mistaking the durable for the
+            important.</p>
+
+          <figure class="diagram">
+            <figcaption><b>Mindmap</b> — the six families of evidence, and what feeds each one</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">mindmap
+  root((How we know))
+    Material
+      Stratigraphy and context
+      Typology and seriation
+      Use-wear and residues
+      Experimental replication
+    Biomolecular
+      Ancient DNA
+      Sedimentary DNA
+      Palaeoproteomics and ZooMS
+      Pathogen genomes
+      Stable isotopes
+      Lipid residues
+    Environmental
+      Pollen and phytoliths
+      Charcoal and fire records
+      Ice cores and speleothems
+      Animal and plant remains
+    Landscape
+      Lidar
+      Satellite and CORONA
+      Ground-penetrating radar
+      Magnetometry
+    Textual
+      Epigraphy and decipherment
+      Machine-read scrolls
+      Archives and accounts
+      Numismatics
+      Palaeography
+    Oral and living
+      Oral tradition
+      Historical linguistics
+      Ethnohistory
+      Indigenous knowledge</pre>
+              <div class="diagram__loading mono">Rendering mindmap…</div>
+            </div>
+          </figure>
+
+          <h3>Preservation bias: geology decides who has a history</h3>
+          <p>Bone survives in alkaline sediments and dies in acid ones. Limestone caves are the great exception
+            machines of prehistory: their percolating carbonate buffers the soil, seals deposits under flowstone,
+            and holds temperature and humidity steady. That is why the hominin record is so heavily a record of
+            <b>caves and rift valleys</b> — Sterkfontein, Atapuerca, Denisova, Shanidar, La Ferrassie — and why
+            tropical lowlands with acidic, biologically active soils return almost no bone at all. In the Congo
+            Basin or the Amazon, a skeleton can be gone in a century. The absence of Pleistocene human fossils
+            across most of the wet tropics is a fact about soil chemistry, not about people.</p>
+          <p>Then there is the water. At the Last Glacial Maximum, around 26,000–19,000 years ago, so much water
+            was locked into ice sheets that global sea level stood roughly <b>120 metres</b> lower than today. The
+            continental shelves were dry land — Doggerland between Britain and Denmark, Sundaland joining Java and
+            Borneo to mainland Asia, the vast Sahul shelf around northern Australia, Beringia between Siberia and
+            Alaska. Between about 19,000 and 7,000 years ago all of it drowned. Coastlines are exactly where
+            foraging people prefer to live: shellfish are predictable, boats work, two ecosystems meet. The single
+            richest archive of late-Pleistocene human life is therefore under a hundred metres of seawater, and the
+            "coastal route" arguments about the peopling of the Americas and of Australia are arguments about
+            evidence we largely cannot reach. <i>Largely</i>, not entirely: in 2020 archaeologists and divers
+            published Australia's first confirmed drowned sites, off the Murujuga coast of the Pilbara — more than 260 stone artefacts at Cape Bruguieres and a find beside a submerged freshwater spring
+            at Flying Foam Passage, sealed by the sea no later than about 7,000 and 8,500 years ago respectively.
+            They were found by predicting where old land surfaces should survive, not by luck — which means the
+            search can be repeated on other shelves.</p>
+          <p>Third, and most distorting of all: <b>organic technology is essentially invisible</b>. Nets, baskets,
+            cordage, traps, digging sticks, bark trays, wooden spears, rafts and canoes, hide clothing, wooden
+            haft-and-glue assemblies — the actual toolkit of nearly every human society that ever existed — decay
+            completely unless a site is permanently waterlogged, frozen, or desert-dry. The rare exceptions are
+            spectacular precisely because they are rare: the <b>Schöningen spears</b> — some 187 wooden artefacts,
+            among them at least twenty hunting weapons, finely balanced spears and throwing sticks of spruce and
+            pine, long dated to ~300,000 years but placed at around <b>200,000 years ago</b> by a 2025
+            amino-acid redating — preserved in waterlogged lakeshore mud beside a lignite mine in Germany; three-ply cord twisted by Neanderthals at Abri du Maras around 50,000
+            years ago; textile impressions in fired clay at Dolní Věstonice at 26,000 years; the Antrea net from
+            Finland at about 8500 BCE. Each one proves that a whole class of technology existed for hundreds of
+            thousands of years and left, almost everywhere, nothing.</p>
+          <div class="callout">
+            <p class="callout__label">The "Stone Age" is a naming artifact</p>
+            <ul>
+              <li><b>We named the era after its garbage.</b> The three-age system — Stone, Bronze, Iron — was
+                proposed by Christian Jürgensen Thomsen in 1836 to sort a museum collection. It classifies periods
+                by which durable material happens to be in the display case.</li>
+              <li><b>Wood and fibre probably dominated.</b> Where preservation is exceptional we find sophisticated
+                organic technology at every date we can check. There is no evidence of a period when people used
+                stone <i>instead of</i> wood, only periods where we can see stone and cannot see wood.</li>
+              <li><b>The bias runs deep into interpretation.</b> Handaxes get treated as the defining Acheulean
+                artifact partly because a million of them survive; the containers, snares and slings that probably
+                fed more people leave no trace.</li>
+            </ul>
+          </div>
+
+          <h3>Sampling bias: the map of digs is not the map of the past</h3>
+          <p>Where excavation happened is a fact about the history of money, empire and universities. Egypt,
+            Mesopotamia, Greece, Rome, the Levant and Britain were dug intensively from the nineteenth century
+            onward because European institutions were interested in Biblical and Classical antecedents and had the
+            colonial access to do it. Whole regions of comparable size and population received a fraction of the
+            fieldwork: interior West Africa, the Congo Basin, Amazonia, mainland and island Southeast Asia, and
+            most of Central Asia. The result is a record that reports far more sites per square kilometre in the
+            eastern Mediterranean than in the Niger basin, and a general reading public that concludes the eastern
+            Mediterranean is where things happened.</p>
+          <p>This matters enormously for the argument this site makes. When the PACUNAM lidar survey of the Maya
+            lowlands, flown in 2016, was published in 2018, tens of thousands of unrecorded structures appeared at
+            once. When lidar surveys of the Bolivian Llanos de Mojos and the Ecuadorian Upano valley were
+            published in 2022 and 2024, monumental settlements appeared in what textbooks had called empty forest. Nothing changed in the ground; the
+            survey changed. <b>Blanks in West Africa, Amazonia, Southeast Asia and the Congo Basin are not evidence
+            of absence — they are evidence of where the aircraft and the grant money have been.</b> This is the
+            strongest single argument <i>for</i> the polycentric reading of human history, not against it: every
+            time a genuinely under-surveyed region gets modern attention, it turns out to have been full of people
+            doing complicated things.</p>
+          <p>The written record carries its own tilt, and it is not subtle. Writing was expensive, and for most of
+            its history it was commissioned. It was commissioned by <b>states</b> (to tax, conscript and adjudicate),
+            by <b>elites</b> (to record their titles, land and lineage), in <b>cities</b> (where scribes lived), and
+            overwhelmingly by <b>men</b>. So the textual past over-reports kings, wars, temples, treaties and grain
+            receipts, and under-reports everything done by farmers, women, children, enslaved people, pastoralists,
+            and the entire population of societies that did not keep archives. A history written from documents
+            alone is a history of the literate one per cent, told in their own vocabulary.</p>
+
+          <details class="datatable" open><summary>Data table — what each environment preserves</summary><div class="table-scroll">
+            <table class="data"><caption>Preservation environments, what survives in each, and the systematic distortion each one introduces</caption>
+              <thead><tr><th>Environment</th><th>Survives well</th><th>Lost</th><th>Distortion introduced</th></tr></thead>
+              <tbody>
+                <tr><td>Limestone cave / rockshelter</td><td>bone, teeth, ash, sealed under flowstone</td><td>most fibre and wood</td><td>hominin record is disproportionately a cave record</td></tr>
+                <tr><td>Rift-valley volcanic sequence</td><td>bone, stone, datable ash layers</td><td>organics, soft tissue</td><td>East Africa looks like the cradle partly because it is datable</td></tr>
+                <tr><td>Waterlogged bog / lake edge</td><td>wood, cordage, leather, seeds, whole boats</td><td>little — the best-case archive</td><td>vanishingly rare, so it reads as exotic</td></tr>
+                <tr><td>Permafrost / glacier ice</td><td>flesh, hair, gut contents, DNA</td><td>little, until it thaws</td><td>Arctic over-represented for soft tissue; melting fast</td></tr>
+                <tr><td>Hyper-arid desert</td><td>textiles, papyri, basketry, mummified bodies</td><td>little</td><td>Egypt and coastal Peru dominate the textile record</td></tr>
+                <tr><td>Acidic tropical forest soil</td><td>stone, pottery, phytoliths, charcoal</td><td>bone, wood, fibre — often totally</td><td>Congo, Amazonia and Borneo look empty of people</td></tr>
+                <tr><td>Drowned continental shelf</td><td>almost nothing accessible</td><td>an entire preferred habitat</td><td>coastal routes and coastal life are unreadable</td></tr>
+                <tr><td>Ploughed farmland</td><td>durable finds, scrambled context</td><td>stratigraphy itself</td><td>finds without layers cannot be securely dated</td></tr>
+                <tr><td>Continuously occupied city</td><td>deep stratified sequences</td><td>whatever later builders dug out</td><td>later phases erase earlier ones</td></tr>
+              </tbody>
+            </table></div></details>
+          <p class="tick" style="color:var(--ink-faint)">The polycentric thesis this bias supports is set out in
+            <a href="civilizations.html#thesis">Parallel Civilizations</a>; the earliest surviving material is walked
+            through in <a href="../tour/01-deep-prehistory.html">Chapter I · Deep Prehistory</a>.</p>
+        </section>
+
+        <!-- DATING -->
+        <section id="dating">
+          <h2>How a date is actually made</h2>
+          <p>There are two kinds of dating and they answer different questions. <b>Relative</b> methods tell you
+            the order of things without telling you when. <b>Absolute</b> — more honestly, <i>chronometric</i> —
+            methods attach a number of years, with an error term that is part of the result and not an apology
+            for it.</p>
+
+          <h3>Relative dating: order before number</h3>
+          <p><b>Stratigraphy and superposition.</b> Nicolas Steno stated the principle in 1669: in an undisturbed
+            sequence, lower layers were deposited before higher ones. William Smith added faunal succession in
+            1815 — the same fossil sequence recurs in the same order everywhere — which let strata be correlated
+            between sites. Everything else in archaeological dating hangs off this. A radiocarbon date on charcoal
+            is meaningless unless you can show the charcoal belongs to the layer you think it does, and the
+            commonest way a date goes wrong is not laboratory error but a rodent burrow, a tree-throw, a robber
+            trench or a slope wash that moved the sample between layers.</p>
+          <p><b>Seriation.</b> Flinders Petrie invented "sequence dating" in 1899 to order 900 predynastic Egyptian
+            graves for which no absolute date existed. Styles rise, peak and fade; if you arrange assemblages so
+            each type forms a single continuous run, you recover the order. The method still underlies pottery
+            chronologies worldwide, and its descendants — <b>typology</b> (grouping artifacts by form) and
+            <b>cross-dating</b> (an Egyptian scarab in a Mycenaean tomb ties two chronologies together) — carried
+            the whole discipline until 1949.</p>
+
+          <h3>Chronometric dating: the clocks</h3>
+          <p><b>Radiocarbon.</b> Willard Libby published the method in 1949 and took the Nobel Prize for it in
+            1960. Cosmic rays make <sup>14</sup>C in the upper atmosphere; living things exchange carbon with the
+            atmosphere and hold the ambient ratio; at death the exchange stops and the <sup>14</sup>C decays with a
+            half-life of 5,730 years. After about ten half-lives there is too little left to measure, which sets a
+            practical ceiling near <b>50,000 years</b> — a hard wall that sits awkwardly close to several of the
+            most interesting questions in human prehistory, including the arrival in Australia.</p>
+          <p>Two complications turn a raw measurement into a date. First, <b>calibration</b>. Libby assumed
+            atmospheric <sup>14</sup>C was constant. It is not: it varies with solar activity and the strength of
+            the geomagnetic field. A raw result is therefore reported in <i>radiocarbon years BP</i> — "before
+            present," where present is fixed by convention at <b>1950</b>, chosen because atmospheric nuclear
+            testing after that date spiked global <sup>14</sup>C and ruined the baseline. (The spike itself — northern
+            hemisphere atmospheric <sup>14</sup>C nearly doubled by the mid-1960s — has since become a forensic clock
+            for tissue formed after the tests.) To get calendar years the
+            raw value is run against the <b>IntCal</b> curve, built from tree rings, corals, speleothems and the
+            annually laminated sediments of Lake Suigetsu, and now reaching back 55,000 years. Calibration is not a
+            cosmetic step: it changes dates by centuries, and where the curve flattens into a <b>plateau</b> — the
+            Hallstatt plateau of roughly 800–400 BCE is the notorious one — a single measurement can be consistent
+            with four hundred calendar years and no more precision is available at any price.</p>
+          <p>Second, <b>reservoir effects</b>. Carbon that has sat out of atmospheric circulation is already
+            depleted before the organism dies. Ocean water carries a global marine offset of roughly 400 years,
+            varying regionally by hundreds more, so a date on a marine shell or on the bone of someone who ate
+            mostly fish comes out too old unless corrected. Hard-water lakes and rivers do the same thing to
+            freshwater fish and to the people who ate them — Baikal and Danube Gorges burials have been shifted by
+            centuries once diet was measured isotopically. A related trap is the <b>old-wood problem</b>: charcoal
+            from the heartwood of a 400-year-old oak dates the tree's youth, not the fire, which is why short-lived
+            samples such as seeds, twigs and nutshell are preferred.</p>
+          <p><b>Potassium-argon and argon-argon.</b> <sup>40</sup>K decays to <sup>40</sup>Ar with a half-life of
+            1.25 billion years. An eruption resets the clock by driving off all existing argon, so the method dates
+            <i>the ash, not the fossil</i> — you bracket a find between a tuff below and a tuff above. The
+            argon-argon refinement measures both isotopes in one irradiated sample and can be run on single
+            crystals, catching contamination that whole-rock K-Ar averages away. This is the reason the East
+            African record is so unusually well anchored: the Rift Valley buried Olduvai, Hadar, Koobi Fora and
+            Omo under a layer cake of datable volcanic ash. It is equally the reason South African and European
+            cave sites are not — no tuffs, so their chronologies rest on uranium-series and U–Pb flowstone dates,
+            palaeomagnetism, faunal correlation and — since 2003 — cosmogenic-nuclide burial dating, and
+            Sterkfontein's Member 4 hominins have been argued over a range from about 2.0 to 3.4 million years
+            (Little Foot, in the older Member 2, at 3.67).</p>
+          <p><b>Uranium-series.</b> Water percolating through limestone deposits calcite containing uranium but
+            essentially no thorium; <sup>238</sup>U decays to <sup>230</sup>Th, so the thorium clock starts when
+            the crystal forms. It dates speleothems, flowstone and coral from about 1,000 to 600,000 years. It
+            produced one of the most consequential recent results in the field: in 2018 Hoffmann and colleagues
+            dated carbonate crusts <i>overlying</i> red painted marks at La Pasiega, Maltravieso and Ardales in
+            Spain to at least <b>64,800 years</b> — a minimum age, which puts the paint before <i>Homo sapiens</i>
+            is known in Iberia and therefore in Neanderthal hands. The result is still contested on grounds of
+            open-system uranium behaviour and crust-to-pigment association, which is exactly the argument such a
+            claim should attract. The same logic, sharpened, reset the story of art in Island Southeast Asia.
+            <b>Laser-ablation U-series</b> maps the uranium and thorium across a crust millimetre by millimetre, so
+            the analyst can read the layer lying directly on the paint rather than an average of the whole crust: in
+            2024 it gave a painted scene of human-like figures and a pig at Leang Karampuang in Sulawesi a minimum
+            age of <b>51,200 years</b>, and in 2026 a hand stencil at Liang Metanduno on Muna Island a minimum of
+            <b>67,800</b> — older than the Spanish marks. Every one of these numbers is a floor, not a date: the
+            crust can only have grown after the paint, and nothing says how long after.</p>
+          <p><b>Luminescence — OSL and TL.</b> Buried quartz and feldspar grains accumulate trapped electrons at a
+            rate set by ambient radiation. Sunlight or heat empties the traps. So the question these methods answer
+            is beautifully specific: <i>when was this grain last exposed to sunlight</i> (optically stimulated
+            luminescence) or <i>last heated above about 500 °C</i> (thermoluminescence)? OSL dates the burial of
+            sediment itself, which means it works where there is nothing organic to date at all. It gave the
+            ~65,000-year age for the earliest occupation at <b>Madjedbebe</b> in Arnhem Land — an age contested
+            precisely on the question of whether small artefacts sank through the sand (see
+            <a href="#contested">live debates</a>) — and TL on burnt
+            flints gave the ~315,000-year redate of <b>Jebel Irhoud</b> in Morocco that pushed <i>Homo sapiens</i>
+            back by more than a hundred thousand years. Its failure modes are incomplete bleaching before burial,
+            and dose-rate estimation — you must model the radioactivity of the surrounding sediment, including how
+            wet it has been for the last 65,000 years.</p>
+          <p><b>Electron spin resonance</b> counts the same trapped electrons directly, usually in tooth enamel,
+            and reaches back around two million years; combined US-ESR modelling on enamel underpins the dates for
+            early <i>Homo sapiens</i> at Skhul and Qafzeh. <b>Tephrochronology</b> chemically fingerprints volcanic
+            glass shards so that a single eruption becomes an instantaneous marker horizon across a continent —
+            the Toba ash of ~74,000 years ago is traceable from Sumatra to India and Africa, and the Campanian
+            Ignimbrite at ~39,850 years ago slices across the Neanderthal-to-sapiens transition in Europe.</p>
+          <p><b>Dendrochronology</b> is the one method with no error bar at all. Trees in seasonal climates lay one
+            ring a year, wide in good years and narrow in bad, and the resulting barcode is regionally shared.
+            A.E. Douglass built the first chronology in the 1920s and dated Ancestral Puebloan roof beams to the
+            year; European oak and pine sequences now run continuously past 12,000 years. Where sapwood and bark
+            survive, dendrochronology names not just the calendar year a tree was felled but often the season. It
+            is also the backbone that calibrates radiocarbon — the reason a <sup>14</sup>C measurement can be
+            converted to a calendar date at all. <b>Varves</b> (annual lake-sediment couplets) and <b>ice-core</b>
+            layers extend the same count-the-years logic: the laminated Lake Suigetsu core in Japan, layer-counted and
+            radiocarbon-dated on fossil leaves, carries a land-based calibration record back to 52,800 years; EPICA
+            Dome C in Antarctica reaches roughly 800,000 years, and the Beyond EPICA core completed in January 2025
+            at nearby Little Dome C holds a continuous record of at least 1.2 million (first analyses, 2025),
+            tying the archaeological record directly to temperature and CO<sub>2</sub>.</p>
+          <p><b>Palaeomagnetism.</b> The Earth's magnetic field reverses, irregularly, and iron-bearing minerals
+            lock in its direction as sediment settles or lava cools. The <b>Brunhes–Matuyama reversal</b> at about
+            <b>780,000 years ago</b> is the single most useful line in Pleistocene stratigraphy: any deposit below
+            it is older than 780 kya, anything above is younger. It anchors the <i>Homo erectus</i> sequence at
+            Zhoukoudian in China, which has no volcanic ash and otherwise rests on cosmogenic-nuclide burial dating
+            (~770,000 years, 2009), and it cross-checks the argon-argon, fission-track and U–Pb dates on tuff and
+            pumice that actually carry the Sangiran sequence in Java.</p>
+          <p><b>Cosmogenic-nuclide burial dating.</b> Quartz lying at the surface is bombarded by cosmic rays,
+            which build up aluminium-26 and beryllium-10 inside the crystal at a fixed ratio of roughly 6.8 to 1.
+            Wash that quartz deep into a cave and production stops; aluminium-26 decays about twice as fast as
+            beryllium-10 (half-lives of roughly 0.7 and 1.4 million years), so the falling ratio is a clock for how
+            long the grains have been buried. It works from a few hundred thousand to about five million years —
+            the gap between uranium-series and the volcanic clocks, which is exactly where the cave record sits — and
+            it has redrawn that record: Zhoukoudian's Peking Man to ~770,000 years (2009), the Little Foot skeleton
+            at Sterkfontein to 3.67 million (2015), and most of Sterkfontein's Member 4 australopiths to ~3.4 million
+            (2022), roughly a million years older than the flowstone dates that had framed them. Its failure mode is
+            a burial history more complicated than the model: grains buried, exhumed and reburied, or washed in from
+            older deposits, come out too old. The <i>isochron</i> version, which measures several samples with
+            different exposure histories from the same layer, is the field's check on that.</p>
+          <p><b>Amino-acid racemisation.</b> Living things build proteins almost entirely from "left-handed"
+            amino acids; after death those slowly flip toward an even mix of left- and right-handed forms, at a
+            rate set mainly by temperature. Measured on protein sealed inside a mineral — the calcite lid, or
+            operculum, of a freshwater snail, or ostrich eggshell — the degree of flipping records how long the
+            protein has been ageing. In cool climates it reaches back through the Pleistocene, and it was this
+            method, applied to fossils from the spear-bearing layer, that moved the Schöningen spears from ~300,000
+            to ~200,000 years in 2025. Its failure mode is heat: the rate depends on a burial temperature history
+            nobody measured, so the method must be calibrated against independently dated sequences and usually
+            resolves an interglacial stage rather than a century — one reason the older luminescence age for
+            Schöningen still has defenders.</p>
+          <p><b>Archaeomagnetism.</b> The same magnetic memory works at human timescales. Clay heated to several
+            hundred degrees — a hearth, a kiln, the mud-brick walls of a burning town — re-magnetises as it cools,
+            recording the direction and strength of the Earth's field at that moment; because the field wanders
+            continuously, a regional reference curve turns the reading into a date. In 2022 Yoav Vaknin and
+            colleagues measured burnt mud bricks from 20 destruction layers in the southern Levant, plus two pottery
+            assemblages, to synchronise the Egyptian, Aramean, Assyrian and Babylonian campaigns of the tenth to
+            sixth centuries BCE that the Hebrew Bible and other Near Eastern texts describe, resolving several
+            arguments about which destruction belongs to which war. Its failure modes: a directional date needs
+            material that has not moved since it cooled; the reference curve must already exist for that region,
+            built from independently dated samples; and where the field swung back to an earlier state, one reading
+            can match two dates.</p>
+
+          <figure class="diagram">
+            <figcaption><b>Flowchart</b> — from a find in the ground to a published date, including the ways it fails</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">flowchart TD
+    F["A find in the ground&lt;br/&gt;&lt;i&gt;bone · flake · seed · charcoal&lt;/i&gt;"] --&gt; CX["Context recorded&lt;br/&gt;layer · square · depth · association"]
+    CX --&gt; Q{"Is the context&lt;br/&gt;undisturbed?"}
+    Q --&gt;|"no — burrow, tree-throw, slope wash"| REJ["Unanchored&lt;br/&gt;&lt;i&gt;dates the sample, not the event&lt;/i&gt;"]
+    Q --&gt;|"yes"| SAMP["Sample taken&lt;br/&gt;light-tight tube · clean gloves · duplicates"]
+    SAMP --&gt; LAB["Laboratory measurement&lt;br/&gt;AMS · mass spectrometer · luminescence reader"]
+    LAB --&gt; RAW["Raw result&lt;br/&gt;4310 ± 35 radiocarbon yr BP"]
+    RAW --&gt; CAL["Correction &amp; calibration&lt;br/&gt;IntCal curve · reservoir offset · dose rate"]
+    CAL --&gt; CALD["Calendar range with a probability&lt;br/&gt;3010–2880 cal BCE at 95%"]
+    CALD --&gt; MOD["Bayesian model&lt;br/&gt;stratigraphic order tightens the range"]
+    MOD --&gt; PUB["Publication &amp; peer review"]
+    PUB --&gt; REP{"Replicated by a second&lt;br/&gt;lab or method?"}
+    REP --&gt;|"yes"| ACC["Enters the record&lt;br/&gt;&lt;i&gt;still provisional&lt;/i&gt;"]
+    REP --&gt;|"no"| CONT["Contested&lt;br/&gt;re-excavate · re-sample · re-date"]
+    CONT --&gt; SAMP
+    REJ --&gt; CONT
+    classDef bad stroke-dasharray:4 4;
+    class REJ,CONT bad;</pre>
+              <div class="diagram__loading mono">Rendering diagram…</div>
+            </div>
+            <details class="datatable"><summary>Data table — the stages, and what goes wrong at each</summary><div class="table-scroll">
+              <table class="data"><caption>The pipeline from excavation to accepted date, with the characteristic failure at every stage</caption>
+                <thead><tr><th>Stage</th><th>What happens</th><th>Characteristic failure</th></tr></thead>
+                <tbody>
+                  <tr><td>Excavation</td><td>the object is removed and its position recorded in three dimensions</td><td>bad recording — a date with no context is not a date</td></tr>
+                  <tr><td>Context assessment</td><td>is the layer intact and does the sample belong to it?</td><td>bioturbation, intrusive material, residual older material</td></tr>
+                  <tr><td>Sampling</td><td>short-lived material preferred; light-tight for luminescence</td><td>old wood; contaminated handling; a single sample with no duplicate</td></tr>
+                  <tr><td>Pre-treatment</td><td>chemical cleaning; collagen or single-grain extraction</td><td>humic acids, conservation glues, modern carbon</td></tr>
+                  <tr><td>Measurement</td><td>accelerator mass spectrometry or luminescence reading</td><td>the smallest error in the chain, and the one people worry about most</td></tr>
+                  <tr><td>Correction</td><td>calibration curve, reservoir offset, dose rate</td><td>uncorrected marine or freshwater diet; mis-modelled sediment moisture</td></tr>
+                  <tr><td>Modelling</td><td>Bayesian model combining dates with stratigraphic order</td><td>a prior that quietly assumes the answer</td></tr>
+                  <tr><td>Publication</td><td>peer review, then attempted replication</td><td>press release outruns replication</td></tr>
+                  <tr><td>Revision</td><td>the date holds, tightens, or falls</td><td>the popular account never updates</td></tr>
+                </tbody>
+              </table></div></details>
+          </figure>
+
+          <h3 id="modelling">Modelling: where precision now comes from</h3>
+          <p>A single radiocarbon date is a smear of probability, often a century or two wide. <b>Bayesian
+            chronological modelling</b> — run in programs such as Christopher Bronk Ramsey's OxCal — combines many
+            dates with what the excavation already knows: this pit was dug before that one was filled, these burials
+            lie in sequence, this layer is sealed by that floor. Each date is pulled toward the values the
+            stratigraphy allows, and the calibrated ranges narrow, sometimes to a few decades. The landmark is
+            Alasdair Whittle, Frances Healy and Alex Bayliss's <i>Gathering Time</i> (2011), which modelled hundreds
+            of dates from the causewayed enclosures of Britain and Ireland and turned a Neolithic dated in blocks of
+            centuries into something closer to narrative history: farmers arrive in the 41st century BCE, long
+            barrows spread around 3800 BCE, the enclosure fashion begins in the east in the late 38th century and
+            peaks in the third quarter of the 37th. The failure mode is built in. A model is only as good as its
+            assumptions — a misread section, an old sample treated as fresh, or a prior that quietly favours a short
+            or a long phase will manufacture precision the data never had. Good practice publishes the model and
+            shows how far the answer moves when the assumptions change.</p>
+
+          <h3 id="year-exact">Year-exact radiocarbon: the cosmic-ray spikes</h3>
+          <p>In 2012 Fusa Miyake and colleagues, measuring single tree rings from Japanese cedars, found atmospheric
+            <sup>14</sup>C jumping within one year, 774–775 CE — the trace of an extreme burst of cosmic radiation,
+            most likely from the Sun. A second spike followed in 993–994 CE, and others have since been found much
+            deeper in time. Because each spike was global, it is a barcode in every tree alive that year: find it
+            in a piece of archaeological wood, count the rings out to the bark, and radiocarbon suddenly has no error
+            bar. Margot Kuitems and colleagues did exactly that with three pieces of wood cut by metal blades at
+            <b>L'Anse aux Meadows</b> in Newfoundland, published in 2021: counting out from the 993 signal, the trees
+            were felled in <b>1021 CE</b>, the first exact year for Europeans in the Americas. The same approach had
+            already fixed the founding of the Uyghur-era enclosure of Por-Bajin, in Tuva, to the summer of 777 CE.
+            The limits are practical — the wood must keep its last ring, and it must have been growing through a
+            spike.</p>
+          <p>The frontier case is <b>Thera</b>. Radiocarbon on material buried by the Bronze Age eruption of
+            Santorini — above all an olive branch caught in the pumice — long pointed to c. 1620–1600 BCE, while
+            Egyptian-linked archaeology points to c. 1530–1500 BCE, roughly a century later. Annual tree-ring radiocarbon published from
+            2018 and folded into IntCal20 makes much of the sixteenth century BCE compatible with the radiocarbon
+            after all; the 1627 BCE tree-ring and ice-core signal once pinned on Thera is now attributed to Aniakchak
+            in Alaska; and a 2025 radiocarbon study of Egyptian objects of the 17th and early 18th Dynasties — among
+            them a mudbrick from Ahmose's temple at Abydos — argues that the eruption came before the reign of Ahmose. The gap has narrowed; the date is still open
+            (<a href="#contested">live debates</a>).</p>
+
+          <h3>The deeper the date, the wider the bracket</h3>
+          <p>This is the single most useful thing to carry away. Precision is not uniform across time — it degrades
+            catastrophically with depth, and the notation hides that. A dendrochronological date can say
+            <i>the winter of 1387/88</i>. A calibrated radiocarbon date on a good short-lived sample from the
+            Neolithic says <i>3010–2880 BCE, 95% probability</i> — a window of 130 years. An OSL date on Australian
+            sand says <i>65,000 ± 6,000</i>. An argon-argon date on a hominin-bearing tuff says <i>1.75 ± 0.02
+            Mya</i> — which reads precise until you notice that ±0.02 Mya is twenty thousand years, nearly four times
+            the length of recorded history. When this site writes <b>"~1 Mya"</b> the tilde is carrying tens of
+            thousands of years, and it is doing that work honestly.</p>
+
+          <figure class="diagram">
+            <figcaption><b>Quadrant chart</b> — dating methods by how deep they reach against how precisely they resolve</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">quadrantChart
+    title Dating methods — reach versus precision
+    x-axis Recent only --> Deep time
+    y-axis Coarse --> Precise
+    quadrant-1 Deep and precise
+    quadrant-2 Recent and precise
+    quadrant-3 Recent and coarse
+    quadrant-4 Deep and coarse
+    Dendrochronology: [0.06, 0.91]
+    Varve counting: [0.14, 0.84]
+    Ice cores: [0.50, 0.80]
+    Radiocarbon calibrated: [0.22, 0.71]
+    Radiocarbon raw: [0.20, 0.43]
+    Tephrochronology: [0.56, 0.63]
+    Uranium-series: [0.46, 0.56]
+    Argon-argon: [0.80, 0.42]
+    OSL: [0.42, 0.40]
+    Thermoluminescence: [0.40, 0.31]
+    Potassium-argon: [0.86, 0.30]
+    ESR: [0.53, 0.23]
+    Palaeomagnetism: [0.88, 0.19]
+    Seriation: [0.15, 0.11]
+    Archaeomagnetism: [0.10, 0.60]
+    Amino-acid racemisation: [0.42, 0.17]
+    Cosmogenic burial: [0.68, 0.10]</pre>
+              <div class="diagram__loading mono">Rendering…</div>
+            </div>
+            <details class="datatable" open><summary>Data table — every dating method, what it needs, and what it rewrote</summary><div class="table-scroll">
+              <table class="data"><caption>The dating toolkit: what each method actually measures, its usable range, the material it requires, its typical uncertainty, and one result it changed. Ranges and errors are order-of-magnitude guides, not laboratory specifications.</caption>
+                <thead><tr><th>Method</th><th>What it dates</th><th>Usable range</th><th>Material needed</th><th>Typical error</th><th>What it rewrote</th></tr></thead>
+                <tbody>
+                  <tr><td>Stratigraphy &amp; superposition</td><td>relative order of deposition</td><td class="num">any</td><td>undisturbed layers</td><td class="num">order only</td><td>Steno 1669, Smith 1815 — made archaeology a science</td></tr>
+                  <tr><td>Seriation</td><td>relative order of assemblages</td><td class="num">any</td><td>large samples of one artifact class</td><td class="num">order only</td><td>Petrie ordered 900 predynastic Egyptian graves, 1899</td></tr>
+                  <tr><td>Radiocarbon (raw)</td><td>death of once-living tissue</td><td class="num">~300 – 50,000 yr</td><td>charcoal, seed, bone collagen (~1 g)</td><td class="num">±25–100 <sup>14</sup>C yr</td><td>Libby 1949 — the "radiocarbon revolution"</td></tr>
+                  <tr><td>Radiocarbon (calibrated, IntCal)</td><td>the same, as calendar years</td><td class="num">~300 – 55,000 yr</td><td>the same, plus diet data for corrections</td><td class="num">±50–300 cal yr; worse on plateaus</td><td>demolished the diffusionist model of European megaliths</td></tr>
+                  <tr><td>Potassium-argon (K-Ar)</td><td>volcanic eruption</td><td class="num">~100 kya – 4+ Gya</td><td>volcanic ash, feldspar, whole rock</td><td class="num">±1–2%</td><td>Olduvai Bed I at 1.75 Mya, 1961 — deep time for hominins</td></tr>
+                  <tr><td>Argon-argon (Ar-Ar)</td><td>volcanic eruption, single crystals</td><td class="num">~10 kya – 4 Gya</td><td>single sanidine crystals</td><td class="num">±0.5–1%</td><td>tightened the whole East African hominin sequence</td></tr>
+                  <tr><td>Uranium-series</td><td>carbonate crystallisation</td><td class="num">~1 – 600 kya</td><td>speleothem, flowstone, coral, calcite crust</td><td class="num">±1–5%</td><td>Iberian cave marks ≥64.8 kya, 2018 — Neanderthal art (contested); by laser ablation, a Sulawesi hand stencil ≥67.8 kya, 2026 — all minimum ages</td></tr>
+                  <tr><td>Uranium–lead (U–Pb) and fission-track</td><td>crystallisation of old flowstone; zircon in volcanic ash</td><td class="num">~0.5 Mya and older</td><td>flowstone; zircon crystals</td><td class="num">±1–5%</td><td>South African cave flowstones, 2010; Sangiran's first hominins at ~1.3 Mya, 2020</td></tr>
+                  <tr><td>OSL (optically stimulated luminescence)</td><td>last sunlight exposure of a grain</td><td class="num">~100 yr – 300 kya</td><td>quartz or feldspar sand, sampled in the dark</td><td class="num">±5–10%</td><td>Madjedbebe at ~65 kya, 2017 — Australia pushed back (contested)</td></tr>
+                  <tr><td>TL (thermoluminescence)</td><td>last heating above ~500 °C</td><td class="num">~1 – 500 kya</td><td>burnt flint, fired ceramic, hearth stone</td><td class="num">±7–15%</td><td>Jebel Irhoud at ~315 kya, 2017 — a pan-African origin</td></tr>
+                  <tr><td>Cosmogenic-nuclide burial (<sup>26</sup>Al/<sup>10</sup>Be)</td><td>time since quartz was buried out of reach of cosmic rays</td><td class="num">~0.2 – 5 Mya</td><td>quartz sand or cobbles in cave fill</td><td class="num">±0.1–0.3 My</td><td>Zhoukoudian ~770 kya, 2009; Little Foot 3.67 Mya, 2015; Sterkfontein Member 4 ~3.4 Mya, 2022</td></tr>
+                  <tr><td>Amino-acid racemisation</td><td>time since protein death, via temperature-dependent chemistry</td><td class="num">Holocene – Early Pleistocene (colder reaches further)</td><td>snail opercula, ostrich eggshell, shell</td><td class="num">stage-level; needs calibration</td><td>Schöningen spears from ~300 to ~200 kya, 2025</td></tr>
+                  <tr><td>ESR (electron spin resonance)</td><td>trapped electrons in enamel</td><td class="num">~1 kya – 2 Mya</td><td>tooth enamel plus sediment dose rate</td><td class="num">±10–20%</td><td>early <i>H. sapiens</i> at Skhul and Qafzeh, ~120–90 kya</td></tr>
+                  <tr><td>Dendrochronology</td><td>calendar year, often season, of felling</td><td class="num">now – ~12,000 yr</td><td>wood with 50+ rings, ideally with sapwood</td><td class="num">±0 yr</td><td>anchors IntCal; dated Ancestral Puebloan beams to the year</td></tr>
+                  <tr><td>Radiocarbon on a cosmic-ray spike (Miyake event)</td><td>the calendar year a tree ring grew</td><td class="num">only where a spike falls (774 and 993 CE, and older)</td><td>wood spanning a spike, with its last ring</td><td class="num">±0 yr</td><td>Norse wood at L'Anse aux Meadows felled in 1021 CE, 2021</td></tr>
+                  <tr><td>Varve counting</td><td>annual lake-sediment couplets</td><td class="num">now – ~52,800 yr (counted, then modelled)</td><td>laminated lake core</td><td class="num">±0–1%</td><td>Lake Suigetsu extended radiocarbon calibration to 52,800 yr</td></tr>
+                  <tr><td>Ice cores</td><td>annual layers, then flow modelling</td><td class="num">now – ~800 kya (EPICA Dome C); &ge;1.2 Mya (Beyond EPICA, 2025)</td><td>polar ice</td><td class="num">±0 yr recent; ±millennia at depth</td><td>EPICA Dome C — 800,000 yr of CO<sub>2</sub> and temperature</td></tr>
+                  <tr><td>Tephrochronology</td><td>correlation to a dated eruption</td><td class="num">any dated eruption</td><td>geochemically fingerprinted glass shards</td><td class="num">inherits the eruption's error</td><td>Toba ~74 kya and Campanian Ignimbrite ~39.85 kya as marker horizons</td></tr>
+                  <tr><td>Palaeomagnetism</td><td>geomagnetic polarity reversals</td><td class="num">&gt;20 kya, best &gt;780 kya</td><td>magnetised sediment or lava</td><td class="num">tens of thousands of yr</td><td>Brunhes–Matuyama at ~780 kya — an anchor at Zhoukoudian, a cross-check at Sangiran</td></tr>
+                  <tr><td>Archaeomagnetism</td><td>the last heating of fired clay, matched to a regional field curve</td><td class="num">Holocene, where a regional curve exists</td><td>hearths, kilns, burnt mud brick, pottery</td><td class="num">decades to centuries</td><td>20 Iron Age destruction layers tied to named Levantine campaigns, 2022</td></tr>
+                  <tr><td>Ancient DNA</td><td>relatedness, admixture, molecular dates</td><td class="num">best &lt;100 kya; hominins ~430 kya (Sima de los Huesos); mammoth &gt;1 Mya; sediment 2 Mya</td><td>petrous bone, tooth cementum, cave sediment</td><td class="num">molecular clock ±10–20%</td><td>Denisovans named from a fingertip bone, 2010</td></tr>
+                  <tr><td>Palaeoproteomics / ZooMS</td><td>species identification, not age</td><td class="num">collagen ~3.5 Mya (permafrost); enamel ~2 Mya in hominins, 18–24 Mya in Miocene mammals (2025)</td><td>~20 mg of bone or enamel powder</td><td class="num">identification, no date</td><td>the Xiahe mandible identified as Denisovan, 2019; ~2 Mya <i>Paranthropus</i> sexed from enamel, 2025; the Harbin skull assigned to the Denisovans, 2025</td></tr>
+                </tbody>
+              </table></div></details>
+          </figure>
+
+          <figure class="diagram">
+            <figcaption><b>Timeline</b> — when each instrument arrived, and what it immediately rewrote</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">timeline
+    title The instrument revolutions
+    1669–1899 · order without number : 1669 · Steno states superposition : 1815 · Smith correlates strata by fossils : 1899 · Petrie invents seriation
+    1910–1960 · the first clocks : 1910 · De Geer's Swedish varve time scale : 1929 · Douglass anchors tree-ring dating : 1949 · Libby publishes radiocarbon : 1953 · Chemistry exposes the Piltdown forgery : 1960 · Nobel Prize for radiocarbon
+    1961–1988 · deep time and calibration : 1961 · Potassium-argon puts Olduvai at 1.75 Mya : 1967 · Tree-ring calibration breaks the diffusionist model : 1987 · Mitochondrial Eve from living DNA : 1988 · Thermoluminescence dates early sapiens at Qafzeh to ~92,000 years
+    1997–2010 · molecules : 1997 · Neanderthal mtDNA from the Feldhofer bone : 2003 · Single-grain OSL becomes routine : 2009 · Lidar maps Caracol under the canopy : 2010 · First ancient human genome, Saqqaq, Greenland : 2010 · Denisovans named from one finger bone
+    2012–2020 · everything at once : 2012 · Miyake finds a one-year radiocarbon spike : 2016 · ZooMS finds Denny among 2,300 scraps : 2017 · Sediment DNA without a fossil : 2018 · PACUNAM lidar — 61,480 Maya structures : 2020 · IntCal20 recalibrates radiocarbon
+    2021–2026 · the 2020s : 2021 · A cosmic-ray spike dates Norse Newfoundland to 1021 CE : 2022 · Two-million-year-old DNA from Greenland : 2023 · First word read inside an unopened Herculaneum scroll : 2025 · Harbin skull identified as Denisovan by its proteins : 2025 · Amino acids redate the Schöningen spears : 2026 · A Herculaneum scroll read end to end</pre>
+              <div class="diagram__loading mono">Rendering timeline…</div>
+            </div>
+            <details class="datatable"><summary>Data table — method milestones and their consequences</summary><div class="table-scroll">
+              <table class="data"><caption>Selected methodological milestones and the specific claim each one overturned</caption>
+                <thead><tr><th class="num">Year</th><th>Milestone</th><th>What it overturned</th></tr></thead>
+                <tbody>
+                  <tr><td class="num">1899</td><td>Petrie's sequence dating</td><td>the idea that undated prehistory could not be ordered at all</td></tr>
+                  <tr><td class="num">1910</td><td>De Geer's Swedish varve time scale, counted layer by layer</td><td>guesswork about how long ago the ice sheets retreated</td></tr>
+                  <tr><td class="num">1929</td><td>Douglass links floating tree-ring sequences</td><td>guesswork chronology in the US Southwest</td></tr>
+                  <tr><td class="num">1949</td><td>Libby's radiocarbon method</td><td>every prehistoric chronology on Earth, simultaneously</td></tr>
+                  <tr><td class="num">1953</td><td>Fluorine and other chemical tests on Piltdown Man</td><td>a forged "missing link" with a human skull and an ape's jaw, accepted for forty years</td></tr>
+                  <tr><td class="num">1961</td><td>K-Ar dating of Olduvai Bed I</td><td>the belief that hominins were a few hundred thousand years old</td></tr>
+                  <tr><td class="num">1967</td><td>Suess's tree-ring calibration curve</td><td>the "ex oriente lux" model — European megaliths proved older than the Near Eastern monuments said to have inspired them</td></tr>
+                  <tr><td class="num">1987</td><td>Mitochondrial Eve</td><td>the multiregional model as the default account of modern human origins</td></tr>
+                  <tr><td class="num">1988</td><td>TL dates of ~92,000 years for early <i>Homo sapiens</i> at Qafzeh</td><td>the idea that Levantine Neanderthals evolved into modern humans — the moderns turned out to be older</td></tr>
+                  <tr><td class="num">1997</td><td>Neanderthal mtDNA sequenced</td><td>the assumption that ancient genomes were unrecoverable</td></tr>
+                  <tr><td class="num">2010</td><td>Saqqaq genome from a 4,000-year-old Greenlander's hair</td><td>a one-migration picture of the Arctic — the Saqqaq came from Siberia independently of Native Americans and later Inuit</td></tr>
+                  <tr><td class="num">2010</td><td>Draft Neanderthal genome and Denisova phalanx</td><td>the belief that our lineage never interbred; ~2% Neanderthal ancestry in non-Africans</td></tr>
+                  <tr><td class="num">2012</td><td>Miyake's 774–775 CE radiocarbon spike in single tree rings</td><td>the assumption that radiocarbon can never give a single calendar year</td></tr>
+                  <tr><td class="num">2017</td><td>Jebel Irhoud TL redate; sedimentary DNA</td><td>a single East African cradle; the need for a fossil to identify a species</td></tr>
+                  <tr><td class="num">2018</td><td>PACUNAM lidar survey of Guatemala (flown 2016)</td><td>Maya population estimates, roughly doubled for the central lowlands</td></tr>
+                  <tr><td class="num">2021</td><td>L'Anse aux Meadows wood dated by the 993 CE spike</td><td>a Norse presence in the Americas known only to within decades — now 1021 CE exactly</td></tr>
+                  <tr><td class="num">2022</td><td>Kap København environmental DNA</td><td>the million-year ceiling on recoverable DNA, doubled</td></tr>
+                  <tr><td class="num">2023</td><td>Vesuvius Challenge: first word read inside an unopened Herculaneum scroll</td><td>the belief that the carbonised rolls could be read only by destroying them</td></tr>
+                  <tr><td class="num">2025</td><td>Harbin cranium's proteins and calculus DNA; enamel proteins at 18–24 Mya; amino-acid redate of Schöningen</td><td>the faceless Denisovans; the ceiling on ancient molecules; a textbook date for the oldest spears</td></tr>
+                  <tr><td class="num">2026</td><td>PHerc. 1667 virtually unwrapped and read end to end</td><td>the limit of reading fragments; 22 columns of a Stoic treatise recovered</td></tr>
+                </tbody>
+              </table></div></details>
+          </figure>
+          <p class="tick" style="color:var(--ink-faint)">How this site handles those error bars in practice is set out
+            in <a href="sources.html#dating">Dating &amp; uncertainty</a>; the notation itself — Mya, kya, BCE, CE —
+            is explained in <a href="sources.html#notation">Reading the dates</a>.</p>
+        </section>
+
+        <!-- BIOMOLECULAR -->
+        <section id="biomolecular">
+          <h2>Reading bodies and molecules</h2>
+          <p>For most of the twentieth century, a skeleton could tell you sex, rough age at death, stature, some
+            diseases, and — through the bitterly unreliable business of skull measurement — nothing trustworthy
+            about ancestry. Since about 1997 the same skeleton has become a chemical archive: who its owner was
+            related to, what they ate, where they grew up, what they were sick with, and whose descendants live
+            there now.</p>
+
+          <h3>Ancient DNA</h3>
+          <p>The workflow is short to describe and brutal to execute. Sample the densest bone available — the
+            <b>petrous</b> portion of the temporal bone, which can retain up to a hundred times more endogenous DNA
+            than the rest of the skeleton, or the cementum of a tooth root. Work in a positive-pressure clean room,
+            physically separate from any lab where modern DNA is amplified, with UV sterilisation, bleach, full
+            suits and one-way movement. Drill the powder, extract, build a sequencing library, optionally enrich
+            for target regions with capture probes, sequence, then map the reads.</p>
+          <p><b>Contamination is the central problem</b>, and it is much worse for human samples than for anything
+            else, because the contaminant and the target are the same species — every excavator, curator and
+            technician who ever handled the bone is a potential source. The field's answer is <b>authentication by
+            damage</b>. Genuinely ancient DNA looks broken in characteristic ways: fragments are short, typically
+            under 100 base pairs; cytosines deaminate to uracil at the fragment ends, which reads out as a
+            C-to-T substitution pattern rising sharply in the terminal few bases. Modern contaminant DNA is long
+            and undamaged. A published ancient genome now comes with damage plots and a contamination estimate as
+            standard — a discipline learned the hard way after the field's 1980s and early 1990s claims, including
+            Svante Pääbo's own 1985 Egyptian mummy sequence, turned out to be contamination.</p>
+          <p>Two systematic biases persist. <b>Reference bias</b>: short ancient reads are mapped to a modern human
+            reference genome, and reads carrying divergent alleles map slightly worse, subtly pulling ancient
+            samples toward the reference. <b>Ascertainment bias</b>: the SNP capture panels used for cost reasons
+            were designed from present-day, disproportionately European, variation, so they see the variation they
+            were built to see. Both are correctable and both have been mis-corrected in published work.</p>
+          <p>The largest thing aDNA changed is the oldest argument in archaeology: <b>pots or people?</b> The
+            culture-history tradition of the early twentieth century read a spreading pottery style as a spreading
+            people, an assumption that fed directly into ugly politics. The processual reaction after the 1960s
+            insisted the opposite — material culture spreads by trade, emulation and fashion, and "migration" was
+            treated as a lazy explanation. Neither camp could test its claim. Ancient DNA can. Sometimes it really
+            was people: around 2500–2400 BCE, populations carrying steppe-derived ancestry associated with the
+            Yamnaya and then the Corded Ware and Beaker complexes replaced something like ninety per cent of the
+            gene pool of Britain within a few centuries. Sometimes it really was pots: elsewhere the same package of
+            objects moves with negligible genetic turnover. The caution now runs in both directions — a genetic
+            turnover is not automatically a conquest, and a style change is not automatically peaceful.</p>
+          <p><b>Sedimentary DNA</b> removed the requirement for a body. In 2017 Viviane Slon and colleagues
+            recovered Neanderthal and Denisovan mitochondrial DNA directly from <b>cave dirt</b> at sites with no
+            hominin fossil in the relevant layers. Since then, sediment DNA has placed Denisovans in Baishiya Karst
+            Cave on the Tibetan Plateau and tracked populations through Estatuas Cave at Atapuerca. In 2022 the Kap
+            København formation in northern Greenland yielded environmental DNA of an entire two-million-year-old
+            ecosystem — poplar, birch, reindeer, mastodon — the oldest DNA yet recovered from anywhere. In Denisova
+            Cave itself, a 2021 study analysed 728 sediment samples and followed Denisovans, Neanderthals and
+            later modern humans in and out of the cave through time. The honest limits: DNA can migrate between
+            layers with water, roots and burrowing animals, so the sediment's date (usually by OSL) is not
+            automatically the DNA's; it says which kinds of hominin were present, never which individual; and it
+            can recognise only what existing reference genomes already describe.</p>
+
+          <h3>Proteins, isotopes and plaque</h3>
+          <p><b>Palaeoproteomics.</b> Collagen and enamel proteins survive far longer than DNA, and in warm
+            climates where DNA is hopeless. <b>ZooMS</b> — Zooarchaeology by Mass Spectrometry — reads the peptide
+            mass fingerprint of bone collagen and identifies the animal from 20 milligrams of powder, cheaply
+            enough to screen thousands of unidentifiable fragments. That is how <b>Denisova 11</b> was found:
+            researchers ZooMS-screened some 2,300 scrappy bone fragments from Denisova Cave, hit one that was
+            hominin, sequenced it, and discovered a girl whose mother was Neanderthal and whose father was
+            Denisovan — a first-generation hybrid. It is also how the <b>Xiahe mandible</b> from the Tibetan
+            Plateau was identified as Denisovan in 2019 from collagen alone, no DNA, at about 160,000 years.
+            Enamel proteomes now reach much deeper: <i>Homo antecessor</i> at ~800,000 years,
+            <i>Paranthropus robustus</i> at ~2 million (sexed from amelogenin, 2025), <i>Gigantopithecus</i> at
+            ~1.9 million, and — beyond hominins — an 18-million-year-old Turkana fauna and a 21–24-million-year-old
+            Arctic rhinoceros (2025). In 2025 the same toolkit settled a famous skull: the <b>Harbin cranium</b>,
+            named <i>Homo longi</i> in 2021, was assigned to the Denisovans from 95 proteins and mitochondrial DNA
+            scraped from its dental calculus — giving a people known mostly from genomes their first face.</p>
+          <p>The limits are as sharp as the reach. Enamel keeps only a handful of proteins, so it can place a
+            fossil on a branch but rarely settle a close call between neighbours; ZooMS can say "hominin" but not
+            which kind — Denisova 11 still needed DNA to go further; and modern proteins from skin and saliva are a
+            constant contaminant, which is why ancient ones are authenticated by their chemical damage, as DNA is.
+            Sampling is also becoming nearly non-destructive: rather than drilling, a 2026 study etched the enamel
+            surface with acid and read the proteins of twenty <i>Homo naledi</i> individuals from the Rising
+            Star caves and found no confident male marker in any of them — a result that feeds straight into the
+            argument over who, or what, put those bodies there.</p>
+          <p><b>Stable isotopes</b> turn a bone into a biography. Carbon-13 separates plants using the C<sub>3</sub>
+            photosynthetic pathway (wheat, rice, most trees) from C<sub>4</sub> plants (maize, millet, sorghum,
+            tropical grasses), which is how the spread of maize agriculture through the Americas is tracked
+            directly in human skeletons rather than inferred from cobs, and how <i>Paranthropus boisei</i> was
+            shown to have eaten mostly C<sub>4</sub> grasses and sedges rather than the nuts its jaw suggested.
+            Nitrogen-15 rises with trophic level: it identified Neanderthals as top-level carnivores, and
+            incremental sampling of dentine can recover an individual's weaning age. <b>Strontium-87/86</b> is
+            fixed in enamel during childhood from local bedrock and never changes, so it records where someone
+            <i>grew up</i> as against where they were buried — the Amesbury Archer, buried near Stonehenge around
+            2300 BCE, grew up in the Alps. Oxygen-18 adds temperature and latitude of drinking water.</p>
+          <p><b>Dental calculus</b> — mineralised plaque, once scraped away as dirt — is now among the richest
+            single sources on the site. It traps starch grains and plant microfossils from the last meals of a
+            life, the oral microbiome, respiratory particulates, and intact proteins. Beta-lactoglobulin, a whey
+            protein, provides direct evidence that a <i>specific individual</i> drank milk. In 2019, lapis
+            lazuli pigment in the calculus of a medieval German woman showed she had been illuminating manuscripts
+            with ultramarine — a role the written record assigned to men.</p>
+          <p><b>Palaeopathology</b> reads stress and disease in the skeleton: enamel hypoplasia from childhood
+            malnutrition, Harris lines, cribra orbitalia from anaemia, healed and unhealed trauma. This is the
+            evidence behind one of the tour's least intuitive claims — that early farmers were shorter, sicker and
+            worked harder than the foragers they replaced. And ancient pathogen genomics has recovered
+            <i>Yersinia pestis</i> from tooth pulp in Justinianic and Black Death burials, plus Neolithic and Bronze
+            Age lineages — the oldest, from a Latvian hunter-fisher-gatherer and from Swedish megalith tombs of
+            c. 3300–2900 BCE, nearly four millennia older than any recorded plague pandemic.</p>
+          <p><b>Lipid residues.</b> Unglazed pottery absorbs fats into its fabric and holds them for millennia.
+            Compound-specific carbon-13 analysis of the C16 and C18 fatty acids distinguishes dairy fat from
+            carcass fat from aquatic oils. That is how dairying is dated without a single cow bone: milk residues
+            appear in northwestern Anatolian pottery in the seventh millennium BCE and in Saharan pottery around
+            5200 BCE — the latter proving pastoralists were milking herds in what is now desert, thousands of years
+            before Europeans evolved adult lactase persistence.</p>
+
+          <h3 id="pathogens">Ancient pathogen genomics: what people died of</h3>
+          <p>Most infections leave nothing in bone. What some of them leave is DNA: a pathogen circulating in the
+            blood at death can be trapped in the pulp chamber of a tooth, and a screening pass over an ancient DNA
+            library that looks for <i>any</i> microbe can find it without anyone guessing the disease first. That
+            is how <i>Salmonella</i> Paratyphi C, a cause of enteric fever, turned up in ten people buried at
+            Teposcolula-Yucundaa in Oaxaca during the 1545–1550 <i>cocoliztli</i> epidemic — a strong candidate for
+            the killer in an outbreak that swept much of Mexico and whose cause had been argued over for more than a
+            century. It is how the Black Death was traced to its source: plague genomes from graves at Kara-Djigach
+            near Lake Issyk-Kul in Kyrgyzstan, whose headstones record death by "pestilence" in 1338–39, sit at the
+            root of the strains that swept western Eurasia from 1346. And it has rewritten the deep history of whole
+            diseases: smallpox in Viking-age northern Europe a thousand years before the earliest confirmed cases,
+            hepatitis B in hunter-gatherers ~10,500 years ago, tuberculosis in pre-contact Peru by way of seals and
+            sea lions, and a treponemal disease related to bejel in Brazil around 2,000 years ago.</p>
+          <p>The failure modes are particular to the field. Soil teems with harmless bacteria closely related to
+            famous pathogens, so a screening hit counts only once damage patterns and a genome-wide comparison
+            confirm it; only infections that flood the bloodstream are likely to be caught at all, which tilts the
+            record toward plague and away from the respiratory and gut infections that killed most people; and a
+            pathogen in a skeleton proves infection, not cause of death. Paratyphi C is a candidate for
+            <i>cocoliztli</i>, not a verdict.</p>
+
+          <details class="datatable" open><summary>Data table — landmark ancient pathogen genomes</summary><div class="table-scroll">
+            <table class="data"><caption>Selected pathogen genomes recovered from archaeological skeletons, and the claim each changed. Dates are those of the burials, not of the pathogen's origin.</caption>
+              <thead><tr><th>Pathogen</th><th>Where</th><th class="num">Date of burials</th><th>What it changed</th><th>Study</th></tr></thead>
+              <tbody>
+                <tr><td>Hepatitis B virus</td><td>137 people across Eurasia and the Americas</td><td class="num">~10,500–400 years ago</td><td>infected hunter-gatherers; a lineage spread by early farmers later replaced older strains in western Eurasia</td><td>Kocher et al. 2021</td></tr>
+                <tr><td><i>Yersinia pestis</i> (plague)</td><td>a hunter-fisher-gatherer in Latvia; megalith tombs in Sweden</td><td class="num">c. 3300–2900 BCE</td><td>plague nearly four millennia older than the first recorded plague pandemic</td><td>Susat et al. 2021; Seersholm et al. 2024</td></tr>
+                <tr><td><i>Treponema</i> (bejel relative)</td><td>a shell-mound site in southern Brazil</td><td class="num">~2,000 years ago</td><td>treponemal disease in the Americas long before 1492; reopened the origin of syphilis</td><td>Majander et al. 2024</td></tr>
+                <tr><td><i>Yersinia pestis</i></td><td>sixth-century burials in Bavaria and elsewhere in western Europe</td><td class="num">6th century CE</td><td>confirmed plague as the agent of the Justinianic pandemic; its death toll is still argued</td><td>Harbeck et al. 2013 (Aschheim); Wagner et al. 2014 (first genome) and later studies</td></tr>
+                <tr><td>Variola virus (smallpox)</td><td>northern Europe, 13 individuals (11 of them Viking Age)</td><td class="num">c. 600–1050 CE</td><td>smallpox ~1,000 years older than its earliest confirmed cases; an extinct sister lineage</td><td>Mühlemann et al. 2020</td></tr>
+                <tr><td><i>Mycobacterium</i> (tuberculosis complex)</td><td>Peru, three skeletons</td><td class="num">~1,000 years ago</td><td>tuberculosis in the Americas before contact, related to strains in seals and sea lions</td><td>Bos et al. 2014</td></tr>
+                <tr><td><i>Yersinia pestis</i></td><td>Kara-Djigach and Burana, Kyrgyzstan</td><td class="num">1338–1339 CE</td><td>located the source strain of the Black Death of 1346–53 in Central Asia</td><td>Spyrou et al. 2022</td></tr>
+                <tr><td><i>Salmonella</i> Paratyphi C</td><td>Teposcolula-Yucundaa, Oaxaca, 10 individuals</td><td class="num">1545–1550 CE</td><td>a candidate cause of the <i>cocoliztli</i> epidemic after the Spanish conquest</td><td>Vågene et al. 2018</td></tr>
+              </tbody>
+            </table></div></details>
+
+          <h3>Kinship, sex and who moved</h3>
+          <p>Genomes also recover the social facts that documents record, if at all, only for elites. At
+            <b>Hazleton North</b>, a Cotswold long cairn of c. 3700 BCE, a study published in 2021 reconstructed five
+            continuous generations of one family, descended through the male line, with the mothers of their
+            children coming from outside it. At <b>Çatalhöyük</b> the pattern runs the other way: a 2025 study of 131
+            genomes found that people buried beneath the same house were linked far more often through mothers than
+            fathers across a thousand years, that later households increasingly included the unrelated, and that
+            girls were more often buried with grave goods than boys. The caution runs alongside the result: biology
+            is not kinship. Households adopt, foster and marry in, and a genetic pattern is the start of a social
+            argument, not its conclusion.</p>
+
+          <details class="datatable" open><summary>Data table — what each molecule answers</summary><div class="table-scroll">
+            <table class="data"><caption>Biomolecular methods: the material sampled, the question it answers, and its practical limit</caption>
+              <thead><tr><th>Method</th><th>Sampled from</th><th>Answers</th><th>Practical limit</th></tr></thead>
+              <tbody>
+                <tr><td>Nuclear ancient DNA</td><td>petrous bone, tooth cementum</td><td>ancestry, admixture, kinship, selection</td><td>heat destroys it; best in cold, dry, stable burial</td></tr>
+                <tr><td>Mitochondrial DNA</td><td>as above, far more copies per cell</td><td>maternal line only; cheap screening</td><td>one locus — a single lineage, not a population</td></tr>
+                <tr><td>Sedimentary DNA</td><td>cave floor sediment</td><td>which species were present, with no fossil</td><td>cannot tell you which individual, or exactly when</td></tr>
+                <tr><td>ZooMS collagen fingerprint</td><td>~20 mg bone powder</td><td>species or genus identification, in bulk</td><td>resolves to genus, rarely to species</td></tr>
+                <tr><td>Enamel proteome</td><td>tooth enamel, now by surface acid-etching</td><td>deep phylogeny, biological sex</td><td>very few informative proteins survive; places a branch, rarely a close call</td></tr>
+                <tr><td>δ<sup>13</sup>C</td><td>bone collagen, enamel apatite</td><td>C<sub>3</sub> versus C<sub>4</sub> plants in the diet; marine input</td><td>averages years of diet; cannot name a species eaten</td></tr>
+                <tr><td>δ<sup>15</sup>N</td><td>bone collagen, incremental dentine</td><td>trophic level, weaning age, some physiological stress</td><td>confounded by aridity, manuring and freshwater fish</td></tr>
+                <tr><td><sup>87</sup>Sr/<sup>86</sup>Sr</td><td>tooth enamel formed in childhood</td><td>the geology someone grew up on</td><td>says "not from here," rarely "from there"</td></tr>
+                <tr><td>δ<sup>18</sup>O</td><td>enamel, bone</td><td>temperature and latitude of drinking water</td><td>brewing, boiling and breastfeeding all shift it</td></tr>
+                <tr><td>Dental calculus</td><td>mineralised plaque</td><td>plant foods, milk proteins, microbiome, pigments, smoke</td><td>often removed and discarded by older excavations</td></tr>
+                <tr><td>Palaeopathology</td><td>the skeleton itself</td><td>malnutrition, anaemia, trauma, infection, workload</td><td>only diseases slow enough to mark bone are visible</td></tr>
+                <tr><td>Pathogen genomes</td><td>tooth pulp, dental calculus</td><td>which infection was in the blood; how a disease evolved and spread</td><td>proves infection, not cause of death; blood-borne diseases over-represented</td></tr>
+                <tr><td>Kinship genomics</td><td>many burials from one site</td><td>pedigrees, descent rules, who married in</td><td>biological relatedness is not the same as social kinship</td></tr>
+                <tr><td>Lipid residue</td><td>unglazed potsherd fabric</td><td>dairy, ruminant, porcine, aquatic and plant products</td><td>tells you what the pot held, not who ate it</td></tr>
+              </tbody>
+            </table></div></details>
+          <p class="tick" style="color:var(--ink-faint)">What these methods established about our relatives is set out
+            in <a href="human-family.html#denisovans">The Human Family · Denisovans</a>, and the discovery history
+            itself in <a href="human-family.html#discovery">how the family was found</a>.</p>
+        </section>
+
+        <!-- LANDSCAPE -->
+        <section id="landscape">
+          <h2>Seeing from above and below</h2>
+          <p>Excavation is destructive, slow, and covers an absurdly small fraction of any landscape. A generous
+            research project might open a few hundred square metres in a decade. Remote sensing inverts the
+            economics: it surveys hundreds of square kilometres in a week, non-destructively, and tells you where
+            the few hundred square metres should go.</p>
+
+          <h3>Lidar, and the decade it rewrote</h3>
+          <p><b>Lidar</b> — airborne laser scanning — fires hundreds of thousands of pulses a second at the ground
+            and times the returns. Under a forest canopy a small percentage of pulses find a gap all the way down;
+            filtering out everything that hit vegetation leaves a bare-earth digital elevation model at 10–20 cm
+            vertical resolution. Anything humans built with earth or stone — platforms, causeways, terraces,
+            reservoirs, ditches, house mounds — appears as if the forest had been shaved off.</p>
+          <p>Arlen and Diane Chase flew the first serious archaeological survey over <b>Caracol</b> in Belize in
+            2009 and found, in five days, more settlement than twenty-five years of ground survey had mapped. In
+            2016 the PACUNAM Lidar Initiative surveyed 2,144 km² of northern Guatemala, around the Maya Biosphere
+            Reserve, and in 2018 published <b>61,480 structures</b> — causeways linking cities, defensive earthworks
+            implying sustained warfare, and agricultural terracing and wetland fields on a scale that pushed Late
+            Classic population estimates from an earlier consensus of a few million (around five million was the
+            figure most often quoted in press coverage) to something like <b>7–11 million</b> for the central lowlands alone — roughly
+            a doubling. Damien Evans's surveys of <b>Angkor</b> in 2012 and 2015 revealed a low-density urban grid
+            extending far beyond the temple enclosures, plus a previously unmapped city on Phnom Kulen. In Amazonia,
+            Heiko Prümers's survey of the <b>Llanos de Mojos</b> in Bolivia, published in 2022, exposed Cotoca and
+            Landívar — Casarabe-culture settlements with stepped platforms, causeways and reservoirs, laid out over a
+            low-density urban region. In 2024 Stéphen Rostain published the <b>Upano valley</b> in Amazonian Ecuador:
+            more than 6,000 earthen platforms and a network of wide straight roads, occupied from roughly 500 BCE.</p>
+          <p>Two results since then address the obvious objection — that archaeologists fly lidar only where they
+            already expect ruins, and so find what they went looking for. In 2024 Luke Auld-Thomas and colleagues
+            re-read lidar flown in 2013 to monitor forest in Campeche, Mexico, chosen by nobody for its archaeology,
+            and found more than 6,500 structures in about 120 km², including a previously unrecorded city they named
+            <b>Valeriana</b> with plazas, temple-pyramids, a ballcourt and a reservoir, a short walk from a highway.
+            And in 2023 Vinicius Peripato and colleagues sampled lidar transects across the whole Amazon basin,
+            found 24 previously unknown earthworks beneath the canopy, and modelled that between about 10,000 and
+            24,000 more remain to be found, most of them in the southwest.</p>
+          <p>The pattern in every case is identical, and it is the point: the sites were not hidden by the
+            forest so much as by the assumption that there was nothing to look for. The limits are equally
+            consistent. Lidar dates nothing — a platform of 500 BCE and one of 1500 CE look alike from the air, and
+            the Upano chronology comes from excavation and radiocarbon, not lasers. It cannot say who lived in a
+            house mound, how many at once, or whether all the mounds were occupied together, which is why population
+            figures derived from it carry wide ranges; and every feature it shows still has to be checked on the
+            ground.</p>
+
+          <h3>Satellite, and the ground you can see through</h3>
+          <p>The declassification of the American <b>CORONA</b> spy satellite archive in 1995 handed archaeology
+            something irreplaceable: high-resolution imagery of the Middle East and Central Asia taken in the 1960s
+            and 1970s, <i>before</i> mechanised agriculture, dam-building and urban sprawl erased the surface
+            record. Jason Ur used it to map the "hollow ways" of Upper Mesopotamia — broad linear depressions worn
+            by millennia of foot and hoof traffic radiating from tells, effectively a fossilised road network of
+            the Bronze Age. Modern satellite imagery is now also the primary tool for monitoring looting and
+            deliberate destruction, which surged after 2011 in Syria and Iraq.</p>
+          <p>Below ground, <b>ground-penetrating radar</b> and <b>magnetometry</b> map buried structures without a
+            trench. GPR produced a complete street-by-street plan of the Roman town of <b>Falerii Novi</b> in 2020
+            — bathhouse, market, theatre, temple, water pipes — with nothing excavated at all. Magnetometry mapped
+            the Cucuteni-Trypillia "megasite" of <b>Nebelivka</b> in Ukraine at around 238 hectares with well over
+            a thousand houses arranged in concentric rings, dated to about 4000 BCE, forcing an awkward question
+            about what counts as a city and whether it needs a palace.</p>
+
+          <h3>Proxies: reading the environment people lived in</h3>
+          <p>None of this tells you what the landscape was <i>like</i>. For that the field reads proxies. <b>Pollen
+            cores</b> from lakes and bogs give a layer-by-layer census of vegetation; the classic signature of
+            human clearance — the <i>landnám</i> horizon — is a fall in tree pollen with a simultaneous rise in
+            cereal-type grasses and weeds of disturbed ground such as <i>Plantago</i>. <b>Phytoliths</b>, the
+            microscopic silica bodies plants deposit in their own tissue, survive where pollen does not and are
+            species-diagnostic enough that banana phytoliths demonstrated cultivation at <b>Kuk Swamp</b> in the
+            New Guinea highlands by about 6,950–6,440 years ago. <b>Starch grains</b> recovered from grinding
+            stones and stone-tool edges identify manioc, maize, potato and wild grass processing directly.
+            <b>Microcharcoal</b> counts reconstruct fire regimes, which is the evidentiary heart of the argument
+            about Aboriginal Australian landscape burning. <b>Speleothem isotopes</b> give high-resolution
+            climate: the Chinese Hulu and Dongge cave records track monsoon strength century by century and are
+            routinely invoked in arguments about dynastic collapse. Lake levels and dust flux mapped the African
+            Humid Period, when the Sahara was green with lakes and hippos until roughly 5,500 years ago.</p>
+
+          <details class="datatable" open><summary>Data table — remote sensing and proxy results</summary><div class="table-scroll">
+            <table class="data"><caption>Selected landscape-scale results, the technique that produced them, and what changed</caption>
+              <thead><tr><th>Technique</th><th>Where</th><th class="num">Year</th><th>What it revealed</th></tr></thead>
+              <tbody>
+                <tr><td>Lidar</td><td>Caracol, Belize</td><td class="num">2009</td><td>the first canopy-penetrating survey; more settlement in 5 days than 25 years on foot</td></tr>
+                <tr><td>Lidar</td><td>Angkor, Cambodia</td><td class="num">2012–2016</td><td>a low-density urban grid far beyond the temples; a lost city on Phnom Kulen</td></tr>
+                <tr><td>Lidar</td><td>Maya Biosphere Reserve, Guatemala</td><td class="num">flown 2016, published 2018</td><td>61,480 structures over 2,144 km²; central-lowland population revised from ~5 million to ~7–11 million</td></tr>
+                <tr><td>Lidar</td><td>Llanos de Mojos, Bolivia</td><td class="num">published 2022</td><td>Casarabe platform settlements, causeways and reservoirs in "empty" Amazonia</td></tr>
+                <tr><td>Lidar</td><td>Upano valley, Ecuador</td><td class="num">published 2024</td><td>6,000+ platforms and a road network from ~500 BCE</td></tr>
+                <tr><td>Lidar + predictive model</td><td>Amazon basin</td><td class="num">2023</td><td>24 new earthworks under canopy; ~10,000–24,000 more predicted</td></tr>
+                <tr><td>Lidar flown for forest monitoring</td><td>Campeche, Mexico (Valeriana)</td><td class="num">2024</td><td>6,500+ structures in ~120 km², including an unrecorded Maya city</td></tr>
+                <tr><td>CORONA satellite imagery</td><td>Upper Mesopotamia</td><td class="num">1995–</td><td>Bronze Age "hollow way" road networks, since destroyed by ploughing</td></tr>
+                <tr><td>Ground-penetrating radar</td><td>Falerii Novi, Italy</td><td class="num">2020</td><td>a complete Roman town plan with zero excavation</td></tr>
+                <tr><td>Magnetometry</td><td>Nebelivka, Ukraine</td><td class="num">2009–2017</td><td>a 238-hectare Trypillia megasite of 1,000+ houses, ~4000 BCE</td></tr>
+                <tr><td>Phytolith analysis</td><td>Kuk Swamp, New Guinea</td><td class="num">2003</td><td>independent banana cultivation ~6,950–6,440 years ago</td></tr>
+                <tr><td>Pollen cores</td><td>northwest Europe</td><td class="num">1940s–</td><td>the <i>landnám</i> clearance horizon — farming visible without a single artifact</td></tr>
+                <tr><td>Speleothem isotopes</td><td>Hulu and Dongge caves, China</td><td class="num">2001–</td><td>century-scale monsoon record now central to collapse arguments</td></tr>
+                <tr><td>Lake and dust records</td><td>Sahara</td><td class="num">1990s–</td><td>the African Humid Period — a green, lake-filled Sahara until ~5,500 years ago</td></tr>
+              </tbody>
+            </table></div></details>
+          <p class="tick" style="color:var(--ink-faint)">The societies these surveys put back on the map are covered in
+            <a href="civilizations.html#region-mesoamerica">Mesoamerica</a> and
+            <a href="civilizations.html#region-andes">the Andes</a>; the climate proxies feed the
+            <a href="master-timeline.html#climate">climate spine of the master timeline</a>.</p>
+        </section>
+
+        <!-- UNWRITTEN -->
+        <section id="unwritten">
+          <h2>Evidence that is not dug up</h2>
+          <p>Some of the strongest evidence about the past was never buried. It is carried in languages, in stories,
+            in the shape of letters, and in the knowledge of communities who never stopped living where the events
+            happened.</p>
+
+          <h3>Historical linguistics</h3>
+          <p>The <b>comparative method</b> is the most rigorous non-archaeological tool history has. Languages
+            change, but they change with regularity: sounds shift systematically, not word by word. If Latin
+            <i>pater</i> corresponds to English <i>father</i>, Latin <i>pes</i> to <i>foot</i>, and Latin
+            <i>piscis</i> to <i>fish</i>, the correspondence p↔f is a law, not a coincidence — Grimm's law, stated
+            in 1822. Stack enough regular correspondences and you can reconstruct forms of an unrecorded parent
+            language. Proto-Indo-European, Proto-Austronesian, Proto-Bantu and Proto-Uto-Aztecan are all
+            reconstructions of this kind, and their family trees are real historical claims about who descends
+            from whom.</p>
+          <p>What a reconstruction <i>can</i> tell you: relatedness, subgrouping, direction of borrowing, and —
+            through "linguistic palaeontology" — something about the world the speakers lived in. Proto-Indo-European
+            has secure vocabulary for wheel, axle, yoke, wool and horse, which is a real constraint: the language
+            cannot have broken up much before those things existed — that is, not much before about 3500 BCE. What it
+            <i>cannot</i> tell you: a date on its own, a location on its own, or an ethnicity. Words shift meaning;
+            a reconstructed root is a hypothesis, marked with an asterisk, not a recording. And a language family is
+            not a gene pool — languages are adopted, imposed and abandoned by people who do not move.</p>
+          <p><b>Glottochronology</b>, proposed by Morris Swadesh in the 1950s, tried to make the clock literal by
+            assuming basic vocabulary is replaced at a constant rate — a linguistic half-life. It does not work.
+            Replacement rates vary by an order of magnitude between families; heavy borrowing accelerates them;
+            Australian languages with death-name taboos replaced core vocabulary at rates that break the model
+            entirely. Modern Bayesian phylogenetics revived the ambition with better statistics, but its results
+            remain contested — the same methods have placed Proto-Indo-European in Anatolia around 6500 BCE and on
+            the Pontic steppe around 4000 BCE, and the argument is not settled. A 2023 analysis with a cleaned-up
+            cognate database put the family's root near 8,100 years ago and proposed a hybrid, with a homeland
+            south of the Caucasus and a later branch onto the steppe; ancient genomes published in 2025 point
+            instead to a Caucasus–Lower Volga population of the fifth millennium BCE as the common source of both
+            the Yamnaya and the Hittite-speakers' ancestors (<a href="#contested">live debates</a>).</p>
+
+          <h3>Oral tradition as a testable record</h3>
+          <p>The default assumption that oral tradition degrades into myth within a few generations is empirically
+            false in at least some cases, and the test is independent corroboration. Patrick Nunn and Nicholas Reid
+            catalogued narratives from <b>21 Aboriginal Australian groups</b> around the continent's coast that
+            describe country now under the sea — islands that were hills, hunting grounds where there is now
+            water — and matched each to the local post-glacial sea-level curve. The drowning they describe ended
+            about <b>7,000 years ago</b>. Whatever the transmission mechanism, the information survived on the
+            order of three hundred generations. Nearby, the Gunditjmara account of the eel-trapping system at
+            <b>Budj Bim</b> is corroborated by engineered stone channels dated to around 6,600 years ago, now a
+            UNESCO World Heritage site listed explicitly on that basis. Klamath narratives of a mountain that
+            exploded and left a lake match the eruption of Mount Mazama, radiocarbon-dated to about 7,600 years
+            ago.</p>
+          <p>Polynesian voyaging knowledge is a second case. The tradition was widely dismissed as legend until
+            <b>Mau Piailug</b>, a master navigator from Satawal, sailed <i>Hōkūle'a</i> from Hawai'i to Tahiti in
+            1976 with no instruments, demonstrating that the genealogically transmitted wayfinding system was a
+            working technology and not a memory of one. Genetics has since corroborated the tradition's reach: a
+            2020 study found Native American admixture in eastern Polynesian populations dating to around 1200 CE,
+            consistent with the sweet potato's Polynesian name <i>kumara</i> being cognate with Quechua
+            <i>k'umar</i>.</p>
+          <p>Africa supplied the method's rulebook. Jan Vansina's <i>De la tradition orale</i> (1961; in English
+            as <i>Oral Tradition</i>, 1965) and <i>Oral Tradition as History</i> (1985) treated spoken testimony as
+            a source like any other — with chains of transmission to trace, genres that shape what is remembered,
+            and predictable distortions, such as the "telescoping" that compresses the middle of a long genealogy
+            while keeping founders and recent generations. Working from Central African kingdoms and the Great
+            Lakes, Vansina made precolonial African history writable in its own terms, and his tests now apply
+            everywhere: the Mande epic of Sunjata (Sundiata), carried by hereditary <i>jeliw</i> (griots) and set down in writing
+            only in modern times, is read the same way, as a layered record of Mali's founding rather than a
+            transcript of it.</p>
+
+          <h3>Decipherment</h3>
+          <p>A script is not a language, and cracking one requires either a bilingual text, a known related
+            language, or extraordinary structural patience. <b>Champollion</b> announced Egyptian hieroglyphs in
+            1822, building on Thomas Young and on the Rosetta Stone's parallel Greek; the decisive insight was that
+            the signs inside royal cartouches were phonetic, not purely symbolic. <b>Michael Ventris</b> deciphered
+            <b>Linear B</b> in 1952 by extending Alice Kober's grids of sign relationships, and produced a result
+            nobody expected: the language was Greek, four centuries earlier than Greek was supposed to exist.</p>
+          <p>Maya decipherment is the cautionary tale. <b>Yuri Knorozov</b> showed in 1952 that the script was
+            logo-syllabic, using Diego de Landa's sixteenth-century "alphabet" as a syllabary rather than dismissing
+            it as garbled; <b>Tatiana Proskouriakoff</b> demonstrated in 1960 that the Piedras Negras monuments
+            recorded the births, accessions and deaths of named rulers, not astronomy. Both results were resisted
+            for decades, principally because <b>J. Eric S. Thompson</b>, the field's dominant authority, insisted
+            the glyphs were not phonetic and that the Maya were peaceful astronomer-priests without dynastic
+            politics. Knorozov's work was additionally dismissed as Soviet propaganda. The script did not become
+            broadly readable until the 1980s, and when it did, it revealed exactly what Thompson had ruled out:
+            kings, wars, captives and succession disputes. Some scripts remain closed — the <b>Indus</b> script
+            (about 400 signs, average text length five signs, no bilingual), <b>Linear A</b>, and
+            <b>rongorongo</b>. A decipherment of <b>Linear Elamite</b>, the script of southwestern Iran in the late
+            third millennium BCE, was published in 2022 by François Desset and colleagues, working largely from
+            inscribed silver beakers; it is being tested sign by sign by other specialists and is best described as
+            promising and not yet agreed.</p>
+
+          <h3 id="machine-reading">Reading the unreadable: machines and damaged texts</h3>
+          <p>In 79 CE the eruption of Vesuvius carbonised the library of a villa at Herculaneum; the rolls were dug
+            out in the 1750s as lumps of charcoal, and two centuries of physical unrolling damaged or destroyed
+            many of those it opened. The <b>Vesuvius Challenge</b>, launched in 2023, scanned intact rolls with X-ray
+            tomography and asked competitors to do two things by software: trace the crushed spiral of papyrus
+            through the scan ("virtual unwrapping"), and train machine-learning models to see carbon ink that
+            barely differs from carbonised papyrus. In October 2023 a student, Luke Farritor, found the first word
+            inside an unopened roll — <i>porphyras</i>, "purple". In February 2024 the grand prize went to a team
+            that recovered about five per cent of one scroll, apparently an unknown work by the Epicurean Philodemus
+            on pleasure; in 2025 the title of a roll in Oxford was read as Philodemus, <i>On Vices</i>; and in June
+            2026 the project announced that one roll, PHerc. 1667, had been read end to end — 22 columns of what a
+            project preprint describes as a Stoic treatise, possibly by Chrysippus.</p>
+          <p>Machine reading of damaged inscriptions runs in parallel. <b>Ithaca</b> (2022), a neural network
+            trained on Greek inscriptions, restored missing text and suggested where and when an inscription was
+            made; in trials, historians' restorations improved from 25 to 72 per cent accurate when they worked with
+            it, better than either alone. A Latin counterpart, Aeneas, followed in 2025. The failure modes matter
+            more here than anywhere: a model that "sees" ink can also invent it, so every letter proposed from a scan
+            is checked by papyrologists before it counts; a restoration is a suggestion ranked by probability, not a
+            reading; and the tools are only as broad as the texts they were trained on.</p>
+          <p>Alongside decipherment sit the quieter document sciences. <b>Numismatics</b>: coin hoards date the
+            layers they sit in, map trade circulation, and record fiscal crisis directly: Rome's principal silver
+            coin (the denarius, then from 215 the antoninianus) falls from ~97% silver under Augustus to under 5%
+            by the 260s CE, an economic history written in metal. <b>Palaeography</b> dates undated manuscripts by
+            letterforms and scribal habit.
+            <b>Ethnohistory</b> reads colonial-era texts against the grain: the Florentine Codex compiled by
+            Bernardino de Sahagún with Nahua co-authors, the K'iche' <i>Popol Vuh</i>, and Guaman Poma de Ayala's
+            1,200-page 1615 letter to Philip III are documents of conquest whose Indigenous authorship shows
+            through, and whose biases are part of the evidence. Finally, <b>Indigenous knowledge held by descendant
+            communities</b> is increasingly treated as evidence rather than folklore — a shift with legal teeth. In
+            the Kennewick Man case, a 9,000-year-old skeleton from Washington State, the tribes' claim of
+            affiliation was fought in court from 1996 to 2004 and disputed for two decades in all, until genome
+            sequencing in 2015 confirmed it; the Ancient One was repatriated and reburied in 2017.</p>
+          <p class="tick" style="color:var(--ink-faint)">The deep continuity these records preserve is followed in
+            <a href="civilizations.html#region-australia-arctic">Australia and the Arctic</a> and
+            <a href="civilizations.html#region-oceania">Oceania</a>.</p>
+        </section>
+
+        <!-- HISTORIOGRAPHY -->
+        <section id="historiography">
+          <h2>How history gets written</h2>
+          <p>Evidence does not arrange itself. Every history is a selection governed by a question, and the
+            questions have their own history. Knowing which frame you are reading is part of reading.</p>
+          <p><b>Whig history</b> — Herbert Butterfield's 1931 term — reads the past as a ramp toward the present,
+            sorting the dead into those who helped and those who obstructed. Its modern descendants are progress
+            narratives that treat industrialisation and liberal democracy as the destination, and its mirror image
+            is declinism, which uses the same arrow pointed the other way. Both make the same mistake: they let the
+            outcome dictate what counts as significant, which guarantees that the winners look inevitable.</p>
+          <p><b>Eurocentrism and Orientalism.</b> Edward Said's <i>Orientalism</i> (1978) argued that European
+            scholarship constructed "the East" as a static, sensual, despotic counterpart against which European
+            dynamism could be defined — and that the construction served empire. In economic history the parallel
+            argument is the <b>Great Divergence</b> debate: Kenneth Pomeranz (2000) contended that the Yangzi delta
+            and industrialising England were broadly comparable in living standards, market development and life
+            expectancy as late as 1750, and that the divergence turns on accessible coal and on New World land and
+            labour rather than on any deep European advantage. Janet Abu-Lughod had already shown a thriving
+            thirteenth-century world system running from Cairo to Quanzhou <i>before</i> European hegemony, and
+            Andre Gunder Frank's <i>ReOrient</i> put Asia at the centre of the early modern world economy. The
+            practical upshot for a tour like this one: any narrative in which Europe is the protagonist from 1500
+            onward is choosing a starting date that makes the answer come out right.</p>
+          <p><b>The Annales school</b> — Marc Bloch, Lucien Febvre, then Fernand Braudel — attacked the
+            history of events itself. Braudel's <i>The Mediterranean</i> (1949) is built in three tiers: the almost
+            motionless <i>longue durée</i> of geography and climate; the slower rhythms of economies and
+            populations, the <i>conjoncture</i>; and at the top, the froth of <i>histoire événementielle</i>, the
+            battles and treaties that fill textbooks. The tour's whole structure — climate, population and energy
+            as the spine, with named events as surface detail — is Annales-descended. The standing criticism is
+            that structures this large leave no room for anyone to <i>do</i> anything.</p>
+          <p><b>World-systems analysis.</b> Immanuel Wallerstein's model divides the modern world economy into
+            core, semi-periphery and periphery, with the core extracting surplus through unequal exchange rather
+            than by producing more. It usefully makes underdevelopment a relationship rather than a starting
+            condition; its critics argue it flattens local agency into a global structure and back-projects
+            capitalism onto periods that did not have it.</p>
+          <p><b>Subaltern and postcolonial history.</b> The Subaltern Studies collective, founded by Ranajit Guha
+            in 1982, set out to write South Asian history from the position of peasants and workers rather than
+            colonial administrators and nationalist elites — and immediately hit the archive problem, since the
+            only records of a peasant revolt are usually the reports of the officials who suppressed it. Gayatri
+            Spivak's "Can the Subaltern Speak?" (1988) pressed the difficulty to its limit; Dipesh Chakrabarty's
+            <i>Provincializing Europe</i> (2000) argued that even anti-colonial history is written in categories
+            manufactured in Europe.</p>
+          <p><b>Great Man versus structure.</b> Carlyle's "history of the world is but the biography of great men"
+            against Tolstoy's argument in the second epilogue of <i>War and Peace</i> that Napoleon was carried by
+            forces he neither controlled nor understood; Marx's formulation splits the difference — people make
+            their own history, but not in circumstances of their own choosing. The workable test is
+            counterfactual: remove the individual and ask whether the outcome changes. Remove Genghis Khan and the
+            steppe confederation looks different; remove Watt and steam power arrives anyway, a decade later.</p>
+          <p><b>"Civilization" is a loaded category.</b> The conventional checklist — monumental architecture,
+            writing, cities, a state, metallurgy, craft specialisation — descends from V. Gordon Childe and
+            functions as a grading scheme. It quietly ranks societies by whether they built in stone and wrote
+            things down. The predictable consequences: Aboriginal Australia, with at least 50,000 and perhaps
+            65,000 years of continuous occupation, engineered aquaculture and the longest surviving cultural
+            traditions on Earth, falls out of world histories; so do the circumpolar peoples, the mobile pastoralists of the steppe who repeatedly
+            decided Eurasian politics, and the Amazonian societies whose earthworks lidar has just made visible.
+            The more useful question is not "was it a civilization?" but "what did these people do, at what scale,
+            and how do we know?"</p>
+          <p><b>Collapse</b> is a category with the same problem. Joseph Tainter's model treats collapse as a
+            rational response to diminishing returns on social complexity; Jared Diamond's popular version leans on
+            environmental self-destruction and has been sharply criticised for determinism and for selective
+            evidence in the Rapa Nui and Norse Greenland cases. The deeper objection is definitional: what usually
+            "collapses" is a political and record-keeping apparatus, and what looks like disappearance is often
+            decentralisation plus a documentary blackout. The Classic Maya cities were abandoned; more than six
+            million people speak Mayan languages today. Calling that a collapse mistakes the end of elite inscription
+            for the end of a people.</p>
+          <p><b>The problem of the archive.</b> What survives to be studied was decided by people with interests.
+            Diego de Landa burned the Maya codices at Maní in 1562; four survive — the fourth, the Maya Codex of
+            Mexico, declared authentic by Mexico's INAH only in 2018 — from what was probably thousands.
+            The British punitive expedition of 1897 removed thousands of Benin bronzes and ivories, which are now
+            distributed across European and American museums and are the subject of ongoing restitution. The Jaffna
+            Public Library burned in 1981, the Sarajevo National Library in 1992, the Iraq Museum was looted in
+            2003, Mosul's museum and library were destroyed in 2015; some 350,000 Timbuktu manuscripts survived
+            the occupation of 2012–13 only because librarians and families smuggled them south to Bamako, while
+            some 4,200 were burned or stolen; the National Museum of Brazil burned in 2018, taking its
+            Indigenous-language archive — recordings made since 1958, chants in languages no longer spoken — while
+            the 11,500-year-old Luzia skull had to be pieced back together from the rubble.
+            Every one of those events is now a permanent hole in what anyone can ever know. And behind them sits a
+            quieter absence: no archive was ever kept of the internal politics of a foraging band, and none ever
+            will be.</p>
+          <p class="tick" style="color:var(--ink-faint)">This site's own framing choices, and what it deliberately
+            does not claim, are stated in <a href="sources.html#method">Sources &amp; method</a>; the polycentric
+            counter-frame is argued in <a href="civilizations.html#parallel">Parallel Civilizations</a>.</p>
+        </section>
+
+        <!-- CONTESTED -->
+        <section id="contested">
+          <h2>Live debates</h2>
+          <p>Some things are uncertain because the dates are fuzzy. Others are uncertain because specialists in
+            good faith read the same evidence differently. This register is for the second kind. Where the rest of
+            the site states a claim that is genuinely disputed, this is where the dispute lives. In each case the
+            question is not "who is right" but <i>what would have to be found</i> to settle it.</p>
+          <p>One entry below is different from the others and worth naming: the authorship of <b>Great Zimbabwe</b>
+            is not contested among archaeologists and has not been since 1929. It is included because the
+            "controversy" was manufactured for political reasons and still circulates — a reminder that a live
+            debate and a loud one are not the same thing. The register was last revised in September 2026; where a
+            study of 2023–2026 moved a debate, the entry says what moved and when.</p>
+
+          <details class="datatable" open><summary>Data table — live debates in deep time</summary><div class="table-scroll">
+            <table class="data"><caption>Contested claims before farming, the competing readings, and where the weight of evidence sits as of September 2026</caption>
+              <thead><tr><th>Claim</th><th>Position A</th><th>Position B</th><th>Where the evidence sits</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><i>Homo naledi</i> buried its dead (Rising Star, South Africa, ~335–236 kya)</td>
+                  <td>Lee Berger's team (2023): bodies deliberately placed in dug hollows, with engravings nearby — burial by a small-brained hominin, far earlier than any known burial by our own species</td>
+                  <td>Natural accumulation, or bodies placed without burial; the sediment, taphonomic and statistical claims do not hold up</td>
+                  <td>Weak for A. The claims appeared as unreviewed preprints a month before a documentary, and reviewers were largely critical; a 2025 reanalysis (Foecke, Queffelec and Pickering) could not replicate the key soil-chemistry difference. Enamel proteins from 20 individuals (2026) found no confident male marker — a fact any explanation now has to accommodate. A case study in a press release outrunning peer review.</td>
+                </tr>
+                <tr>
+                  <td>The age of the Schöningen spears</td>
+                  <td>~337–300 kya by thermoluminescence and regional stratigraphy — made by pre-Neanderthal <i>Homo</i></td>
+                  <td>~200 kya by amino-acid geochronology on fossils from the spear layer itself (Hutson and colleagues, 2025) — made by Neanderthals</td>
+                  <td>Open. The new date is closer to the find; the older one has defenders because amino-acid dating needs calibration elsewhere. Either way they are the most complete Palaeolithic hunting spears known, part of some 187 wooden artefacts.</td>
+                </tr>
+                <tr>
+                  <td>Neanderthals painted caves (Spain, ≥64.8 kya)</td>
+                  <td>Uranium-series crusts over red marks at La Pasiega, Maltravieso and Ardales give minimum ages of 64,800 years and more — before <i>Homo sapiens</i> is known in Iberia (Hoffmann and colleagues, 2018)</td>
+                  <td>Uranium leaching can make crusts look too old, the crust-to-paint link is uncertain, and some marks may be natural staining</td>
+                  <td>Unresolved. Neanderthal symbolism is otherwise well supported — pigments, perforated shells, eagle talons — so the claim is plausible, but these dates have not been independently replicated. The same technique, refined, gave a Sulawesi hand stencil a minimum of 67.8 kya in 2026.</td>
+                </tr>
+                <tr>
+                  <td>The Cognitive Revolution</td>
+                  <td>A sudden behavioural threshold ~70–50 kya, possibly a single genetic change, producing art, ornament and complex tools</td>
+                  <td>A long, patchy African accumulation over 200,000+ years, with the apparent "revolution" an artifact of where excavation happened</td>
+                  <td>Strongly toward B. Ochre engraving at Blombos 100–73 kya, heat-treated silcrete at Pinnacle Point, shell beads at Bizmoune possibly ~142 kya. McBrearty and Brooks's "the revolution that wasn't" (2000) has largely carried the field.</td>
+                </tr>
+                <tr>
+                  <td>People reached Australia by ~65 kya</td>
+                  <td>Luminescence dates of ~65 kya for the lowest artefacts at Madjedbebe, Arnhem Land (Clarkson and colleagues, 2017); a hand stencil in Sulawesi at ≥67.8 kya (2026) fits an early crossing</td>
+                  <td>A later arrival, ~50–47 kya: small artefacts can sink through sandy deposits (O'Connell and colleagues, 2018), and genomes date the Neanderthal admixture shared by all non-Africans — Aboriginal Australians included — to ~50,500–43,500 years ago (2024)</td>
+                  <td>Unresolved, and it matters: much of this site's "65,000 years" rests on one site. An early wave that left few descendants would reconcile the two; so would an error in either line of evidence. "At least 50,000 years" is secure.</td>
+                </tr>
+                <tr>
+                  <td>The Toba super-eruption (~74 kya) nearly wiped us out</td>
+                  <td>A volcanic winter crashed human numbers to a small remnant — the "bottleneck" in our genes (Stanley Ambrose, 1998)</td>
+                  <td>People across Africa and Asia lived through it</td>
+                  <td>Strongly toward B. Occupation runs straight through Toba glass at Pinnacle Point, South Africa (2018); tool-making continues above the ash at Jwalapuram, India (2007); at Shinfa-Metema 1 in Ethiopia people fished shrinking waterholes through the dry aftermath (2024). The genetic signal is better read as the small size of the population that later left Africa.</td>
+                </tr>
+                <tr>
+                  <td>When the Americas were peopled</td>
+                  <td>Clovis-first — no one before ~13,000 years ago, via an ice-free corridor</td>
+                  <td>Pre-Clovis: Monte Verde ~14,500; White Sands footprints ~21,000–23,000; a Pacific coastal "kelp highway"</td>
+                  <td>Pre-Clovis is established. A pre-LGM presence rests on few sites: the White Sands seed dates were challenged for a hard-water reservoir effect in <i>Ruppia</i>, then independently supported by pollen and OSL in 2023 and by 26 radiocarbon dates on the footprint-bearing mud from two further labs in 2025 (&gt;23,600–17,000 cal BP), though a 2024 methodological critique is still argued. Plausible, not settled. The anchor itself is now under fire: a 2026 <i>Science</i> paper argued that Monte Verde's deposits are mid-Holocene, a reading its excavators and others reject.</td>
+                </tr>
+                <tr>
+                  <td>What killed the Ice Age giants (~50–10 kya)</td>
+                  <td>People: extinctions follow human arrival continent by continent — Australia around 50–40 kya, the Americas around 13–11 kya — the "overkill" case Paul Martin argued from the 1960s</td>
+                  <td>Climate: the swings of the last glacial cycle, and the end-Pleistocene warming above all, shrank and split habitats</td>
+                  <td>Weighted toward a human role. A 2014 global analysis found extinction severity tracks the spread of hominins far better than climate, with only a weak climate link in Eurasia; Africa, where big animals evolved alongside hominins, lost least. How people did it — hunting, fire, habitat change — and how much climate amplified it region by region are still argued.</td>
+                </tr>
+              </tbody>
+            </table></div></details>
+
+          <details class="datatable" open><summary>Data table — live debates since farming</summary><div class="table-scroll">
+            <table class="data"><caption>Contested claims from the first farmers to the present, the competing readings, and where the weight of evidence sits as of September 2026</caption>
+              <thead><tr><th>Claim</th><th>Position A</th><th>Position B</th><th>Where the evidence sits</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Kuk Swamp as an independent agricultural origin</td>
+                  <td>New Guinea domesticated banana, taro and yam on its own; drainage channels from ~10,000 BP, banana phytoliths by ~6,950 BP</td>
+                  <td>The earliest phases show plant manipulation and forest management rather than agriculture as usually defined</td>
+                  <td>New Guinea as an independent centre is now widely accepted. The status of the earliest phase turns on where you draw the line between tending and farming — a definitional dispute as much as an evidential one.</td>
+                </tr>
+                <tr>
+                  <td>Çatalhöyük as an egalitarian town</td>
+                  <td>Hundreds, perhaps a few thousand, people at any one time — older estimates ran to 8,000 — no public buildings, no central storage, no cemetery segregation, near-identical houses over 1,000+ years</td>
+                  <td>"History houses" accumulate far more burials and elaborate installations than their neighbours; diet and mobility isotopes vary between households</td>
+                  <td>Ian Hodder's own position moved over three decades toward "relatively egalitarian with emerging differences." Mellaart's earlier goddess-cult reading is not supported. A 2025 study of 131 genomes adds a twist: people buried in the same house were linked far more often through mothers than fathers, and girls more often received grave goods than boys — difference, but not obviously rank.</td>
+                </tr>
+                <tr>
+                  <td>Where Proto-Indo-European was spoken</td>
+                  <td>The Pontic–Caspian steppe, ~4000 BCE, spread by Yamnaya-linked herders with wagons and horses — the shared wheel vocabulary sets a floor</td>
+                  <td>Anatolia or south of the Caucasus, with early farming, ~6500–6000 BCE — Renfrew's model and Bayesian word-trees, including a 2023 "hybrid" with a root near 8,100 years ago</td>
+                  <td>Genomes firmly tie the spread of most branches in Europe and South Asia to steppe ancestry after ~3000 BCE. A 2025 study of 435 ancient genomes proposed that the last shared ancestor of Anatolian and the other branches was spoken by Caucasus–Lower Volga people between 4400 and 4000 BCE, who supplied ~80% of Yamnaya ancestry and at least a tenth of that of Hittite-speaking Anatolians. A strong synthesis, not a settlement: language is not genes.</td>
+                </tr>
+                <tr>
+                  <td>The mechanism of the Bantu expansion</td>
+                  <td>Demic diffusion — farmers with iron and crops spreading from the Nigeria–Cameroon borderland ~3000 BCE, reaching southern Africa by ~300 CE</td>
+                  <td>Language shift and networked mobility, with iron, farming and language arriving separately rather than as one package</td>
+                  <td>Ancient DNA confirms real population movement plus highly variable admixture with resident foragers. But iron does not travel with the language everywhere, and the rainforest-corridor route appears tied to a savanna corridor opening ~2,500 years ago. Movement: yes. Single package: no.</td>
+                </tr>
+                <tr>
+                  <td>A peaceful, egalitarian Indus civilization</td>
+                  <td>No royal iconography, no palaces, no mass graves; standardised weights, planned drainage and broadly uniform housing across 1,000+ sites</td>
+                  <td>Absence of elite art is not absence of hierarchy — citadel and lower-town divisions, unequal access to water, and skeletal evidence of differential violence at Harappa</td>
+                  <td>"Less overtly militarised than its Bronze Age contemporaries" is defensible. "Egalitarian" is not established — and because the script is undeciphered, there are no political texts either way.</td>
+                </tr>
+                <tr>
+                  <td>When Thera (Santorini) erupted</td>
+                  <td>c. 1620–1600 BCE: radiocarbon on short-lived material from the eruption layer, above all an olive branch buried in the pumice</td>
+                  <td>c. 1530–1500 BCE: Aegean pottery tied to dated Egyptian contexts of the early 18th Dynasty</td>
+                  <td>Narrowed, not closed. Annual tree-ring radiocarbon (2018) and IntCal20 make much of the 16th century BCE compatible with the radiocarbon; the olive branch's wiggle-match has been questioned; the 1627 BCE ice-core and tree-ring signal once claimed for Thera is now attributed to Aniakchak in Alaska; and a 2025 radiocarbon study of Egyptian objects of the 17th and early 18th Dynasties — among them a mudbrick from Ahmose's temple at Abydos — argues the eruption preceded Ahmose. Chapter IV gives both ranges, which is the honest position.</td>
+                </tr>
+                <tr>
+                  <td>The Olmec as Mesoamerica's "mother culture"</td>
+                  <td>San Lorenzo, at its height ~1400–1000 BCE, originated the monumental and iconographic package that later cultures inherited</td>
+                  <td>A "sister culture" lattice — several Formative regions exchanging ideas, with Olmec precocity in sculpture but not priority in everything</td>
+                  <td>Neutron-activation studies of pottery clays were read as one-way export from San Lorenzo and then disputed on statistical grounds. Aguada Fénix, a 1,400-metre lidar-detected platform of ~1000 BCE in Tabasco, complicated the sequence further. Olmec precocity is real; exclusivity is not established.</td>
+                </tr>
+                <tr>
+                  <td>The Late Bronze Age collapse, "1177 BCE"</td>
+                  <td>A cascading systems failure with a datable focus — Eric Cline's framing of a single hinge year</td>
+                  <td>A rolling multi-causal decline across ~1200–1100 BCE with no single trigger and different causes region by region</td>
+                  <td>Drought is now well supported by pollen and isotope cores from Cyprus, the Levant and Anatolia. The "Sea Peoples as invading cause" reading is the weakest element — increasingly read as a symptom. The single-year framing is a teaching device.</td>
+                </tr>
+                <tr>
+                  <td>The Axial Age</td>
+                  <td>A real synchrony, ~800–200 BCE: Confucius and Laozi, the Buddha and Mahavira, the Hebrew prophets, the Greek philosophers</td>
+                  <td>A retrospective pattern — the dates are stretched to fit, no mechanism links the regions, and the clustering partly tracks when texts began to be preserved</td>
+                  <td>The rough clustering is real; the causal story is not established. Jaspers proposed it in 1949 as a philosophy of history, not an empirical finding, and it has been defended and attacked as both ever since.</td>
+                </tr>
+                <tr>
+                  <td>How lethal the Justinianic plague was (541–c. 750 CE)</td>
+                  <td>Maximalist: tens of millions dead around the Mediterranean, a pandemic that helped end antiquity (for example Kyle Harper, <i>The Fate of Rome</i>, 2017)</td>
+                  <td>Minimalist: papyri, coinage, legislation, pollen and burials show continuity rather than collapse (Mordechai, Eisenberg and colleagues, 2019)</td>
+                  <td>Genomes prove the pathogen — <i>Yersinia pestis</i> is in sixth-century graves across western Europe — but cannot count the dead, and the texts that describe emptied cities are rhetoric as well as report. Open; Chapter VI sets out both readings.</td>
+                </tr>
+                <tr>
+                  <td>Who built Great Zimbabwe</td>
+                  <td>Ancestral Shona builders, ~1100–1450 CE, from local dry-stone tradition and Indian Ocean gold trade wealth</td>
+                  <td>Phoenicians, Arabs, or the Queen of Sheba — Karl Mauch's 1871 claim, sustained by the Rhodesian state into the 1970s</td>
+                  <td>Settled since Randall-MacIver (1906) and Caton-Thompson (1929). Not a scientific controversy but a political one: Rhodesia censored its own archaeologists, and Peter Garlake left the country over it.</td>
+                </tr>
+                <tr>
+                  <td>Rapa Nui ecocide</td>
+                  <td>Islanders deforested their own island, triggering warfare and a population crash before European contact</td>
+                  <td>Polynesian rats ate the palm seeds; the population was stable until 1862–63 Peruvian slave raids removed ~1,500 people including the ariki and the rongorongo readers, followed by smallpox</td>
+                  <td>The evidence has moved substantially toward B. Radiocarbon and obsidian-hydration re-analyses find no pre-contact crash, and 2024 ancient-DNA work found no genetic bottleneck. Deforestation is real and human-assisted; "self-destruction" is not.</td>
+                </tr>
+                <tr>
+                  <td>How many people lived in the Americas in 1492</td>
+                  <td>High counts: Henry Dobyns (1966) argued for 90–112 million, projecting backward from epidemic depopulation</td>
+                  <td>Low counts: Alfred Kroeber (1939) gave ~8.4 million for the whole hemisphere; later critics such as David Henige (1998) called the high counts arithmetic built on unreliable sources</td>
+                  <td>Most modern estimates fall between ~45 and ~60 million — William Denevan's 53.9 million (1992) is the usual reference — and a 2019 review that linked the resulting collapse to a dip in atmospheric CO<sub>2</sub> estimated about 60 million. The early low counts reflected assumptions about Indigenous societies as much as evidence. The range, ~40–110 million on this site, is itself the finding.</td>
+                </tr>
+                <tr>
+                  <td>Why northwestern Europe pulled ahead after 1800 — the Great Divergence</td>
+                  <td>Late and contingent: the Yangzi delta matched England in living standards as late as 1750, and coal plus New World land and labour made the difference (Kenneth Pomeranz, 2000); high wages and cheap energy made machines pay in Britain first (Robert Allen, 2009)</td>
+                  <td>Earlier and structural: institutions (Acemoglu and Robinson), a culture of useful knowledge (Joel Mokyr), and national-accounts reconstructions that put parts of Europe ahead in output per head well before 1800</td>
+                  <td>Unresolved, but narrowed. A 2018 reconstruction of Chinese GDP per head from 980 to 1850 (Broadberry, Guan and Li) found the divergence began earlier than Pomeranz's "California School" allows but later than older Eurocentric accounts claimed. The wage and output series each side relies on are themselves disputed.</td>
+                </tr>
+                <tr>
+                  <td>When the Anthropocene begins</td>
+                  <td>A formal epoch from the early 1950s, marked by bomb-test plutonium in the annually layered mud of Crawford Lake, Ontario — the Anthropocene Working Group's 2023 proposal</td>
+                  <td>An earlier start — 1610, when the collapse of Indigenous American populations left a dip in atmospheric CO<sub>2</sub>, or the Industrial Revolution — or no formal epoch at all, treating it as an unfolding "event"</td>
+                  <td>In March 2024 the Subcommission on Quaternary Stratigraphy voted the proposal down 12 to 4, with 2 abstentions, and the International Union of Geological Sciences upheld the decision. The human signal in the sediments is not in dispute; only its formal rank is.</td>
+                </tr>
+              </tbody>
+            </table></div></details>
+
+          <figure class="diagram">
+            <figcaption><b>Flowchart</b> — why "earliest currently known" is the honest phrasing</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">flowchart LR
+    A["Earliest currently known&lt;br/&gt;&lt;i&gt;the reigning date&lt;/i&gt;"] --&gt; B["A new site is excavated"]
+    B --&gt; C["Dated by two independent methods"]
+    C --&gt; D{"Older than the&lt;br/&gt;standing first?"}
+    D --&gt;|"no"| E["Record unchanged&lt;br/&gt;the site still adds context"]
+    D --&gt;|"yes"| F["Claim published"]
+    F --&gt; G{"Survives scrutiny of&lt;br/&gt;context · contamination · sample?"}
+    G --&gt;|"yes"| H["The first moves back&lt;br/&gt;oldest accepted tools from 2.6 to ~2.9 Mya&lt;br/&gt;earliest &lt;i&gt;Homo sapiens&lt;/i&gt; from ~195 to ~315 kya"]
+    G --&gt;|"no"| I["Claim fails&lt;br/&gt;&lt;i&gt;Calico Hills · Cerutti Mastodon&lt;/i&gt;"]
+    H --&gt; A
+    I --&gt; A
+    E --&gt; A
+    classDef bad stroke-dasharray:4 4;
+    class I bad;</pre>
+              <div class="diagram__loading mono">Rendering diagram…</div>
+            </div>
+            <details class="datatable"><summary>Data table — firsts that moved</summary><div class="table-scroll">
+              <table class="data"><caption>Six "earliest known" claims, what they used to be, where they stand in September 2026, and how secure the new date is</caption>
+                <thead><tr><th>The first</th><th>Earlier standing date</th><th>Current earliest</th><th>Method</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>Stone tools</td><td class="num">~2.6 Mya, Gona, Ethiopia (1997)</td><td class="num">~2.9 Mya, Nyayanga, Kenya (2023); 3.3 Mya claimed at Lomekwi (2015)</td><td>palaeomagnetism and faunal correlation (Nyayanga); argon-argon-dated tuffs and palaeomagnetism (Lomekwi)</td><td>Nyayanga widely accepted; Lomekwi contested</td></tr>
+                  <tr><td><i>Homo sapiens</i></td><td class="num">~195 kya, Omo Kibish, Ethiopia (2005)</td><td class="num">~315 kya, Jebel Irhoud, Morocco (2017)</td><td>argon-argon; thermoluminescence on burnt flint</td><td>widely accepted</td></tr>
+                  <tr><td>Dated cave art</td><td class="num">≥40.8 kya, El Castillo, Spain (2012)</td><td class="num">≥67.8 kya, Muna, Sulawesi (2026); Spanish marks ≥64.8 kya (2018)</td><td>uranium-series on overlying calcite</td><td>minimum ages; the Spanish attribution contested</td></tr>
+                  <tr><td>People in Sahul</td><td class="num">~50 kya, Malakunanja II, Arnhem Land (1990)</td><td class="num">~65 kya, Madjedbebe (2017)</td><td>luminescence</td><td>contested</td></tr>
+                  <tr><td>People in the Americas</td><td class="num">~13 kya, Clovis</td><td class="num">~14.5 kya, Monte Verde (accepted 1997); ~23–21 kya, White Sands (2021)</td><td>radiocarbon; OSL</td><td>Monte Verde widely accepted, challenged 2026; White Sands contested</td></tr>
+                  <tr><td>Recoverable DNA</td><td class="num">&gt;1 Mya, mammoth teeth in Siberian permafrost (2021); before that ~0.7 Mya, a horse in Yukon permafrost (2013)</td><td class="num">~2 Mya, Kap København, Greenland (2022)</td><td>environmental DNA from sediment</td><td>well attested</td></tr>
+                </tbody>
+              </table></div></details>
+          </figure>
+          <p>The loop is the point. A "first" is a statement about the current state of excavation, not about the
+            past. It can only ever move in one direction — earlier — because finding an older site is possible and
+            finding proof that no older site exists is not. Every deep-time first on this site should be read with
+            that asymmetry attached.</p>
+          <p class="tick" style="color:var(--ink-faint)">Three of these debates are also summarised, with the tour's
+            chosen middle path, in <a href="sources.html#dating">Dating &amp; uncertainty</a>; the hominin ones are
+            unpacked in <a href="human-family.html#bush">The Human Family</a>.</p>
+        </section>
+
+        <!-- MISCONCEPTIONS -->
+        <section id="misconceptions">
+          <h2>Things almost everyone gets wrong</h2>
+          <p>Most of these are not errors of fact so much as errors of shape — a story that is easier to tell than
+            the evidence supports, repeated until it feels like knowledge. Several were textbook orthodoxy within
+            living memory, which is the useful part: they show what a confident consensus looks like from the
+            inside.</p>
+
+          <details class="datatable" open><summary>Data table — twenty-three standard corrections</summary><div class="table-scroll">
+            <table class="data"><caption>Common versions of the past, what the evidence actually supports, and where to check it</caption>
+              <thead><tr><th>The common version</th><th>What the evidence says</th><th>Source</th></tr></thead>
+              <tbody>
+                <tr><td><b>The March of Progress.</b> Human evolution is a single file of figures straightening up into us.</td><td>It is a bush, not a line. Rudolph Zallinger drew that image for a Time-Life book in 1965 and it has outperformed every correction since. For most of the last seven million years several hominin species were alive at once; every branch but ours ended.</td><td>F. Clark Howell, <i>Early Man</i> (1965); Stephen Jay Gould, <i>Wonderful Life</i> (1989)</td></tr>
+                <tr><td><b>Somewhere there is a "missing link."</b></td><td>There is no single link to find: the record holds many intermediate forms on many branches, and the order was not "big brain first" — upright walking came millions of years before large brains. The most famous "missing link," Piltdown Man, had exactly the big brain and ape jaw people expected; it was a forgery, exposed in 1953 when fluorine and other chemical tests showed skull and jaw had different histories.</td><td>Weiner, Oakley &amp; Le Gros Clark 1953; <a href="human-family.html">The Human Family</a></td></tr>
+                <tr><td><b>We descended from chimpanzees.</b></td><td>We share an ancestor with them, roughly 6–9 million years ago; a 2012 study of generation times in wild apes argued for at least 7–8 million. Chimpanzees have been evolving for exactly as long as we have and are not an earlier version of anything.</td><td>Langergraber et al. 2012, <i>PNAS</i>; <a href="human-family.html">The Human Family</a></td></tr>
+                <tr><td><b>Neanderthals were shambling brutes.</b></td><td>Larger average braincase than ours, controlled fire, made adhesives from birch tar, buried their dead, used pigment, and produced structures 336 metres inside Bruniquel Cave ~176,000 years ago. Non-Africans carry ~2% of their DNA. The brute image traces partly to Marcellin Boule's 1911 reconstruction of an individual with severe arthritis.</td><td>Straus &amp; Cave 1957; Jaubert et al. 2016, <i>Nature</i>; Green et al. 2010, <i>Science</i></td></tr>
+                <tr><td><b>People in the past died at 30.</b></td><td>That is an average dragged down by the deaths of infants and small children. Among recent hunter-gatherers and forager-farmers, people who survived childhood most often died in their late sixties or seventies, and grandparents were a normal part of life. What changed in the last two centuries was mainly how many children survived, not how long old age lasted.</td><td>Gurven &amp; Kaplan 2007, <i>Population and Development Review</i>; <a href="great-acceleration.html">The Great Acceleration</a></td></tr>
+                <tr><td><b>Farming was invented once, in the Fertile Crescent, and spread.</b></td><td>Plants and animals were domesticated independently in many places — among them southwest Asia, China's Yangzi and Yellow River basins, New Guinea, Mesoamerica, the Andes and Amazonia, eastern North America and sub-Saharan Africa — on different crops and timetables.</td><td>Larson et al. 2014, <i>PNAS</i></td></tr>
+                <tr><td><b>Enslaved people built the pyramids.</b></td><td>The workers' settlement at Giza, excavated from the 1990s, shows organised labour gangs housed, fed on beef and bread, given medical care, and buried in tombs beside the monument with their titles inscribed. Papyri found in 2013 at Wadi al-Jarf include the logbook of an official named Merer whose crew shipped limestone for Khufu's pyramid. It looks like conscripted and provisioned seasonal labour, not chattel slavery — and the Biblical framing is anachronistic by a thousand years.</td><td>Lehner &amp; Hawass, <i>Giza and the Pyramids</i> (2017); Tallet, the Wadi al-Jarf papyri</td></tr>
+                <tr><td><b>Cavemen fought dinosaurs.</b></td><td>Non-avian dinosaurs died out 66 million years ago; the oldest claimed stone tools are ~3.3 million years old (Lomekwi, contested) and the oldest widely accepted ones about 2.6 million, possibly ~2.9 million at Nyayanga (its layers are bracketed to 3.0–2.6 million). The gap is about 63 million years — some twenty times longer than the entire hominin toolmaking record. Also, most people did not live in caves; caves are simply where the evidence survived.</td><td>Renne et al. 2013, <i>Science</i>; Plummer et al. 2023, <i>Science</i></td></tr>
+                <tr><td><b>The Dark Ages.</b> Europe after Rome was a blank of ignorance until the Renaissance.</td><td>The term describes a shortage of surviving Latin documents, not a shortage of activity — and only in western Europe. The same centuries hold Tang and Song China, the Abbasid Baghdad of the House of Wisdom, Srivijaya, Ghana and Mali, the Maya Classic, and Angkor. Medievalists abandoned the term decades ago.</td><td>Chris Wickham, <i>The Inheritance of Rome</i> (2009)</td></tr>
+                <tr><td><b>Rome fell in 476 CE.</b></td><td>Odoacer deposed one western child-emperor and returned the regalia to Constantinople. The eastern Roman empire continued for another <b>977 years</b>, until 1453, and called itself Roman throughout. In the west the institutions, law, language and church persisted while the political apparatus decentralised.</td><td>Wickham 2009; Anthony Kaldellis, <i>The New Roman Empire</i> (2023)</td></tr>
+                <tr><td><b>Africa had no history before Europeans arrived.</b></td><td>Said aloud by the Oxford historian Hugh Trevor-Roper as late as the 1960s, and wrong on every count: Meroitic and Ge'ez writing, Arabic and Ajami chronicles and the manuscript libraries of Timbuktu, the stone towns of Great Zimbabwe, the brass plaques of Benin, and oral histories that can be tested like any other source. The absence was in European syllabuses, not in Africa.</td><td>Jan Vansina, <i>Oral Tradition as History</i> (1985); Trevor-Roper, <i>The Rise of Christian Europe</i> (1965)</td></tr>
+                <tr><td><b>Gutenberg invented printing.</b></td><td>He invented a European printing <i>system</i> — metal punch matrices, an oil-based ink, an adapted screw press — around 1450. Woodblock printing was in use in Tang China by ~700 CE; Bi Sheng made ceramic movable type around 1040; Korea printed the <i>Jikji</i> with movable metal type in <b>1377</b>, seventy-three years earlier and seventy-eight before the Gutenberg Bible.</td><td>UNESCO Memory of the World Register, <i>Jikji</i> (2001)</td></tr>
+                <tr><td><b>Vikings wore horned helmets.</b></td><td>No Viking-age helmet yet found has horns, and no contemporary text mentions them. Horned helmets are real but belong to the Nordic Bronze Age, nearly two thousand years earlier. The Viking version is a nineteenth-century Romantic invention, fixed in the public mind by Carl Emil Doepler's costumes for Wagner's <i>Ring</i> at Bayreuth in 1876.</td><td>Djupdræt, "The Making of the Viking Horned Helmet" (2022)</td></tr>
+                <tr><td><b>The Silk Road was a road.</b></td><td>The phrase was coined by Ferdinand von Richthofen in 1877. It names a shifting mesh of overland and maritime routes over which almost no single trader travelled end to end — goods, and more importantly religions, technologies and diseases, moved by relay. Most of the volume went by sea.</td><td>Valerie Hansen, <i>The Silk Road: A New History</i> (2012)</td></tr>
+                <tr><td><b>Polynesia was settled by lucky castaways.</b></td><td>Andrew Sharp argued in 1956 that the islands were found by drift and accident. A 1973 computer simulation of drift voyages found that drift could not plausibly account for the settlement of Hawai'i, Aotearoa or Rapa Nui, and in 1976 <i>Hōkūle'a</i> sailed from Hawai'i to Tahiti with no instruments. Settling the Pacific was deliberate, navigated voyaging.</td><td>Levison, Ward &amp; Webb, <i>The Settlement of Polynesia</i> (1973); Ben Finney, <i>Hokule'a: The Way to Tahiti</i> (1979)</td></tr>
+                <tr><td><b>The Americas in 1492 were a pristine wilderness.</b></td><td>They were a managed landscape of perhaps 40–110 million people: fired grasslands, raised fields, terraces, earthwork towns from Cahokia to the Llanos de Mojos, Amazonian forests enriched with the trees people planted. Much of the "wilderness" early colonists saw was land emptied by epidemics a generation earlier.</td><td>William Denevan, "The Pristine Myth" (1992); Levis et al. 2017, <i>Science</i></td></tr>
+                <tr><td><b>Mesoamericans did not know the wheel.</b></td><td>They made wheeled clay figurines — animals on axles — in Veracruz and elsewhere. With no draft animals to pull a cart and terrain often ill-suited to one, the wheel had no work to do; the constraint was ecology, not ignorance.</td><td>Gordon Ekholm, "Wheeled Toys in Mexico," <i>American Antiquity</i> (1946)</td></tr>
+                <tr><td><b>The Aztecs thought Cortés was the god Quetzalcoatl.</b></td><td>No source from the conquest years calls Cortés Quetzalcoatl or a god. Cortés's own letter of 1520 puts a speech about a returning ancestral lord into Moctezuma's mouth — a speech that conveniently made Spanish rule look legitimate — and the Quetzalcoatl version surfaces decades later, in texts shaped by Franciscan friars and post-conquest politics. The Mexica dealt with the Spaniards as dangerous foreigners, politically.</td><td>Camilla Townsend, "Burying the White Gods," <i>American Historical Review</i> (2003)</td></tr>
+                <tr><td><b>The Inca had no writing.</b></td><td>They had <b>quipu</b> — knotted cord records encoding numbers positionally in a base-10 system, used for census, tribute and accounting across an empire of ~12 million. Narrative quipu were reported by colonial sources and remain undeciphered. "No alphabet" and "no records" are different claims.</td><td>Gary Urton, <i>Inka History in Knots</i> (2017)</td></tr>
+                <tr><td><b>Columbus proved the Earth was round.</b></td><td>Educated Europeans had known the Earth was spherical since antiquity; Eratosthenes measured its circumference to within a few per cent around 240 BCE. Columbus's actual disagreement with his critics was about the planet's <i>size</i> — he thought it much smaller than it is, and his critics were right. The flat-Earth story was popularised by Washington Irving's 1828 fiction.</td><td>Jeffrey Burton Russell, <i>Inventing the Flat Earth</i> (1991)</td></tr>
+                <tr><td><b>Indigenous Americans had "no immunity."</b></td><td>Framed as biological weakness, this is wrong and ugly. It is an epidemiological accident of geography: Eurasia had large domesticable herd animals and dense cities, which incubated zoonotic crowd diseases over millennia; the Americas had almost none. Populations that never encountered smallpox had no acquired immunity — and neither did Europeans, when transplanted into unfamiliar disease environments where mortality ran just as brutally. War, enslavement, famine and displacement multiplied the deaths.</td><td>David S. Jones, "Virgin Soils Revisited," <i>William and Mary Quarterly</i> (2003)</td></tr>
+                <tr><td><b>The Maya predicted the world would end in 2012.</b></td><td>21 December 2012 closed the thirteenth <i>b'ak'tun</i> of the Long Count, a calendar that runs on past it. Classic inscriptions refer to dates far beyond 2012 — one at Palenque projects an anniversary of the king K'inich Janaab Pakal into the year 4772 CE — and none forecasts an ending.</td><td>David Stuart, <i>The Order of Days</i> (2011)</td></tr>
+                <tr><td><b>ARPANET was built to survive a nuclear war.</b></td><td>Paul Baran's separate RAND work on distributed packet networks did have a survivability motive. ARPANET itself was built to share scarce, expensive computers among funded research sites. Its architects — Larry Roberts and Bob Taylor among them — said so repeatedly and directly.</td><td>Leiner et al., "A Brief History of the Internet" (Internet Society, 1997)</td></tr>
+              </tbody>
+            </table></div></details>
+
+          <div class="callout">
+            <p class="callout__label">How to read a claim about the past</p>
+            <ul>
+              <li><b>Ask what was dated, not what was found.</b> A date on a tuff above a fossil is not a date on
+                the fossil. A date on charcoal is not a date on the layer unless the context holds.</li>
+              <li><b>Ask what the error bar is.</b> If the number arrives without one, it has been rounded off
+                somewhere between the lab and you.</li>
+              <li><b>Ask whether it is a date, a floor or a ceiling.</b> A calcite crust over a painting, or an ash
+                layer above a fossil, gives only a minimum age; an ash layer below gives only a maximum.</li>
+              <li><b>Ask whether "first" means first, or first found.</b> Almost always the second.</li>
+              <li><b>Ask what would have survived if it had happened.</b> If the answer is "nothing," absence tells
+                you nothing.</li>
+              <li><b>Ask who paid for the excavation, and when.</b> The map of evidence is partly a map of
+                twentieth-century research funding.</li>
+              <li><b>Ask whether the claim has been replicated</b> by a second laboratory or a second method. The
+                press release comes out years before the replication does.</li>
+            </ul>
+          </div>
+          <p class="tick" style="color:var(--ink-faint)">See these corrections applied in place across
+            <a href="master-timeline.html">the master timeline</a> and
+            <a href="../tour/06-medieval.html">Chapter VI · the Medieval World</a>; the site's own caveats are in
+            <a href="sources.html#credits">Sources · credits &amp; caveats</a>.</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="wrap">
+  <div class="site-footer__grid">
+    <div><h4>Reference</h4><ul>
+      <li><a href="master-timeline.html">Master Timeline</a></li>
+      <li><a href="tech-tree.html">Tech Tree</a></li>
+      <li><a href="great-acceleration.html">The Great Acceleration</a></li>
+      <li><a href="civilizations.html">Parallel Civilizations</a></li>
+      <li><a href="human-family.html">The Human Family</a></li>
+      <li><a href="how-we-know.html">How We Know</a></li>
+      <li><a href="sources.html">Sources &amp; method</a></li>
+    </ul></div>
+    <div><h4>The Tour</h4><ul>
+      <li><a href="../index.html">Home &amp; overview</a></li>
+      <li><a href="../tour/01-deep-prehistory.html">I · Deep Prehistory</a></li>
+      <li><a href="../tour/02-paleolithic.html">II · Paleolithic</a></li>
+      <li><a href="../tour/03-neolithic.html">III · Neolithic</a></li>
+    </ul></div>
+    <div><h4>About the data</h4><ul>
+      <li><a href="sources.html#data">Data provenance</a></li>
+      <li><a href="sources.html#dating">Dating &amp; uncertainty</a></li>
+      <li><a href="further-reading.html">Further reading</a></li>
+    </ul></div>
+  </div>
+  <p class="site-footer__legal mono">Method summaries are simplified for a general reader; ranges and error terms are order-of-magnitude guides, not laboratory specifications. Where specialists disagree, the disagreement is stated rather than resolved.</p>
+</div></footer>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

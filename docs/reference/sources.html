@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en" class="no-js" data-tour-root="../" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources &amp; Method — Human History Tour</title>
+<meta name="description" content="How this tour was built and how to read its dates: an honest note on method and limits, the large error bars on deep-time dates, the Mya/kya versus BCE/CE convention, the standard datasets behind the numbers, how the September 2026 expansion was double-checked and where its maps come from, and a plain-language colophon.">
+<link rel="canonical" href="https://sonoransun.github.io/humanhistorytour/reference/sources.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sources &amp; Method — Human History Tour">
+<meta property="og:description" content="How this was built, how to read the dates, and where the numbers come from — transparently.">
+<meta property="og:url" content="https://sonoransun.github.io/humanhistorytour/reference/sources.html">
+<meta property="og:image" content="https://sonoransun.github.io/humanhistorytour/assets/img/og/sources.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340..660&family=Source+Serif+4:opsz,wght@8..60,400..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/tour.css">
+<link rel="stylesheet" href="../assets/css/reference.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+<script>
+  (function () { try { var d=document.documentElement; var t=localStorage.getItem('hht-theme'); if(t)d.setAttribute('data-theme',t); if(localStorage.getItem('hht-motion')==='reduce')d.classList.add('reduce-motion'); } catch(e){} document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js'); })();
+</script>
+</head>
+<body>
+
+<div class="skip-links"><a href="#main">Skip to content</a></div>
+
+<header class="site-header">
+  <a class="site-header__brand" href="../index.html">Human&nbsp;<b>History</b>&nbsp;Tour</a>
+  <div class="site-header__spacer"></div>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="../index.html">Home</a>
+    <a class="site-nav__wide" href="master-timeline.html">Timeline</a>
+    <a class="site-nav__wide" href="tech-tree.html">Tech&nbsp;Tree</a>
+    <a class="site-nav__wide" href="great-acceleration.html">Data</a>
+    <a class="site-nav__wide" href="sources.html" aria-current="page">Sources</a>
+  </nav>
+  <button class="iconbtn" data-theme-toggle aria-pressed="false" title="Toggle theme">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M5 5l1.5 1.5M17.5 17.5 19 19M3 12h2M19 12h2M5 19l1.5-1.5M17.5 6.5 19 5"/><circle cx="12" cy="12" r="4"/></svg>
+    <span class="vh">Toggle light or dark theme</span>
+  </button>
+</header>
+
+<div class="grain" aria-hidden="true"></div>
+
+<main id="main" class="doc">
+  <div class="doc__hero">
+    <div class="wrap">
+      <span class="eyebrow">Reference · how this was built</span>
+      <h1>Sources &amp; Method</h1>
+      <p class="lede">This tour is an educational synthesis, not original scholarship. This page says so plainly:
+        how the material was assembled, why deep-time dates come with wide error bars, how to read the tour's
+        mixed Mya / kya / BCE / CE dating, and which standard datasets the numbers lean on. When in doubt,
+        follow the primary sources — this page tells you where to look.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="doc__layout">
+      <aside class="doc__side">
+        <nav class="toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#method">Method &amp; honest limits</a></li>
+            <li><a href="#dating">Dating &amp; uncertainty</a></li>
+            <li><a href="#notation">Reading the dates: Mya, kya, BCE, CE</a></li>
+            <li><a href="#data">Data provenance</a></li>
+            <li><a href="#expansion-2026">The 2026 expansion &amp; its checks</a></li>
+            <li><a href="#credits">Credits &amp; colophon</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <div class="doc__main">
+
+        <!-- METHOD -->
+        <section id="method">
+          <h2>Method &amp; honest limits</h2>
+          <p>Let's be direct about what this is. The Human History Tour is an <b>educational synthesis</b>: a
+            reader-friendly retelling of what standard reference works and public datasets already say about the
+            human past. It was assembled with <b>AI assistance</b> from that widely-taught, non-specialist body of
+            knowledge — the kind you would find in survey textbooks, museum explainers, encyclopedias, and open
+            data portals. It is <b>not</b> original research, it is <b>not</b> peer-reviewed, and it should not be
+            cited as a primary or authoritative source.</p>
+          <p>What that means in practice: nearly every number here is a <b>best-estimate approximation</b>. Where the
+            scholarship gives a range, this tour shows a range. Where a single tidy figure is quoted, read a quiet
+            "roughly" in front of it. The goal is to get the <i>shape</i> of the human story right — the orders of
+            magnitude, the sequence, the turning points — not to settle any specialist debate.</p>
+
+          <div class="callout">
+            <p class="callout__label">Honest limits</p>
+            <ul>
+              <li><b>Not authoritative.</b> Treat this as a well-organized starting point, not an endpoint. For
+                anything that matters to you, go to the primary literature.</li>
+              <li><b>Approximate by design.</b> Dates, populations, and economic figures are rounded and
+                simplified; deep-time figures especially so.</li>
+              <li><b>Syntheses, not citations.</b> The quantitative claims echo standard datasets (see
+                <a href="#data">Data provenance</a>) rather than any single original measurement.</li>
+              <li><b>A moving target.</b> Prehistory is revised constantly. Some "firsts" below will be outdated by
+                the next field season (see <a href="#dating">Dating &amp; uncertainty</a>).</li>
+              <li><b>AI-assisted, human-shaped.</b> Assembling text at this scale invites errors of emphasis and
+                fact; the framing, cross-checks, and where-uncertain ranges are editorial choices, and mistakes are
+                possible. The September 2026 expansion added a double-checked audit of every page
+                (<a href="#expansion-2026">how it was checked</a>); that catches more errors, but it cannot promise
+                that none remain.</li>
+            </ul>
+          </div>
+
+          <figure class="diagram">
+            <figcaption><b>Flowchart</b> — how this tour was assembled, and where you should go next</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">flowchart LR
+    A["Standard reference&lt;br/&gt;knowledge&lt;br/&gt;&lt;i&gt;textbooks, museums,&lt;br/&gt;open datasets&lt;/i&gt;"] --&gt; B["AI-assisted&lt;br/&gt;synthesis &amp; drafting"]
+    B --&gt; C["Editorial shaping&lt;br/&gt;&lt;i&gt;sequence, cross-checks,&lt;br/&gt;ranges where uncertain&lt;/i&gt;"]
+    C --&gt; D(["This tour&lt;br/&gt;an educational synthesis"])
+    D -.-&gt; E["Primary sources &amp;&lt;br/&gt;Further Reading&lt;br/&gt;&lt;i&gt;where you should go next&lt;/i&gt;"]
+    classDef ghost stroke-dasharray:5 5,fill:transparent;
+    class E ghost;</pre>
+              <div class="diagram__loading mono">Rendering diagram…</div>
+            </div>
+          </figure>
+
+          <p class="tick" style="color:var(--ink-faint)">Non-defensively: if you find an error, you are almost
+            certainly right to trust the primary source over this page. Start with the
+            <a href="further-reading.html">further reading</a> list.</p>
+        </section>
+
+        <!-- DATING -->
+        <section id="dating">
+          <h2>Dating &amp; uncertainty</h2>
+          <p>The deeper in time a date sits, the wider its true error bar. A radiocarbon date on a hearth might be
+            good to a century or two; a date on a two-million-year-old tool bed rests on argon-argon or
+            palaeomagnetic methods with uncertainties measured in tens of thousands of years. When this tour writes
+            "~1 Mya," the tilde is doing real work.</p>
+          <p>Just as important: most "firsts" in prehistory are really <b>"earliest currently known."</b> They mark
+            the oldest <i>evidence found so far</i>, not the true beginning — and they move whenever a new site is
+            excavated. Two well-known jolts make the point, and the 2020s have kept adding to it. In 2015, stone
+            tools at Lomekwi in Kenya pushed the origin of toolmaking back from ~2.6 to ~3.3 million years ago,
+            before our own genus existed. In 2017, fossils from Jebel Irhoud in Morocco pushed the oldest known
+            <i>Homo sapiens</i> back from ~195,000 to ~300,000 years — and shifted the picture from a single
+            East-African cradle toward a pan-African origin. Since then the goalposts have kept moving: the Omo
+            Kibish fossils that Jebel Irhoud displaced were themselves redated to at least 233,000 years in 2022;
+            the earliest known Oldowan toolkit moved to Nyayanga, Kenya, in 2023, possibly ~2.9 million years old
+            (its layers are bracketed to 3.0–2.6 million years); the oldest known figurative painting moved to at
+            least 51,200 years in Sulawesi in 2024; and a 2026 study puts a hand stencil on Muna, an island just off
+            Sulawesi, at a minimum of 67,800 years — a date not yet widely tested.</p>
+
+          <h3>Three genuinely contested questions</h3>
+          <p>Some debates are not just fuzzy dates but live disagreements among specialists. The tour picks a
+            defensible middle path and flags the dispute; here are the big ones.</p>
+          <ul>
+            <li><b>When did behavioral modernity arrive?</b> Symbolic art, ornaments, and complex tools appear in
+              Africa well before 70,000 years ago — ochre engravings at Blombos, shell beads across North and
+              South Africa. Was there a sudden cognitive "revolution" ~50–70 kya, or a slow, patchy African
+              build-up over 100,000+ years? The gradualist reading is increasingly favored, but it is not settled.</li>
+            <li><b>When (and how often) did we leave Africa?</b> There were early excursions into the Levant — the
+              Misliya Cave jaw ~180 kya, then the Skhul and Qafzeh burials ~120–90 kya — and into Arabia ~125–85 kya
+              (Jebel Faya's tools and the Alathar footprints, credited to our species without any fossils, and the
+              Al Wusta finger bone); a partial skull from Apidima in
+              Greece may push a probe back past 210 kya, though its species assignment is disputed. But the
+              <i>lasting</i> dispersal that founded all non-African populations is usually dated ~60–70 kya. Whether the earlier
+              waves left any genetic trace is debated.</li>
+            <li><b>When were the Americas peopled?</b> This is the sharpest fight in the field. For decades the
+              "Clovis-first" model held that people arrived ~13,000 years ago. Pre-Clovis sites (Monte Verde in
+              Chile, ~14,500 years) broke that consensus, and fossil human footprints at White Sands, New Mexico,
+              have been dated to ~21,000–23,000 years ago — dates since corroborated by pollen and luminescence
+              (2023) and by radiocarbon dates from two independent labs on wetland mud traced into the
+              track-bearing layers (2025), though some specialists still argue the seed
+              dates could be too old and treat them as maximum ages. The anchors keep moving: a 2026 geological
+              re-analysis argues Monte Verde's camp is no older than ~8,200 years, a claim its excavators and others
+              dispute. The tour treats a pre-Clovis arrival as likely while flagging the dates as unsettled.</li>
+          </ul>
+
+          <figure class="diagram">
+            <figcaption><b>Flowchart</b> — the peopling of the Americas: a debate still open</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">flowchart TD
+    Q{"When were the&lt;br/&gt;Americas peopled?"} --&gt; CF["Clovis-first model&lt;br/&gt;~13,000 years ago&lt;br/&gt;&lt;i&gt;20th-century orthodoxy&lt;/i&gt;"]
+    Q --&gt; PC["Pre-Clovis evidence&lt;br/&gt;now widely accepted"]
+    PC --&gt; MV["Monte Verde, Chile&lt;br/&gt;~14,500 years ago&lt;br/&gt;&lt;i&gt;age challenged 2026, itself disputed&lt;/i&gt;"]
+    PC --&gt; WS["White Sands footprints&lt;br/&gt;~21,000–23,000 yrs ago&lt;br/&gt;&lt;i&gt;seeds, pollen &amp; OSL,&lt;br/&gt;wetland mud — replicated&lt;br/&gt;2021–2025; some&lt;br/&gt;still dissent&lt;/i&gt;"]
+    PC --&gt; KH["Pacific coastal route&lt;br/&gt;'kelp highway' hypothesis"]
+    classDef hot stroke-dasharray:4 4;
+    class WS hot;</pre>
+              <div class="diagram__loading mono">Rendering diagram…</div>
+            </div>
+            <details class="datatable" open><summary>Data table</summary><div class="table-scroll">
+              <table class="data"><caption>Selected "firsts" — really "earliest currently known" — with their moving error bars</caption>
+                <thead><tr><th>Milestone</th><th>Earliest known</th><th>Why it may still move</th></tr></thead>
+                <tbody>
+                  <tr><td>Stone toolmaking</td><td class="num">~3.3 Mya</td><td>Lomekwi (2015) pushed it back from ~2.6 Mya; the Oldowan proper has since moved to ~2.9 Mya (Nyayanga, 2023; bracketed 3.0–2.6 Mya). Lomekwi's context and the 3.4-Mya Dikika cut-marks are both debated.</td></tr>
+                  <tr><td><i>Homo sapiens</i> fossils</td><td class="num">~300 kya</td><td>Jebel Irhoud (2017) pushed it back from ~195 kya and favored a pan-African origin; Omo Kibish, the record it broke, has since been redated to at least 233 kya (2022).</td></tr>
+                  <tr><td>Behavioral modernity</td><td class="num">~100–40 kya</td><td>Sudden "revolution" vs. gradual African build-up — genuinely unsettled.</td></tr>
+                  <tr><td>Lasting Out-of-Africa dispersal</td><td class="num">~60–70 kya</td><td>Earlier Levant and Arabian excursions ~180–85 kya; their genetic legacy is debated.</td></tr>
+                  <tr><td>Sea crossing to Sahul (Australia)</td><td class="num">~50–65 kya</td><td>Requires deliberate watercraft. The ~50 kya cluster sits at radiocarbon's practical ceiling; Madjedbebe's ~65 kya rests on luminescence dating, which has no such limit — what is disputed is whether termite activity and other disturbance carried the artefacts down into older sand.</td></tr>
+                  <tr><td>People in the Americas</td><td class="num">~16–23 kya</td><td>White Sands footprints vs. Clovis (~13 kya) — the field's liveliest dispute; Monte Verde's ~14,500-year age was itself challenged in 2026 (Surovell et al.), and that challenge is disputed in turn.</td></tr>
+                </tbody>
+              </table></div></details>
+          </figure>
+          <div class="callout">
+            <p class="callout__label">Where the methods themselves are explained</p>
+            <p>This page is about how <i>this tour</i> was assembled and what its limits are. How the <i>field</i>
+              actually establishes any of it — stratigraphy, radiocarbon and the IntCal calibration curve,
+              argon-argon, uranium-series, luminescence, dendrochronology, ice cores, ancient DNA,
+              palaeoproteomics, isotopes and lidar — has its own page:
+              <a href="how-we-know.html">How We Know</a>. It also carries a register of
+              <a href="how-we-know.html#contested">live debates</a> and a list of
+              <a href="how-we-know.html#misconceptions">things almost everyone gets wrong</a>.</p>
+          </div>
+
+          <p class="tick" style="color:var(--ink-faint)">Rule of thumb for the whole tour: read every deep-time date
+            as a midpoint with a wide, invisible bracket around it, and expect the oldest "firsts" to get older.</p>
+        </section>
+
+        <!-- NOTATION -->
+        <section id="notation">
+          <h2>Reading the dates: Mya, kya, BCE, CE</h2>
+          <p>The tour deliberately switches units partway through, because no single convention reads well across
+            seven million years. Two abbreviations carry the deep past:</p>
+          <ul>
+            <li><b>Mya</b> — <i>millions of years ago</i>. "7 Mya" is seven million years before the present.</li>
+            <li><b>kya</b> — <i>thousands of years ago</i>. "300 kya" is three hundred thousand years before the
+              present.</li>
+          </ul>
+          <p><b>Chapters I–II</b> (deep prehistory and the Paleolithic) use these "years ago" units, because the
+            numbers are astronomical and counting them from a zero point 2,000 years ago would be absurd — no one
+            writes "298,000 BCE." <b>From Chapter III onward</b> (the Neolithic and everything after), the tour
+            switches to the familiar calendar convention:</p>
+          <ul>
+            <li><b>BCE</b> — <i>Before Common Era</i> (numerically identical to BC), counting down to the year 1.</li>
+            <li><b>CE</b> — <i>Common Era</i> (identical to AD), counting up from the year 1.</li>
+          </ul>
+          <p>The prose switches at the <b>II→III boundary</b>: Chapter II's title card already ends in
+            "12,000 BCE," and Chapter III's title card prints both units — 12,000 – 3500 BCE above the title,
+            ≈ 14,000 – 5,500 years ago beneath it — so the change of gears is not silent. One wrinkle for the careful: the
+            timeline rail's live year readout keeps counting in "kya" until about 12,000 years ago — roughly a
+            quarter of the way into Chapter III — and only then flips to BCE.</p>
+          <p>The two systems differ only by a fixed offset of about 2,000 years:
+            "years ago" is measured from roughly today, while BCE is measured from year 1. That is why
+            <b>12,000 years ago ≈ 10,000 BCE</b>. (One footnote for the careful: radiocarbon dates use "BP," Before
+            Present, where "present" is pinned by convention to 1950 CE. The tour's casual "years ago" is rounded
+            from today and is not the same precise datum.)</p>
+
+          <figure class="diagram">
+            <figcaption><b>Timeline</b> — where the tour changes how it counts</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">timeline
+    title Where the dating convention switches
+    section Years ago — Mya / kya
+      Chapter I : 7 Mya to 300 kya
+      Chapter II : 300 kya to ~14 kya (12,000 BCE)
+    section BCE / CE
+      Chapter III : Neolithic, 12,000 to 3500 BCE
+      Chapters IV to IX : 3500 BCE to today</pre>
+              <div class="diagram__loading mono">Rendering timeline…</div>
+            </div>
+            <details class="datatable" open><summary>Data table</summary><div class="table-scroll">
+              <table class="data"><caption>Converting "years ago" to the BCE / CE calendar (present rounded to ~2000)</caption>
+                <thead><tr><th>Years ago</th><th class="num">≈ Calendar date</th><th>What it marks</th></tr></thead>
+                <tbody>
+                  <tr><td>3.3 Mya</td><td class="num">~3,300,000 ya</td><td>Deep time — BCE is meaningless at this scale</td></tr>
+                  <tr><td>300 kya</td><td class="num">~300,000 ya</td><td>First <i>Homo sapiens</i> (Jebel Irhoud)</td></tr>
+                  <tr><td>70 kya</td><td class="num">~68,000 BCE</td><td>The lasting Out-of-Africa dispersal</td></tr>
+                  <tr><td>12,000 ya</td><td class="num">~10,000 BCE</td><td>Ice Age ends; farming begins</td></tr>
+                  <tr><td>7,000 ya</td><td class="num">~5,000 BCE</td><td>Spread of agriculture</td></tr>
+                  <tr><td>5,500 ya</td><td class="num">~3,500 BCE</td><td>First cities (Uruk); writing follows by ~3,300 BCE</td></tr>
+                  <tr><td>~2,025 ya</td><td class="num">1 CE</td><td>The BCE / CE hinge</td></tr>
+                  <tr><td>~75 ya</td><td class="num">1950 CE</td><td>The radiocarbon "present" (BP datum)</td></tr>
+                  <tr><td>0</td><td class="num">today</td><td>You are here</td></tr>
+                </tbody>
+              </table></div></details>
+          </figure>
+        </section>
+
+        <!-- DATA -->
+        <section id="data">
+          <h2>Data provenance</h2>
+          <p>The quantitative through-lines — the population hockey stick, the energy transition, the Great
+            Enrichment, the CO₂ curve, the biomass inversion — lean on a small set of well-known, widely-used
+            datasets and syntheses. These are the standard reference compilations a data journalist or an
+            undergraduate course would reach for. Crucially, the figures here are <b>drawn from these syntheses
+            rather than cited to a single original dataset</b>: think of the list below as "the family of sources
+            this kind of claim comes from," not a footnote to one file.</p>
+
+          <figure class="diagram">
+            <figcaption><b>Mindmap</b> — the families of sources behind the numbers</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">mindmap
+    root((Data behind the numbers))
+      Population
+        HYDE historical database
+        UN Population Prospects
+        Our World in Data
+      Economy
+        Maddison Project Database
+      Energy
+        Vaclav Smil
+        Energy Institute review
+      Climate
+        Ice cores EPICA and Law Dome
+        Mauna Loa Keeling curve
+      Biomass
+        Bar-On, Phillips and Milo 2018
+      Forced migration
+        SlaveVoyages database
+      Deep past
+        Paleoanthropology literature
+        Ancient-DNA studies</pre>
+              <div class="diagram__loading mono">Rendering mindmap…</div>
+            </div>
+            <details class="datatable" open><summary>Data table</summary><div class="table-scroll">
+              <table class="data"><caption>Standard sources the tour's quantitative claims lean on</caption>
+                <thead><tr><th>Domain</th><th>Leaned-on syntheses</th><th>What it informs</th></tr></thead>
+                <tbody>
+                  <tr><td>Population &amp; cities</td><td>HYDE database; UN World Population Prospects; Our World in Data</td><td>Population curve, urbanization, largest-city relay</td></tr>
+                  <tr><td>Income &amp; growth</td><td>Maddison Project Database</td><td>GDP per capita; the Great Enrichment after 1800</td></tr>
+                  <tr><td>Energy</td><td>Vaclav Smil (<i>Energy and Civilization</i>); Energy Institute Statistical Review; Our World in Data</td><td>Per-capita energy use and the shifting fuel mix</td></tr>
+                  <tr><td>Atmospheric CO₂</td><td>Ice-core records (EPICA Dome C, Law Dome); NOAA Mauna Loa / the Keeling curve</td><td>CO₂ ppm across the ice ages and the modern spike</td></tr>
+                  <tr><td>Biomass</td><td>Bar-On, Phillips &amp; Milo, "The biomass distribution on Earth" (PNAS, 2018)</td><td>The wild / human / livestock mammal inversion</td></tr>
+                  <tr><td>Slavery &amp; forced migration</td><td>The Trans-Atlantic Slave Trade Database (SlaveVoyages; David Eltis, David Richardson and colleagues)</td><td>Chapter VII's ~12.5 million people forced aboard slave ships and ~10.7 million landed alive, and the trade's timing by half-century</td></tr>
+                  <tr><td>Health &amp; mortality</td><td>Our World in Data; UN; historical demography</td><td>Life expectancy and the collapse of child mortality</td></tr>
+                  <tr><td>Human origins</td><td>Smithsonian Human Origins Program; peer-reviewed paleoanthropology</td><td>Fossil dates, brain-size series, species sequence</td></tr>
+                  <tr><td>Migration &amp; admixture</td><td>Published ancient-DNA studies (e.g. the Reich lab)</td><td>Out-of-Africa routes; Neanderthal / Denisovan percentages</td></tr>
+                </tbody>
+              </table></div></details>
+          </figure>
+          <p class="tick" style="color:var(--ink-faint)">Deliberately global: these datasets aim at worldwide
+            coverage, so Africa, the Americas, and Oceania appear on the same footing as Eurasia rather than as an
+            afterthought. See the numbers assembled on <a href="great-acceleration.html">The Great Acceleration</a>.</p>
+        </section>
+
+        <!-- EXPANSION 2026 -->
+        <section id="expansion-2026">
+          <h2>The September 2026 expansion — and how it was checked</h2>
+          <p>In September 2026 the tour was expanded chapter by chapter, and every content page — the nine
+            chapters, the eight reference pages, the landing page and the chapter manifest behind the timeline
+            rail — was audited again. The method described above did not change: this is still an
+            <b>AI-assisted synthesis</b>. What changed is how much checking was layered on top of it. This section
+            says what was done, what was added, and what the checking cannot promise.</p>
+
+          <h3>An audit whose corrections were checked twice</h3>
+          <p>Each page was read claim by claim against published sources — research papers, standard references,
+            museum and data pages — and against the site's own other pages. Every correction the audit proposed
+            was then handed to <b>two independent verifiers with opposite jobs</b>. One tried to
+            <b>defend the original text</b>: to show that the page had been right, or right enough, after all.
+            The other <b>scrutinised the fix</b>: was the replacement itself accurate, current, and consistent
+            with the rest of the site? A correction went in only when both confirmed it, often in wording the
+            verifiers amended. Where one of them was unsure, the change was made only if it could be confirmed
+            separately; otherwise the original was softened into properly hedged wording. Where the defence won,
+            the original stayed.</p>
+          <p>New material — the sections described below — went to <b>two further independent checkers</b>: one
+            for the claims themselves (dates, places, attributions, the current state of each debate), and one for
+            quotations, numbers and consistency with every other page on the site. Then each page went through
+            the machine checks listed in the table.</p>
+          <p>Plainly: the auditor, the verifiers and the checkers were all <b>separate AI passes</b>, not human
+            specialists. Setting them against one another is a real cross-check, but it is not peer review — and
+            AI assistance still means errors are possible, including errors that several passes share.</p>
+
+          <figure class="diagram">
+            <figcaption><b>Flowchart</b> — the path a correction or a new section took before it was published</figcaption>
+            <div class="diagram__scroll">
+              <pre class="mermaid">flowchart TD
+    A["Every page&lt;br/&gt;audited claim by claim"] --&gt; B["Proposed corrections"]
+    B --&gt; V1["Verifier 1&lt;br/&gt;&lt;i&gt;defends the original&lt;/i&gt;"]
+    B --&gt; V2["Verifier 2&lt;br/&gt;&lt;i&gt;scrutinises the fix&lt;/i&gt;"]
+    V1 --&gt; J{"Verdicts"}
+    V2 --&gt; J
+    J --&gt;|both confirm| AP["Applied"]
+    J --&gt;|one unsure| HD["Confirmed&lt;br/&gt;separately,&lt;br/&gt;or hedged"]
+    J --&gt;|defence wins| KP["Original&lt;br/&gt;kept"]
+    N["New sections"] --&gt; C1["Checker 3&lt;br/&gt;&lt;i&gt;claims&lt;/i&gt;"]
+    N --&gt; C2["Checker 4&lt;br/&gt;&lt;i&gt;quotes, numbers,&lt;br/&gt;consistency&lt;/i&gt;"]
+    AP --&gt; M["Machine checks&lt;br/&gt;&lt;i&gt;lint, links, browser&lt;/i&gt;"]
+    HD --&gt; M
+    C1 --&gt; M
+    C2 --&gt; M
+    M --&gt; P(["Published"])
+    classDef ghost stroke-dasharray:5 5,fill:transparent;
+    class KP ghost;</pre>
+              <div class="diagram__loading mono">Rendering diagram…</div>
+            </div>
+            <details class="datatable" open><summary>The checks, stage by stage</summary><div class="table-scroll">
+              <table class="data"><caption>Every check in the September 2026 expansion, who or what ran it, and what it is there to catch</caption>
+                <thead><tr><th>Stage</th><th>Run by</th><th>What it catches</th></tr></thead>
+                <tbody>
+                  <tr><td>Page audit</td><td>An AI pass, one per page</td><td>Claims that are wrong, outdated, overstated, or inconsistent with another page</td></tr>
+                  <tr><td>Verifier 1 — the defence</td><td>A separate AI pass</td><td>Corrections that were never needed because the original was defensible</td></tr>
+                  <tr><td>Verifier 2 — the fix</td><td>A separate AI pass</td><td>Replacement text that is itself wrong, stale, or at odds with the rest of the site</td></tr>
+                  <tr><td>Checker 3 — the claims</td><td>A separate AI pass</td><td>Dates, places, attributions and the stated status of each debate in new sections</td></tr>
+                  <tr><td>Checker 4 — quotes, numbers &amp; consistency</td><td>A separate AI pass</td><td>Misquoted or unverifiable wording, arithmetic, and contradictions between pages</td></tr>
+                  <tr><td><span class="mono">scripts/lint-pages.py</span></td><td>Script</td><td>Diagram markup that fails silently; scroll-animation steps shifted against the pre-expansion copy; a milestone card whose machine date disagrees with its printed one; spelled-out counts that no longer match; region panels out of order; duplicate ids</td></tr>
+                  <tr><td><span class="mono">scripts/check-links.py</span></td><td>Script</td><td>Any broken link or #anchor anywhere on the site</td></tr>
+                  <tr><td>Browser check</td><td>A headless browser</td><td>Console errors, and any diagram that failed to draw</td></tr>
+                </tbody>
+              </table></div></details>
+          </figure>
+
+          <h3>What the chapters gained</h3>
+          <p>The expansion gave the chapters up to six new kinds of section. Each comes with a rule meant to keep it
+            honest, because a new component is also a new way to be wrong.</p>
+          <div class="table-scroll">
+            <table class="data"><caption>The new components, what they are built from, and the rule each one follows</caption>
+              <thead><tr><th>Component</th><th>What it shows</th><th>Built from</th><th>The rule that keeps it honest</th></tr></thead>
+              <tbody>
+                <tr><td>Real-map atlas scenes</td><td>A scroll-driven map of the chapter's key places and routes</td><td>Real coastlines, rivers and lakes (see <a href="#map-data">below</a>); every pin and route placed from latitude and longitude by <span class="mono">scripts/mapkit.py</span></td><td>No coordinate is placed by hand; ice-age maps are captioned as approximate</td></tr>
+                <tr><td>True-scale chrono strips</td><td>The chapter's milestones spaced by their real distance in time</td><td>Drawn in the browser from the dates carried by the milestone cards themselves</td><td>The strip cannot disagree with the cards; with JavaScript off, the cards carry everything</td></tr>
+                <tr><td>Stats strips</td><td>Three or four figures for the world at a chapter's start and end</td><td>Standard datasets; every figure carries a source line</td><td>Only the kind of number the literature actually gives; ranges stated in words, not false precision</td></tr>
+                <tr><td>Sixteen-region panels</td><td>"Meanwhile, everywhere": what was happening across the world in the chapter's span</td><td>Named places, polities and peoples, always in the same sixteen regions in the same order</td><td>A gap shows instead of hiding; where no one lived yet, the card describes the land and its animals rather than inventing people</td></tr>
+                <tr><td>Ordinary-lives vignettes</td><td>Individual lives, with a "life by the numbers" table</td><td>Real evidence: a named burial, an excavated household, a document, an isotope study</td><td>Never a composite presented as a real person; each closes with how we know</td></tr>
+                <tr><td>Primary-source voices</td><td>Short excerpts in the words of the time, from Chapter IV onward</td><td>Standard published translations</td><td>Quoted only when the text, speaker, work and date were verified; voices from beyond Europe and beyond the palace</td></tr>
+              </tbody>
+            </table></div>
+          <p>The region panels turn a standing rule into something you can see. An earlier audit scored a
+            14-region × 9-chapter grid and found 27% of it empty, after which Australia, the Arctic, North America
+            north of Mexico and the Caribbean were promoted to first-class coverage. A fixed sixteen-region panel in
+            the same order in every chapter that carries one makes any blank that remains visible, instead of letting confident
+            prose disguise it.</p>
+
+          <h3 id="map-data">Where the maps come from</h3>
+          <p>The atlas scenes and the region panels' small maps are drawn from <b>Natural Earth</b>, a
+            cartographic dataset placed in the <b>public domain</b>: its 1:50m land, lakes and rivers (only the
+            larger lakes and rivers, simplified so a whole world stays light) and its 1:10m bathymetry at the
+            200 m depth contour. <span class="mono">scripts/build-basemap.py</span> turns them into one shared file,
+            <span class="mono">assets/img/world.svg</span>, which every chapter references — nothing is traced by
+            hand. Chapter IX's former Aral Sea shoreline comes from the same project's 1:10m historic-lakes layer.</p>
+          <p><b>The ice-age coastline is approximate.</b> Chapter II's ice-age maps show as land everything
+            shallower than today's 200 m depth contour (Chapter I keeps today's coast and tints that same shelf as
+            shallow sea). At the Last Glacial Maximum, ~21,000 years ago, sea level
+            was ~120–130 m lower than now, so the 200 m line somewhat over-draws the land that was exposed. Nor is
+            today's sea floor exactly the old shore: local sea levels departed from the global figure where the
+            crust sagged under the ice sheets and has since rebounded, and sediment has built up the shelves. Read
+            those shores as the right shape, not a survey. Maps in later chapters use today's coasts and rivers,
+            which have moved as well — the Yellow River has shifted its course and its mouth many times, and many
+            deltas have grown seaward.</p>
+
+          <h3 id="errata-2026">Errata: what the September 2026 review corrected</h3>
+          <p>These are the significant corrections the review made: claims that were wrong, had been overtaken by
+            newer research, or gave a date or number that disagreed with the rest of the site. Each one was confirmed by
+            both verifiers and then checked again against the page as published. Where the same mistake appeared in
+            several places on a page (a card, a timeline and a table, say), it is listed once. Smaller fixes to wording,
+            tone and hedging are not listed. Each entry gives what the page used to say, what it says now, and why.</p>
+
+          <details class="datatable">
+            <summary>I · Deep Prehistory &amp; Human Origins (11 entries)</summary>
+            <ul>
+              <li><b>Was:</b> <i>Homo antecessor</i>, ~1.2 Mya, the oldest firmly dated humans in western Europe. <b>Now:</b> the Sima del Elefante fossils at Atapuerca (a jaw, and the 2025 “Pink” face), ~1.4–1.1 Mya, with Europe reached by ~1.4 Mya; <i>H. antecessor</i> follows at ~850–780 kya. <b>Why:</b> the species name and the date belonged to different fossils, and the 2025 face pushed the date back.</li>
+              <li><b>Was:</b> oldest <i>Homo erectus</i> ~1.9 Mya at Lake Turkana. <b>Now:</b> ~2.0 Mya at Drimolen (South Africa) and Melka Kunture (Ethiopia). <b>Why:</b> older fossils have been published since.</li>
+              <li><b>Was:</b> the Oldowan begins ~2.6 Mya with <i>Homo habilis</i>. <b>Now:</b> ~2.9–2.6 Mya, first at Nyayanga in Kenya, before any known <i>habilis</i> fossil. <b>Why:</b> the 2023 Nyayanga finds.</li>
+              <li><b>Was:</b> the <i>Paranthropus</i> radiation ~2.7–1.0 Mya. <b>Now:</b> ~2.9–1.0 Mya. <b>Why:</b> the Nyayanga molars and a 2026 jaw from the Afar are older.</li>
+              <li><b>Was:</b> “three genera” of hominins in East Africa at 1.8 Mya. <b>Now:</b> at least three species from two genera. <b>Why:</b> <i>Paranthropus</i> and <i>Homo</i> are two genera, not three.</li>
+              <li><b>Was:</b> Olorgesailie’s new tools appear “in the same lake basin and the same century” as our species. <b>Now:</b> within dating error of the earliest fossils of our species. <b>Why:</b> the oldest <i>sapiens</i> fossils are in Morocco, 6,000 km away, with error bars of tens of thousands of years.</li>
+              <li><b>Was:</b> the earliest organic toolkit is Schöningen, ~300 kya. <b>Now:</b> Kalambo Falls, Zambia, ~476 kya; Schöningen ~300–200 kya. <b>Why:</b> a 2023 find is older, and a 2025 study redated Schöningen.</li>
+              <li><b>Was:</b> no sea crossing to Australia “for another 600,000 years”. <b>Now:</b> roughly another quarter of a million years after the chapter ends. <b>Why:</b> the arithmetic was counted from the wrong starting point.</li>
+              <li><b>Was:</b> OSL moved Jebel Irhoud to ~315 kya. <b>Now:</b> thermoluminescence on burnt flint did. <b>Why:</b> the dating method was misnamed.</li>
+              <li><b>Was:</b> Trinil, Java, 900 kya. <b>Now:</b> ~830–773 kya. <b>Why:</b> the site was redated in 2023.</li>
+              <li><b>Was:</b> East Asia reached ~1.5 Mya at “Java &amp; Zhoukoudian”, and China at ~780 kya. <b>Now:</b> China by ~1.66 Mya (Nihewan, Lantian), Java ~1.5–1.3 Mya. <b>Why:</b> 780 kya is Zhoukoudian’s oldest layer, not China’s first people.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>II · Paleolithic &amp; the Cognitive Revolution (9 entries)</summary>
+            <ul>
+              <li><b>Was:</b> the oldest figurative painting is the Leang Tedongnge pig, Sulawesi, ~45.5 kya. <b>Now:</b> the pig-and-figures scene at Leang Karampuang, at least 51,200 years old. <b>Why:</b> a 2024 study dated an older painting with a finer version of uranium-series dating.</li>
+              <li><b>Was:</b> “140 millennia before any <i>sapiens</i> reached Europe”. <b>Now:</b> some 130 millennia before <i>sapiens</i> are securely attested in Europe. <b>Why:</b> the subtraction was wrong, and one Greek skull may be older.</li>
+              <li><b>Was:</b> Lascaux comes “ten millennia” after the Swabian Jura carvings. <b>Now:</b> more than twenty millennia. <b>Why:</b> ~40 kya to ~17 kya is over 20,000 years.</li>
+              <li><b>Was:</b> the map labels the Americas ~15 kya. <b>Now:</b> ~23–15 kya. <b>Why:</b> the label disagreed with the White Sands footprints described beside it.</li>
+              <li><b>Was:</b> the Niah “Deep Skull” shows people in the rainforest ~46 kya. <b>Now:</b> occupation layers reach ~46 kya; the skull itself is ~37 kya. <b>Why:</b> the site and the skull have different dates.</li>
+              <li><b>Was:</b> Border Cave’s digging stick and poison applicator, 44 kya. <b>Now:</b> 44–24 kya, with the poison applicator ~24 kya. <b>Why:</b> the objects span twenty thousand years.</li>
+              <li><b>Was:</b> Denisovans known from a finger bone, teeth, one jaw and cave DNA, from Siberia to Tibet. <b>Now:</b> also the Harbin skull and Penghu jaw, with a range reaching north-east China and Taiwan. <b>Why:</b> 2025 protein and DNA studies identified both fossils.</li>
+              <li><b>Was:</b> pigment processing ~100 kya, listed as the earliest. <b>Now:</b> ochre paint kits ~100 kya. <b>Why:</b> pigment use itself goes back ~320 kya (Chapter I).</li>
+              <li><b>Was:</b> “composite &amp; projectile tools”, earliest at ~64 kya. <b>Now:</b> probable bow-and-arrow and compound glues, ~71–61 kya. <b>Why:</b> hafted and thrown weapons are hundreds of thousands of years older.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>III · The Neolithic Revolution (13 entries)</summary>
+            <ul>
+              <li><b>Was:</b> Budj Bim’s eel channels, ~6600 BCE. <b>Now:</b> ~4600 BCE. <b>Why:</b> the channels are ~6,600 years <i>old</i>; the years-ago figure had been printed as a BCE date.</li>
+              <li><b>Was:</b> Budj Bim in “the Australian southwest”. <b>Now:</b> Australia’s southeast. <b>Why:</b> it is in western Victoria.</li>
+              <li><b>Was:</b> one Varna grave held more gold (or metal) than all the rest together. <b>Now:</b> grave 43 held some 1.5 kg, about a quarter of the cemetery’s gold. <b>Why:</b> the excavation totals don’t support the stronger claim.</li>
+              <li><b>Was:</b> the Jiahu signs are “four millennia before Chinese writing”. <b>Now:</b> more than five millennia before the oracle-bone script. <b>Why:</b> 6600 BCE to c. 1250 BCE is over 5,000 years.</li>
+              <li><b>Was:</b> Jiahu has “the first beer”. <b>Now:</b> early beer. <b>Why:</b> brewing residues at Raqefet Cave in Israel are some 13,000 years old.</li>
+              <li><b>Was:</b> the Talheim and Asparn massacres happened on farming’s frontier. <b>Now:</b> in the crisis of its settled interior. <b>Why:</b> both date to the end of the first farming culture, in land farmed for centuries.</li>
+              <li><b>Was:</b> Austronesian voyagers left Taiwan ~3000 BCE. <b>Now:</b> ~2200 BCE. <b>Why:</b> the move out of Taiwan is dated later than the move into it.</li>
+              <li><b>Was:</b> sorghum and millet domesticated in the Sahel ~5000 BCE. <b>Now:</b> sorghum in eastern Sudan ~3500 BCE, pearl millet in Mali ~2500 BCE. <b>Why:</b> the earlier date had no evidence behind it.</li>
+              <li><b>Was:</b> maize comes from a single teosinte population. <b>Now:</b> from Balsas teosinte plus a second wild parent. <b>Why:</b> a 2023 genetic study.</li>
+              <li><b>Was:</b> a diagram derived barley from wild einkorn. <b>Now:</b> wild barley. <b>Why:</b> they are different plants.</li>
+              <li><b>Was:</b> Zhokhov Island sled dogs ~6200 BCE, at 75° north. <b>Now:</b> ~7000 BCE, at 76° north. <b>Why:</b> both the date and the latitude were off.</li>
+              <li><b>Was:</b> the oldest pottery ~16,000 BCE. <b>Now:</b> ~18,000 BCE. <b>Why:</b> Xianrendong’s pots are 20,000–19,000 years old, as Chapter II already said.</li>
+              <li><b>Was:</b> the timeline put cotton at Mehrgarh and llamas in the Andes too early. <b>Now:</b> cotton by 6000 BCE and llama by 4000 BCE. <b>Why:</b> the timeline disagreed with the chapter’s own cards and tables.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>IV · First Civilizations &amp; the Bronze Age (6 entries)</summary>
+            <ul>
+              <li><b>Was:</b> within three centuries chariots fought for Egypt, Hatti and Shang China. <b>Now:</b> within four centuries for Egypt and Hatti; China by c. 1250–1200 BCE. <b>Why:</b> the spread took longer, and reached China last.</li>
+              <li><b>Was:</b> the first epidemic we can read about comes late in the chapter. <b>Now:</b> the Mari letters of c. 1775 BCE already give quarantine orders. <b>Why:</b> those letters were overlooked.</li>
+              <li><b>Was:</b> Grotefend deciphered cuneiform from the Behistun inscription in 1802. <b>Now:</b> Grotefend worked from Persepolis copies; Behistun came later. <b>Why:</b> Grotefend never worked on Behistun.</li>
+              <li><b>Was:</b> the same skeletons that traced steppe ancestry yielded the oldest plague genomes. <b>Now:</b> a separate 2015 study found them. <b>Why:</b> the discovery was credited to the wrong study.</li>
+              <li><b>Was:</b> Ban Non Wat’s bronze burials, 1200 BCE. <b>Now:</b> 1050 BCE. <b>Why:</b> the timeline disagreed with the milestone card.</li>
+              <li><b>Was:</b> the Uluburun wreck’s cargo touched “a dozen lands”. <b>Now:</b> at least seven cultures. <b>Why:</b> that is the excavator’s count and the page’s own diagram.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>V · Classical Antiquity &amp; the Iron Age (7 entries)</summary>
+            <ul>
+              <li><b>Was:</b> wet rice, bronze and iron reached Yayoi Japan together, c. 300 BCE. <b>Now:</b> wet rice c. 900 BCE, bronze and iron c. 400 BCE. <b>Why:</b> radiocarbon dating since 2003 moved rice farming earlier.</li>
+              <li><b>Was:</b> Nazca lines and puquios aqueducts, c. 100 CE. <b>Now:</b> puquios probably c. 450–650 CE, date debated. <b>Why:</b> surveys show the aqueducts came later than the early Nasca period.</li>
+              <li><b>Was:</b> the Antikythera mechanism had no known successor for 1,500 years. <b>Now:</b> nothing as complex until 14th-century clocks, though simpler geared devices survive. <b>Why:</b> a Byzantine geared sundial of c. 400–600 CE is known.</li>
+              <li><b>Was:</b> Bronze Age palace scribes all wrote syllabaries. <b>Now:</b> cuneiform and Linear B, plus Ugarit’s thirty-sign alphabet. <b>Why:</b> Ugarit, named in the same sentence, used an alphabet.</li>
+              <li><b>Was:</b> Aksum c. 100–540 CE. <b>Now:</b> c. 100–700 CE. <b>Why:</b> the card disagreed with the page’s table and the rest of the site.</li>
+              <li><b>Was:</b> the Dorset, c. 500 BCE – 1000 CE. <b>Now:</b> to 1300 CE. <b>Why:</b> late Dorset people lived on until the Thule arrived.</li>
+              <li><b>Was:</b> “four unusually warm centuries”. <b>Now:</b> some six. <b>Why:</b> it disagreed with the climate dates given on the same page.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>VI · The Post-Classical / Medieval World (8 entries)</summary>
+            <ul>
+              <li><b>Was:</b> Budj Bim’s channels were first cut “some 6,600 years earlier” than this chapter. <b>Now:</b> some 6,600 years ago, more than five thousand years before this chapter. <b>Why:</b> 6,600 years is the channels’ age today.</li>
+              <li><b>Was:</b> Chaco and Cahokia both emptied within a century of the 1276–1299 megadrought. <b>Now:</b> Chaco’s building stopped c. 1130 and the canyon emptied after 1150. <b>Why:</b> tree-ring dates put Chaco’s end much earlier.</li>
+              <li><b>Was:</b> the Thule move east from c. 1000. <b>Now:</b> c. 1200, reaching Greenland within about a century. <b>Why:</b> corrected radiocarbon dates.</li>
+              <li><b>Was:</b> Great Zimbabwe was a capital of tens of thousands. <b>Now:</b> some thousands, no more than 10,000. <b>Why:</b> a 2017 re-estimate.</li>
+              <li><b>Was:</b> Norse and Thule in Greenland, c. 985–1350. <b>Now:</b> c. 985–1450. <b>Why:</b> the card’s own text says the Norse held on until about 1450.</li>
+              <li><b>Was:</b> the Black Death travelled from Messina to Constantinople. <b>Now:</b> Constantinople (summer 1347), then Messina (October 1347). <b>Why:</b> the route was drawn backwards.</li>
+              <li><b>Was:</b> Pachacuti begins the Inca expansion in 1438, “widely accepted”. <b>Now:</b> 1438 by tradition, but contested; radiocarbon puts it earlier. <b>Why:</b> newer radiocarbon dates from Ecuador, Argentina and Machu Picchu.</li>
+              <li><b>Was:</b> the Jikji came seventy-eight years before Gutenberg. <b>Now:</b> seventy-three. <b>Why:</b> the site dates Gutenberg’s press to c. 1450.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>VII · The Early Modern Age (8 entries)</summary>
+            <ul>
+              <li><b>Was:</b> the Inca Empire was the largest on Earth around 1500. <b>Now:</b> the largest state the Americas had seen, and among the largest on Earth. <b>Why:</b> Ming China was far larger.</li>
+              <li><b>Was:</b> 57 years from Yermak to a Cossack fort at Okhotsk. <b>Now:</b> 57 years to Cossacks on the Pacific shore (1639); the fort came later. <b>Why:</b> two events had been merged.</li>
+              <li><b>Was:</b> Russia crossed ten time zones in six decades. <b>Now:</b> five time zones, some 4,600 km. <b>Why:</b> Urals to Okhotsk is five.</li>
+              <li><b>Was:</b> Kangxi defeats Galdan, 1697. <b>Now:</b> 1696, at Jao Modo. <b>Why:</b> the timeline disagreed with the card.</li>
+              <li><b>Was:</b> Palmares, 1655–1694. <b>Now:</b> c. 1605–1694. <b>Why:</b> Palmares grew from about 1605.</li>
+              <li><b>Was:</b> Old World diseases were “barnyard diseases” from cattle. <b>Now:</b> crowd diseases of dense Afro-Eurasian populations. <b>Why:</b> ancient DNA shows smallpox did not come from cattle.</li>
+              <li><b>Was:</b> a misquoted line from <i>The Broken Spears</i>. <b>Now:</b> the standard translation. <b>Why:</b> the pull quote didn’t match its source.</li>
+              <li><b>Was:</b> “Four continents, one era”. <b>Now:</b> six continents. <b>Why:</b> the diagram covers six.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>VIII · The Industrial &amp; Modern Age (4 entries)</summary>
+            <ul>
+              <li><b>Was:</b> the 1918 influenza killed 50–100 million. <b>Now:</b> 17–100 million, most often put at around 50 million. <b>Why:</b> the range disagreed with the page’s own evidence note.</li>
+              <li><b>Was:</b> “Watt’s governor, 1769”. <b>Now:</b> Watt’s engine: the separate condenser in 1769, the governor from 1788. <b>Why:</b> the governor came nearly twenty years later.</li>
+              <li><b>Was:</b> “more than a dozen republics” by 1825. <b>Now:</b> nine new states by 1825, Brazil an empire; more than a dozen later. <b>Why:</b> both the count and the “republics” were wrong for 1825.</li>
+              <li><b>Was:</b> Chapter IX opens six weeks after Hiroshima. <b>Now:</b> at the Trinity test, three weeks before Hiroshima. <b>Why:</b> that is where Chapter IX actually starts.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>IX · The Contemporary &amp; Information Age (10 entries)</summary>
+            <ul>
+              <li><b>Was:</b> UN membership “nearly doubled”, 1945–65. <b>Now:</b> more than doubled, from 51 to 117. <b>Why:</b> that is a 2.3-fold rise.</li>
+              <li><b>Was:</b> chips improved “many billionfold”. <b>Now:</b> tens of millions of times over. <b>Why:</b> 2,300 transistors to tens of billions is ten-million-fold.</li>
+              <li><b>Was:</b> life expectancy “roughly doubled”, 46 to 73. <b>Now:</b> rose from about 46 to 73. <b>Why:</b> that is a rise of about 60%.</li>
+              <li><b>Was:</b> nuclear arsenals peaked near 60,000 warheads. <b>Now:</b> about 70,000, in 1986. <b>Why:</b> standard stockpile counts.</li>
+              <li><b>Was:</b> CO₂ “over 420” ppm now. <b>Now:</b> 427 in 2025. <b>Why:</b> updated to the latest annual figure.</li>
+              <li><b>Was:</b> the internet reaches over five billion people. <b>Now:</b> about six billion, three-quarters of humanity. <b>Why:</b> 2025 figures.</li>
+              <li><b>Was:</b> a chatbot saw the fastest adoption of any tool. <b>Now:</b> of any consumer app to that date. <b>Why:</b> another app beat it within a year.</li>
+              <li><b>Was:</b> Syria drove Europe’s largest refugee movement since 1945. <b>Now:</b> the largest until Ukraine in 2022. <b>Why:</b> the war in Ukraine displaced more people.</li>
+              <li><b>Was:</b> China mines ~60% of rare earths. <b>Now:</b> ~70%. <b>Why:</b> 2025 figures.</li>
+              <li><b>Was:</b> the deep Antarctic ice cores overlap the Keeling curve. <b>Now:</b> the fast-accumulating Law Dome cores do. <b>Why:</b> the overlap comes from a different core.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>Parallel Civilizations (14 entries)</summary>
+            <ul>
+              <li><b>Was:</b> Budj Bim ~6600 BCE. <b>Now:</b> ~4600 BCE (6,600 years old). <b>Why:</b> a years-ago age had been printed as a BCE date.</li>
+              <li><b>Was:</b> Teotihuacan held ~125,000 while no European city came close. <b>Now:</b> 100,000–150,000, outranked in Europe only by Rome. <b>Why:</b> Rome was far larger, as the page’s own table shows.</li>
+              <li><b>Was:</b> the Maya ~750 BCE – 1521 CE. <b>Now:</b> ~1000 BCE – 1697 CE. <b>Why:</b> 1521 is the fall of the Aztec capital; the last Maya kingdom fell in 1697.</li>
+              <li><b>Was:</b> Christian Nubia from ~340 CE. <b>Now:</b> from ~540 CE. <b>Why:</b> 340 is Aksum’s conversion; Nubia’s came in the 540s.</li>
+              <li><b>Was:</b> Wari and Tiwanaku both around Lake Titicaca. <b>Now:</b> Wari in the Ayacucho basin. <b>Why:</b> only Tiwanaku is on the lake.</li>
+              <li><b>Was:</b> the Yana camp at 72° north. <b>Now:</b> ~71°. <b>Why:</b> it matches the site and the rest of the tour.</li>
+              <li><b>Was:</b> the Thule expansion ~1000–1300, taking about three centuries. <b>Now:</b> from ~1200, in little more than a century. <b>Why:</b> corrected radiocarbon dates.</li>
+              <li><b>Was:</b> central Polynesia settled by ~500 CE. <b>Now:</b> the Society Islands ~1000 CE. <b>Why:</b> a large radiocarbon review in 2011.</li>
+              <li><b>Was:</b> Nok ~1500 BCE – 500 CE. <b>Now:</b> to ~1 CE. <b>Why:</b> the newer chronology ends it earlier.</li>
+              <li><b>Was:</b> squash domesticated in eastern North America by ~5000 BCE. <b>Now:</b> ~3000 BCE. <b>Why:</b> a years-ago date had been read as BCE.</li>
+              <li><b>Was:</b> Yamnaya “horse-and-wagon” herders. <b>Now:</b> ox-wagon herders; whether they rode is disputed. <b>Why:</b> 2024 horse genomes.</li>
+              <li><b>Was:</b> steppe nomads spread the stirrup. <b>Now:</b> paired stirrups first appear in 4th-century China. <b>Why:</b> the earliest evidence is Chinese.</li>
+              <li><b>Was:</b> Tokyo the largest settlement ever. <b>Now:</b> Jakarta, on the UN’s 2025 definition. <b>Why:</b> the UN changed how it measures cities.</li>
+              <li><b>Was:</b> agriculture invented in at least 7 places. <b>Now:</b> at least 11. <b>Why:</b> it disagreed with Chapter III and the Great Acceleration page.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>Further Reading (3 entries)</summary>
+            <ul>
+              <li><b>Was:</b> Harari’s <i>Sapiens</i> is the source of the tour’s “four revolutions” spine. <b>Now:</b> only of its “Cognitive Revolution” framing; Harari has three revolutions. <b>Why:</b> the book was misdescribed.</li>
+              <li><b>Was:</b> Thornton, 1992. <b>Now:</b> 2nd edition, 1998. <b>Why:</b> the title listed is the 1998 edition’s.</li>
+              <li><b>Was:</b> three to five books per chapter. <b>Now:</b> five to eight. <b>Why:</b> the lists are longer than the page said.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>The Great Acceleration (9 entries)</summary>
+            <ul>
+              <li><b>Was:</b> woolly rhino and cave bear both vanished ~15–11 kya. <b>Now:</b> woolly rhino by ~14 kya, cave bear ~26–24 kya. <b>Why:</b> the cave bear died out much earlier.</li>
+              <li><b>Was:</b> Denisovans survived to at least ~50,000 years ago. <b>Now:</b> to ~40,000 or later. <b>Why:</b> a Denisovan rib from Tibet dates to 48–32 kya.</li>
+              <li><b>Was:</b> world GDP per person in 2000, ~$8,500. <b>Now:</b> ~$9,900. <b>Why:</b> it disagreed with the dataset the page uses.</li>
+              <li><b>Was:</b> the US the largest contributor to CO₂ since the 1890s. <b>Now:</b> the largest yearly emitter from the late 1880s; the largest overall since ~1911. <b>Why:</b> yearly and cumulative emissions had been mixed up.</li>
+              <li><b>Was:</b> wild land mammals weigh ~0.007 Gt of carbon. <b>Now:</b> ~0.003 Gt. <b>Why:</b> 0.007 is all wild mammals, sea mammals included.</li>
+              <li><b>Was:</b> ~700 million people without electricity, three-quarters in sub-Saharan Africa. <b>Now:</b> ~655 million (2024), about 86%. <b>Why:</b> updated figures.</li>
+              <li><b>Was:</b> 2024, ~57% urban, largest city Tokyo. <b>Now:</b> 2025, ~58% on national definitions, largest city Jakarta on the UN’s new measure. <b>Why:</b> the UN changed how it measures cities.</li>
+              <li><b>Was:</b> ~68% of humanity online (2024). <b>Now:</b> ~74% (2025). <b>Why:</b> updated figures.</li>
+              <li><b>Was:</b> ~10.3 billion people in 2100. <b>Now:</b> ~10.2 billion, after a peak of ~10.3 billion in the 2080s. <b>Why:</b> the peak and the 2100 figure had been confused.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>How We Know (9 entries)</summary>
+            <ul>
+              <li><b>Was:</b> the Schöningen spears, ~300,000 years old. <b>Now:</b> long dated ~300,000, ~200,000 by a 2025 redating. <b>Why:</b> a 2025 study.</li>
+              <li><b>Was:</b> ±20,000 years is “ten times” recorded history. <b>Now:</b> nearly four times. <b>Why:</b> writing is about 5,200 years old.</li>
+              <li><b>Was:</b> neither Sangiran nor Zhoukoudian has usable volcanic layers. <b>Now:</b> this applies only to Zhoukoudian. <b>Why:</b> Sangiran’s volcanic layers have been dated directly.</li>
+              <li><b>Was:</b> the Jikji came seventy-eight years before a Gutenberg dated c. 1440. <b>Now:</b> Gutenberg c. 1450; the Jikji is seventy-three years earlier, seventy-eight before the Gutenberg Bible. <b>Why:</b> the numbers didn’t add up.</li>
+              <li><b>Was:</b> ancient proteins reach ~3.8 Mya in enamel. <b>Now:</b> enamel proteins to ~18–24 Mya in other mammals, and ~2 Mya in <i>Paranthropus</i> (2025). <b>Why:</b> the 3.8 Mya figure was from eggshell, and 2025 studies went further.</li>
+              <li><b>Was:</b> ice cores reach roughly 800,000 years. <b>Now:</b> the Beyond EPICA core, finished in 2025, is expected to pass 1.2 million. <b>Why:</b> a new core.</li>
+              <li><b>Was:</b> White Sands supported by pollen and OSL in 2023, “plausible, not settled”. <b>Now:</b> also by radiocarbon on the footprint-bearing mud in 2025. <b>Why:</b> the debate moved on.</li>
+              <li><b>Was:</b> the oldest plague genome is a Bronze Age lineage. <b>Now:</b> Neolithic lineages from Latvia and Sweden, c. 3300–2900 BCE. <b>Why:</b> older genomes have been found.</li>
+              <li><b>Was:</b> the evidence chart placed ice cores’ reach too short. <b>Now:</b> placed to match the table beside it. <b>Why:</b> the chart and table disagreed.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>The Human Family (12 entries)</summary>
+            <ul>
+              <li><b>Was:</b> for roughly 6.7 of the last 7 million years, more than one kind of human. <b>Now:</b> all but the last ~40,000 years, more than 99%. <b>Why:</b> the wrong subtraction; our species being alone began ~40,000 years ago.</li>
+              <li><b>Was:</b> three of the species on the tree were unknown in 2000. <b>Now:</b> eleven were first described in 2001 or later. <b>Why:</b> the tree’s own nodes say so.</li>
+              <li><b>Was:</b> Harbin (<i>H. longi</i>) was “possibly” the Denisovan face, and Denisovans had no agreed face. <b>Now:</b> identified as Denisovan in 2025 from proteins and dental DNA, with brain size and range updated. <b>Why:</b> two 2025 studies.</li>
+              <li><b>Was:</b> <i>H. antecessor</i> ~1.2–0.8 Mya, the oldest well-dated European. <b>Now:</b> ~0.9–0.8 Mya; the older Atapuerca fossils are another group. <b>Why:</b> the 1.2 Mya date belongs to different fossils.</li>
+              <li><b>Was:</b> painted shells at Aviones and Cueva Antón, both ~115 kya. <b>Now:</b> only Aviones is ~115 kya. <b>Why:</b> the two sites have different dates.</li>
+              <li><b>Was:</b> Schöningen, ~300 kya, eight spears, <i>H. heidelbergensis</i>. <b>Now:</b> ~200 kya by 2025 dating, about ten spears, possibly Neanderthals. <b>Why:</b> a 2025 redating and a recount.</li>
+              <li><b>Was:</b> Oldowan tools from 2.6 Mya. <b>Now:</b> possibly from ~2.9 Mya at Nyayanga. <b>Why:</b> the 2023 Nyayanga finds.</li>
+              <li><b>Was:</b> the chimpanzee site is the only excavated non-human Stone Age. <b>Now:</b> the oldest; capuchins have one reaching back ~3,000 years. <b>Why:</b> capuchin sites in Brazil have been excavated.</li>
+              <li><b>Was:</b> the Königsaue tar with a fingerprint, ~120 kya. <b>Now:</b> ~80 kya. <b>Why:</b> the usual published date.</li>
+              <li><b>Was:</b> <i>Paranthropus</i> is “the branch this site has never mentioned”. <b>Now:</b> the branch the popular story leaves out. <b>Why:</b> Chapter I discusses it at length.</li>
+              <li><b>Was:</b> the last Neanderthals, ~40,000 years ago, in Iberia. <b>Now:</b> at sites from Belgium to the Caucasus. <b>Why:</b> Croatia’s Vindija, once the classic late site, has been redated to before 44,000 years ago.</li>
+              <li><b>Was:</b> <i>A. anamensis</i> ~4.2–3.9 Mya and <i>A. afarensis</i> from 3.8. <b>Now:</b> 4.2–3.8 and 3.9–2.9 Mya. <b>Why:</b> the ranges disagreed across the page.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>The Master Timeline (10 entries)</summary>
+            <ul>
+              <li><b>Was:</b> Budj Bim ~6600 BCE. <b>Now:</b> ~4600 BCE. <b>Why:</b> a years-ago age had been printed as a BCE date.</li>
+              <li><b>Was:</b> Australia settled “50–65,000 BCE” and “~65,000 BCE”. <b>Now:</b> 65–50 kya, with 65 kya contested. <b>Why:</b> years ago is not the same as BCE, and the early date is debated.</li>
+              <li><b>Was:</b> Mali at 1000 CE. <b>Now:</b> Ghana; Mali founded c. 1235. <b>Why:</b> Mali did not yet exist.</li>
+              <li><b>Was:</b> in Big History the Industrial Revolution is a sub-beat. <b>Now:</b> it is threshold eight. <b>Why:</b> that is David Christian’s own scheme.</li>
+              <li><b>Was:</b> Korean metal type dated 1377. <b>Now:</b> by 1234; 1377 is the oldest surviving book. <b>Why:</b> the two dates had been conflated.</li>
+              <li><b>Was:</b> Mega-Chad, 350,000 km², larger than the Caspian. <b>Now:</b> 350,000–400,000 km², about the size of the Caspian. <b>Why:</b> the Caspian is ~371,000 km².</li>
+              <li><b>Was:</b> the Americas settled 15–20,000 BCE. <b>Now:</b> ~23–13 kya. <b>Why:</b> the White Sands footprints and the rest of the site.</li>
+              <li><b>Was:</b> CO₂ risen to ~425 ppm. <b>Now:</b> 427 ppm (2025 annual mean). <b>Why:</b> updated figure.</li>
+              <li><b>Was:</b> the Roman Climatic Optimum ~250 BCE – 400 CE. <b>Now:</b> ~200 BCE – 150 CE, end date argued. <b>Why:</b> newer climate records from Italy.</li>
+              <li><b>Was:</b> the Thule crossed from Alaska to Greenland in about three centuries, and Gutenberg’s press in 1440. <b>Now:</b> little more than a century from c. 1200; Gutenberg c. 1450. <b>Why:</b> corrected radiocarbon dates, and consistency with the chapters.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>Sources &amp; Method — this page (4 entries)</summary>
+            <ul>
+              <li><b>Was:</b> “a fossil jaw in Greece” hints at early exits from Africa. <b>Now:</b> the Misliya jaw in the Levant (~180 kya), then Skhul and Qafzeh. <b>Why:</b> the Greek find is a skull, not a jaw.</li>
+              <li><b>Was:</b> White Sands “a claim still being tested”. <b>Now:</b> dated by seeds, pollen, OSL and lake mud, 2021–2025, with some dissent. <b>Why:</b> the dates have since been corroborated.</li>
+              <li><b>Was:</b> “two recent jolts” (from 2015 and 2017). <b>Now:</b> those two, plus finds from the 2020s. <b>Why:</b> they are no longer recent.</li>
+              <li><b>Was:</b> Chapter II ending ~12 kya, Chapter III starting ~10,000 BCE, Chapter IV at 3000 BCE. <b>Now:</b> ~14 kya (12,000 BCE); 12,000–3500 BCE; 3500 BCE. <b>Why:</b> they disagreed with the chapters themselves.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>The Human Tech Tree (14 entries)</summary>
+            <ul>
+              <li><b>Was:</b> Budj Bim ~6600 BCE, 4,000 years before Stonehenge. <b>Now:</b> ~4600 BCE, some 1,600 years before. <b>Why:</b> a years-ago age had been printed as a BCE date.</li>
+              <li><b>Was:</b> Greek fire lost ~500 CE. <b>Now:</b> invented c. 672, lost ~1200. <b>Why:</b> it did not exist in 500.</li>
+              <li><b>Was:</b> zero as a dot in the Bakhshali manuscript, 3rd–4th century. <b>Now:</b> the oldest firmly dated zero is at Sambor, Cambodia, 683 CE. <b>Why:</b> the manuscript’s early date is disputed.</li>
+              <li><b>Was:</b> Persia and Maurya India, ~40–50 million each, ~300 BCE. <b>Now:</b> ~17–35 million (~500 BCE) and ~15–30 million (~250 BCE). <b>Why:</b> Persia had fallen by 330 BCE, and the figures were too high.</li>
+              <li><b>Was:</b> the first empires ~500 BCE. <b>Now:</b> Akkad ~2300 BCE. <b>Why:</b> it disagreed with Chapter IV.</li>
+              <li><b>Was:</b> computers came after the integrated circuit. <b>Now:</b> 1940s valves, 1950s transistors, microprocessor 1971. <b>Why:</b> the order was backwards.</li>
+              <li><b>Was:</b> <i>sapiens</i> in the Levant ~120–60 kya. <b>Now:</b> ~180–60 kya. <b>Why:</b> the Misliya jaw.</li>
+              <li><b>Was:</b> the Americas ~15–20 kya. <b>Now:</b> ~23–15 kya. <b>Why:</b> the White Sands footprints.</li>
+              <li><b>Was:</b> Oldowan cores, 2.6 Mya. <b>Now:</b> ~2.9–2.6 Mya. <b>Why:</b> the 2023 Nyayanga finds.</li>
+              <li><b>Was:</b> art and ornament ~100–40 kya. <b>Now:</b> beads ~140 kya. <b>Why:</b> shell beads from Morocco.</li>
+              <li><b>Was:</b> watercraft to Australia ~50 kya. <b>Now:</b> ~65–50 kya. <b>Why:</b> it disagreed with the same page.</li>
+              <li><b>Was:</b> metallurgy ~6000 BCE, with the Andes among its origins. <b>Now:</b> smelting ~5000 BCE; Andean metalwork much later. <b>Why:</b> it disagreed with the page’s own table.</li>
+              <li><b>Was:</b> agriculture in 7+ centres. <b>Now:</b> 11+. <b>Why:</b> it disagreed with the rest of the site.</li>
+              <li><b>Was:</b> the Jikji 63 years before Gutenberg. <b>Now:</b> seventy-three. <b>Why:</b> the site dates Gutenberg to c. 1450.</li>
+            </ul>
+          </details>
+
+          <details class="datatable">
+            <summary>Landing page (2 entries)</summary>
+            <ul>
+              <li><b>Was:</b> Budj Bim ~6600 BCE. <b>Now:</b> ~4600 BCE. <b>Why:</b> a years-ago age had been printed as a BCE date.</li>
+              <li><b>Was:</b> “for roughly 6.7 of the last 7 million years” several kinds of human. <b>Now:</b> all but the last 40,000 years or so. <b>Why:</b> the wrong subtraction.</li>
+            </ul>
+          </details>
+
+          <div class="callout">
+            <p class="callout__label">What the checking cannot promise</p>
+            <ul>
+              <li><b>Errors are still possible.</b> This is still AI-assisted work. Two verifiers lower the odds
+                that a wrong claim survives; they cannot bring them to zero, and checkers built on similar models
+                can share blind spots.</li>
+              <li><b>The literature keeps moving.</b> Several claims on this very page changed during the audit
+                because studies published in 2022–2026 moved them. More will move.</li>
+              <li><b>Current to September 2026.</b> Findings published after that are not reflected.</li>
+              <li><b>Still not peer review.</b> Treat the tour as a starting point and the primary source as the
+                authority — and if you find an error, trust the source over this site.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- CREDITS -->
+        <section id="credits">
+          <h2>Credits &amp; colophon</h2>
+          <p>The Human History Tour is an <b>open, static, zero-build website</b>. There is no framework, no
+            server, and no tracking. It is hand-authored HTML, CSS, and a little vanilla JavaScript, published as a
+            plain folder of files on <b>GitHub Pages</b>. The only runtime dependency is the diagram library. That
+            simplicity is a feature: the whole site is inspectable, forkable, and will keep working with no
+            maintenance.</p>
+          <details class="datatable" open><summary>Colophon</summary><div class="table-scroll">
+            <table class="data"><caption>What the site is made of</caption>
+              <thead><tr><th>Piece</th><th>Choice</th></tr></thead>
+              <tbody>
+                <tr><td>Hosting</td><td>GitHub Pages — a static site served from the <span class="mono">/docs</span> folder</td></tr>
+                <tr><td>Build step</td><td>None. Hand-written files; no bundler, no framework, no server</td></tr>
+                <tr><td>Runtime dependencies</td><td>One — Mermaid, for rendering diagrams in the browser</td></tr>
+                <tr><td>Typefaces</td><td><b>Fraunces</b> (display), <b>Source Serif 4</b> (body), <b>IBM Plex Mono</b> (labels &amp; data) — served from Google Fonts</td></tr>
+                <tr><td>Diagrams</td><td>Mermaid.js — flowcharts, timelines, Gantt charts, mindmaps, XY charts, pie and quadrant charts</td></tr>
+                <tr><td>Bespoke charts</td><td>Hand-written inline SVG (e.g. the population hockey stick, the 24-hour clock); each chapter's true-scale strip is drawn in the browser from its own milestone cards</td></tr>
+                <tr><td>Maps</td><td>One shared basemap, <span class="mono">assets/img/world.svg</span>, generated from public-domain Natural Earth data by <span class="mono">scripts/build-basemap.py</span>; pin and route positions computed by <span class="mono">scripts/mapkit.py</span> (see <a href="#map-data">where the maps come from</a>)</td></tr>
+                <tr><td>Checks</td><td><span class="mono">scripts/check-links.py</span> (every link and #anchor), <span class="mono">scripts/lint-pages.py</span> (the traps that fail silently) and headless-browser render checks</td></tr>
+                <tr><td>Accessibility</td><td>Every quantitative diagram is mirrored by a real data table, because screen readers cannot read a Mermaid SVG</td></tr>
+              </tbody>
+            </table></div></details>
+          <p>Fonts are used under the SIL Open Font License via Google Fonts. Mermaid is open-source software. The
+            historical and scientific content is a synthesis of standard reference knowledge, assembled with AI
+            assistance and shaped by hand — see <a href="#method">Method &amp; honest limits</a> above, and go
+            deeper through the <a href="further-reading.html">further reading</a>.</p>
+          <p class="tick" style="color:var(--ink-faint)">Keep exploring: the
+            <a href="master-timeline.html">master timeline</a>, the <a href="tech-tree.html">human tech tree</a>,
+            the <a href="civilizations.html">parallel-civilizations reference</a>, or start the tour at
+            <a href="../tour/01-deep-prehistory.html">Chapter I · Deep Prehistory</a>.</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="wrap">
+  <div class="site-footer__grid">
+    <div><h4>Reference</h4><ul>
+      <li><a href="master-timeline.html">Master Timeline</a></li>
+      <li><a href="tech-tree.html">Tech Tree</a></li>
+      <li><a href="great-acceleration.html">The Great Acceleration</a></li>
+      <li><a href="civilizations.html">Parallel Civilizations</a></li>
+      <li><a href="human-family.html">The Human Family</a></li>
+      <li><a href="how-we-know.html">How We Know</a></li>
+    </ul></div>
+    <div><h4>The Tour</h4><ul>
+      <li><a href="../index.html">Home &amp; overview</a></li>
+      <li><a href="../tour/01-deep-prehistory.html">I · Deep Prehistory</a></li>
+      <li><a href="../tour/09-information-age.html">IX · Information Age</a></li>
+    </ul></div>
+    <div><h4>About the data</h4><ul>
+      <li><a href="#data">Data provenance</a></li>
+      <li><a href="#dating">Dating &amp; uncertainty</a></li>
+      <li><a href="further-reading.html">Further reading</a></li>
+    </ul></div>
+  </div>
+  <p class="site-footer__legal mono">An educational synthesis assembled with AI assistance from standard reference knowledge — not peer-reviewed scholarship. Figures are best-estimate approximations; ranges are given where the scholarship is genuinely uncertain. Follow the primary sources.</p>
+</div></footer>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* ============================================================================
+   tokens.css — Design tokens for Human History Tour
+   ----------------------------------------------------------------------------
+   One structural token set (--bg, --surface, --ink, --ink-muted, --accent,
+   --accent-2, --line) is re-skinned per era. Only bg/ink/accent/accent-2 are
+   authored per era; surface, ink-muted and line are derived with color-mix so
+   the palette stays internally consistent. Crossfades animate these tokens.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* ---- Type ---- */
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+
+  --step--1: clamp(0.83rem, 0.79rem + 0.18vw, 0.94rem);
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  --step-1: clamp(1.2rem, 1.11rem + 0.44vw, 1.5rem);
+  --step-2: clamp(1.44rem, 1.29rem + 0.74vw, 1.95rem);
+  --step-3: clamp(1.73rem, 1.5rem + 1.17vw, 2.54rem);
+  --step-4: clamp(2.07rem, 1.72rem + 1.77vw, 3.3rem);
+  --step-5: clamp(2.49rem, 1.95rem + 2.68vw, 4.3rem);
+  --display: clamp(2.8rem, 1.5rem + 6vw, 8rem);
+
+  --measure: 66ch;
+  --leading-body: 1.72;
+  --leading-tight: 1.08;
+
+  /* ---- Space (fluid) ---- */
+  --space-3xs: clamp(0.25rem, 0.24rem + 0.05vw, 0.31rem);
+  --space-2xs: clamp(0.5rem, 0.48rem + 0.1vw, 0.56rem);
+  --space-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.88rem);
+  --space-s: clamp(1rem, 0.95rem + 0.25vw, 1.13rem);
+  --space-m: clamp(1.5rem, 1.43rem + 0.38vw, 1.69rem);
+  --space-l: clamp(2rem, 1.9rem + 0.5vw, 2.25rem);
+  --space-xl: clamp(3rem, 2.85rem + 0.75vw, 3.38rem);
+  --space-2xl: clamp(4rem, 3.8rem + 1vw, 4.5rem);
+  --space-3xl: clamp(6rem, 5.7rem + 1.5vw, 6.75rem);
+
+  /* ---- Structure ---- */
+  --rail-w: 60px;
+  --header-h: 56px;
+  --radius: 10px;
+  --radius-lg: 18px;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 30px rgb(0 0 0 / 0.28);
+  --content-max: 68rem;
+  --prose-max: 44rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-cross: 1200ms;
+
+  /* ---- Default (neutral dark) palette — used by chrome & reference pages ---- */
+  --bg: #12100e;
+  --ink: #ece6da;
+  --accent: #cf7a45;
+  --accent-2: #4a90a4;
+}
+
+/* Derived tokens (recomputed whenever bg/ink/accent change) --------------- */
+:root,
+[data-era] {
+  --surface: color-mix(in oklab, var(--bg) 86%, var(--ink) 14%);
+  --surface-2: color-mix(in oklab, var(--bg) 76%, var(--ink) 24%);
+  --ink-muted: color-mix(in oklab, var(--ink) 72%, var(--bg));   /* ≥4.8:1 on --surface in every palette */
+  --ink-faint: color-mix(in oklab, var(--ink) 60%, var(--bg));   /* ≥4.7:1 on --bg (was 40%: ~2.8:1, failed AA) */
+  --line: color-mix(in oklab, var(--ink) 20%, transparent);
+  --line-strong: color-mix(in oklab, var(--ink) 34%, transparent);
+  --accent-soft: color-mix(in oklab, var(--accent) 22%, transparent);
+  --accent-ink: color-mix(in oklab, var(--accent) 82%, var(--ink));
+  --sel: color-mix(in oklab, var(--accent) 34%, transparent);
+}
+
+/* ---- Neutral LIGHT theme (reference/prose reading + landing chrome) ------ */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f6f1e7;
+  --ink: #241f1a;
+  --accent: #a8501f;
+  --accent-2: #2f6d7e;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #12100e;
+  --ink: #ece6da;
+  --accent: #cf7a45;
+  --accent-2: #4a90a4;
+}
+
+/* ============================================================================
+   Era palettes — bg / ink / accent / accent-2 (surfaces derived above).
+   The arc runs dark-and-mineral (deep time) → bright-and-electric (modernity).
+   All body ink-on-bg pairs verified ≥ 7:1.
+   ========================================================================== */
+
+[data-era="1"] {           /* Deep Prehistory — charcoal cave */
+  --bg: #140f0c;  --ink: #e8dfd3;  --accent: #c1502e;  --accent-2: #8a3b24;
+  --grain: 0.075;
+}
+[data-era="2"] {           /* Paleolithic — cave-art ochre & red */
+  --bg: #191310;  --ink: #ead9c6;  --accent: #cf6a3c;  --accent-2: #b0432a;
+  --grain: 0.065;
+}
+[data-era="3"] {           /* Neolithic — loam, flax, wheat */
+  --bg: #20261a;  --ink: #efe6ce;  --accent: #d9a441;  --accent-2: #6b8f3c;
+  --grain: 0.052;
+}
+[data-era="4"] {           /* First Civilizations — river silt, lapis */
+  --bg: #241f19;  --ink: #f2e8d5;  --accent: #4f86c6;  --accent-2: #3fa7a0;
+  --grain: 0.04;
+}
+[data-era="5"] {           /* Classical — marble & Aegean */
+  --bg: #22222a;  --ink: #f4f1ea;  --accent: #5b8fc4;  --accent-2: #c06a3f;
+  --grain: 0.03;
+}
+[data-era="6"] {           /* Medieval — vellum, gold leaf, crimson */
+  --bg: #241d1a;  --ink: #f5ecd9;  --accent: #d0ab34;  --accent-2: #b23c48;
+  --grain: 0.022;
+}
+[data-era="7"] {           /* Early Modern — oil-varnish umber, verdigris */
+  --bg: #201c21;  --ink: #f6f0e4;  --accent: #c25236;  --accent-2: #359a7e;
+  --grain: 0.014;
+}
+[data-era="8"] {           /* Industrial — soot, ember, steel */
+  --bg: #191b1f;  --ink: #e9eaec;  --accent: #ef6a3d;  --accent-2: #5e86bd;
+  --grain: 0.006;
+}
+[data-era="9"] {           /* Information — near-black, cyan, violet */
+  --bg: #0e1116;  --ink: #f2f5f9;  --accent: #22d3ee;  --accent-2: #a78bfa;
+  --grain: 0;
+}
+
+/* Optional light-reading variant for reference pages tinted per era.
+   (Reference pages use the neutral theme by default; era tint is opt-in.) */

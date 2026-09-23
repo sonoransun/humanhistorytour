@@ -1,0 +1,118 @@
+/* ============================================================================
+   reference.css — long-form documentation pages + Mermaid figures + data tables
+   ========================================================================== */
+
+.doc { padding-top: var(--header-h); }
+.doc__hero {
+  padding-block: var(--space-3xl) var(--space-xl);
+  border-bottom: 1px solid var(--line);
+  background: radial-gradient(70% 100% at 100% 0%, var(--accent-soft), transparent 60%);
+}
+.doc__hero .eyebrow { display: block; margin-bottom: var(--space-xs); }
+.doc__hero h1 { font-size: var(--step-5); max-width: 18ch; }
+.doc__hero .lede { margin-top: var(--space-m); max-width: 52ch; color: var(--ink-muted); }
+
+.doc__layout { display: block; }
+@media (min-width: 1000px) {
+  .doc__layout {
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+}
+.doc__side { }
+@media (min-width: 1000px) {
+  .doc__side { position: sticky; top: calc(var(--header-h) + var(--space-l)); }
+}
+.doc__side h2 { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); font-weight: 500; margin-bottom: var(--space-s); }
+
+.doc__main { min-width: 0; }
+.doc__main > section { padding-block: var(--space-xl); border-top: 1px solid var(--line); }
+.doc__main > section:first-child { border-top: none; }
+.doc__main h2 { font-size: var(--step-3); margin-bottom: var(--space-s); }
+.doc__main h3 { font-size: var(--step-1); margin-top: var(--space-l); margin-bottom: var(--space-2xs); }
+.doc__main p, .doc__main li { max-width: var(--measure); color: var(--ink); }
+.doc__main p + p, .doc__main > * + * { margin-top: var(--space-s); }
+.doc__main ul, .doc__main ol { padding-inline-start: 1.35em; }
+.doc__main li + li { margin-top: 0.4rem; }
+.doc__main .lede { color: var(--ink-muted); }
+
+/* ---- Mermaid figures ---- */
+figure.diagram {
+  margin-block: var(--space-l);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  overflow: hidden;
+}
+figure.diagram > figcaption {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+  padding: var(--space-xs) var(--space-m);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in oklab, var(--surface) 60%, var(--bg));
+}
+figure.diagram > figcaption b { color: var(--accent); font-weight: 600; }
+.diagram__scroll { overflow-x: auto; padding: var(--space-m); }
+.mermaid { min-height: 120px; display: block; }
+.mermaid[data-processed] { min-height: 0; }
+.mermaid svg { max-width: 100%; height: auto; margin-inline: auto; }
+.diagram__loading {
+  display: grid; place-items: center; min-height: 140px;
+  font-family: var(--font-mono); font-size: var(--step--1); color: var(--ink-faint);
+}
+.diagram__err {
+  padding: var(--space-m); font-family: var(--font-mono); font-size: var(--step--1);
+  color: var(--accent-2);
+}
+
+/* ---- Accessible data tables (the AT equivalent for quantitative diagrams) */
+.datatable { margin-top: var(--space-s); }
+.datatable > summary {
+  cursor: pointer;
+  font-family: var(--font-mono); font-size: var(--step--1);
+  color: var(--accent); list-style: none;
+  padding: var(--space-2xs) 0;
+}
+.datatable > summary::-webkit-details-marker { display: none; }
+.datatable > summary::before { content: "▸ "; }
+.datatable[open] > summary::before { content: "▾ "; }
+.table-scroll { overflow-x: auto; }
+table.data {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--step--1);
+  margin-top: var(--space-xs);
+}
+table.data caption { text-align: left; color: var(--ink-faint); font-family: var(--font-mono); font-size: var(--step--1); padding-bottom: var(--space-2xs); }
+table.data th, table.data td { text-align: left; padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--line); }
+table.data thead th { color: var(--accent); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; font-size: 0.78rem; }
+table.data td.num, table.data th.num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+table.data tbody tr:hover { background: color-mix(in oklab, var(--surface) 55%, var(--bg)); }
+
+/* ---- Definition-style reference lists ---- */
+.reflist { display: grid; gap: var(--space-m); }
+.reflist__item { border-inline-start: 2px solid var(--line); padding-inline-start: var(--space-m); }
+.reflist__item h3 { margin-top: 0; }
+.reflist__meta { font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent); }
+
+/* ---- Bespoke inline SVG charts (hockey stick etc.) ---- */
+.svgchart { width: 100%; border-radius: var(--radius); }
+.svgchart .axis { stroke: var(--line-strong); stroke-width: 1; }
+.svgchart .gridline { stroke: var(--line); stroke-width: 1; stroke-dasharray: 3 4; }
+.svgchart .tick { fill: var(--ink-faint); font-family: var(--font-mono); font-size: 10px; }
+.svgchart .series { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.svgchart .series-2 { stroke: var(--accent-2); }
+.svgchart .area { fill: var(--accent-soft); }
+.svgchart .label { fill: var(--ink-muted); font-family: var(--font-mono); font-size: 11px; }
+.svgchart .dot { fill: var(--accent); }
+
+/* ---- 24-hour clock dial ---- */
+.clockdial { max-width: 460px; margin-inline: auto; }
+.clockdial .face { fill: none; stroke: var(--line-strong); stroke-width: 2; }
+.clockdial .tickline { stroke: var(--line); stroke-width: 1; }
+.clockdial .civ { stroke: var(--accent); stroke-width: 3; stroke-linecap: round; }
+.clockdial .hand { stroke: var(--accent-2); stroke-width: 2; }
+.clockdial .lbl { fill: var(--ink-muted); font-family: var(--font-mono); font-size: 10px; }

@@ -1,0 +1,340 @@
+<!doctype html>
+<!-- ============================================================================
+     CANONICAL CHAPTER TEMPLATE — Human History Tour
+     This file lives OUTSIDE docs/ so it is never published. Copy it to
+     docs/tour/0N-slug.html and fill in the {{PLACEHOLDERS}}.
+
+     HARD RULES (violating these breaks the page — learned from Chapter 1):
+     1. Mermaid line breaks & italics MUST be HTML entities inside <pre>:
+        write  &lt;br/&gt;  (NOT <br/>) and &lt;i&gt;…&lt;/i&gt; and &amp; for "&".
+        A literal <br/> inside <pre class="mermaid"> is parsed as an element and
+        stripped from textContent, mashing the diagram text.
+     2. All asset/link paths are RELATIVE with ../ (tour pages sit one level deep).
+     3. <html> carries: class="no-js"  data-tour-root="../".
+        <body> carries: class="tour"  data-era="N"  data-chapter="N"
+        data-chapter-title="Short Name".  data-era drives the palette (1–9).
+     4. Every quantitative diagram ships a <details class="datatable"> with a real
+        <table class="data"> — screen readers cannot read the SVG.
+     5. Static prev/next chapter links are hardcoded (no-JS must navigate).
+     6. Give scene steps a data-caption; scene graphics reveal via
+        data-step-show / data-step-draw / data-step-lit (0-based step index).
+     7. Section order, ids and paste-ready markup for every component (jump nav,
+        stats, atlas scene, milestones + chrono, why, world, lives, voices,
+        diagrams, objects) are in templates/COMPONENTS.md. Run
+        python3 scripts/lint-pages.py and scripts/check-links.py before shipping.
+     ========================================================================= -->
+<html lang="en" class="no-js" data-tour-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ROMAN}} · {{TITLE}} — Human History Tour</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<link rel="canonical" href="https://sonoransun.github.io/humanhistorytour/tour/{{SLUG}}.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{TITLE}} — Human History Tour">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:url" content="https://sonoransun.github.io/humanhistorytour/tour/{{SLUG}}.html">
+<meta property="og:image" content="https://sonoransun.github.io/humanhistorytour/assets/img/og/{{SLUG}}.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340..660&family=Source+Serif+4:opsz,wght@8..60,400..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/tour.css">
+<link rel="stylesheet" href="../assets/css/reference.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+<script>
+  (function () {
+    try {
+      var d = document.documentElement;
+      var t = localStorage.getItem('hht-theme'); if (t) d.setAttribute('data-theme', t);
+      if (localStorage.getItem('hht-motion') === 'reduce') d.classList.add('reduce-motion');
+    } catch (e) {}
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  })();
+</script>
+</head>
+<body class="tour" data-era="{{N}}" data-chapter="{{N}}" data-chapter-title="{{SHORT}}">
+
+<div class="skip-links">
+  <a href="#main">Skip to content</a>
+  <a href="#chapter-nav">Skip to chapter navigation</a>
+</div>
+
+<header class="site-header">
+  <a class="site-header__brand" href="../index.html">Human&nbsp;<b>History</b>&nbsp;Tour</a>
+  <div class="site-header__spacer"></div>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="../index.html">Home</a>
+    <a class="site-nav__wide" href="../reference/master-timeline.html">Timeline</a>
+    <a class="site-nav__wide" href="../reference/tech-tree.html">Tech&nbsp;Tree</a>
+    <a class="site-nav__wide" href="../reference/great-acceleration.html">Data</a>
+    <a class="site-nav__wide" href="../reference/sources.html">Sources</a>
+  </nav>
+  <button class="iconbtn" data-theme-toggle aria-pressed="false" title="Toggle theme">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M5 5l1.5 1.5M17.5 17.5 19 19M3 12h2M19 12h2M5 19l1.5-1.5M17.5 6.5 19 5"/><circle cx="12" cy="12" r="4"/></svg>
+    <span class="vh">Toggle light or dark theme</span>
+  </button>
+  <button class="iconbtn" data-motion-toggle aria-pressed="false" title="Reduce motion">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M5 12l4-4M5 12l4 4"/></svg>
+    <span class="vh">Reduce motion</span>
+  </button>
+</header>
+
+<div class="grain" aria-hidden="true"></div>
+
+<aside class="rail" data-rail aria-label="Timeline navigation"></aside>
+<div class="mrail" aria-hidden="true"><div class="mrail__fill"></div></div>
+<button class="mchip" aria-label="Open chapter index"><span data-year>&nbsp;</span> ▾</button>
+<dialog class="sheet" id="tour-sheet">
+  <div class="sheet__inner">
+    <h2>Chapters</h2><ol></ol>
+    <form method="dialog" style="margin-top:1rem"><button class="btn btn--ghost">Close</button></form>
+  </div>
+</dialog>
+<div class="announcer" aria-live="polite" aria-atomic="true"></div>
+
+<main id="main" class="tour">
+
+  <!-- TITLE CARD -->
+  <section class="titlecard chapter" id="chapter-{{N}}" aria-labelledby="ch{{N}}-title">
+    <div class="titlecard__bg"><div class="hero__layer hero__stars" data-parallax="0.25" style="opacity:.4"></div></div>
+    <div>
+      <p class="titlecard__num">Chapter {{ROMAN}} &nbsp;·&nbsp; {{SPAN}}</p>
+      <h1 class="titlecard__title" id="ch{{N}}-title">{{TITLE_HTML}}</h1>
+      <p class="titlecard__span mono">{{SPAN_LONG}}</p>
+      <p class="titlecard__hook">{{HOOK}}</p>
+      <p class="scroll-cue" aria-hidden="true"><span>Scroll to continue</span>
+        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW (+ jump nav; see templates/COMPONENTS.md §1) -->
+  <section class="section"><div class="wrap prose reveal">
+    <p class="eyebrow">The chapter before us</p>
+    <p class="lede">{{OVERVIEW_LEDE}}</p>
+    <p>{{OVERVIEW_BODY — what carried forward from the previous chapter, what this one adds}}</p>
+    <nav class="jumpnav" aria-label="In this chapter">
+      <a class="chip" href="#scene-atlas">The map</a>
+      <a class="chip" href="#milestones">Milestones</a>
+      <a class="chip" href="#why">Why it happened</a>
+      <a class="chip" href="#world">Around the world</a>
+      <a class="chip" href="#lives">Ordinary lives</a>
+      <a class="chip" href="#voices">In their own words</a>
+      <a class="chip" href="#diagrams">Seen whole</a>
+      <a class="chip" href="#objects">Objects</a>
+    </nav>
+  </div></section>
+
+  <!-- STATS STRIP (COMPONENTS.md §2). Markup carries the FINAL value; scrolly.js animates it. -->
+  <section class="section" aria-label="The world at a glance" style="padding-block:var(--space-l)"><div class="wrap"><div class="stats">
+    <div class="stat reveal"><p class="stat__label">{{LABEL}}</p>
+      <p class="counter" data-counter="{{EXACT_NUMBER}}" data-compact="true">{{FORMATTED, e.g. 10M}}</p>
+      <p class="stat__note">{{RANGE / CAVEAT}}<span class="stat__src">{{SOURCE}}</span></p></div>
+    <!-- 2–3 more -->
+  </div></div></section>
+
+  <!-- STICKY SCENE (generic "milestone spine" stage — relabel dots & steps).
+       Add data-step-show / data-step-draw / data-step-lit = step index (0-based).
+       Once a chapter ships, NEVER add or remove a .step here (CLAUDE.md gotcha 8). -->
+  <section class="section scene" id="scene-1" aria-label="{{SCENE_LABEL}}">
+    <div class="scene__sticky">
+      <figure class="scene__stage" aria-hidden="true">
+        <svg class="stage-svg" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet">
+          <rect width="500" height="400" fill="color-mix(in oklab, var(--bg) 82%, #000)"/>
+          <path d="M110 60 C 300 120 190 260 400 340" fill="none" stroke="var(--line-strong)" stroke-width="2"/>
+          <path class="draw" pathLength="1" data-step-draw="0" d="M110 60 C 300 120 190 260 400 340" fill="none" stroke="var(--accent)" stroke-width="3"/>
+          <g>
+            <circle class="region" data-step-lit="0" cx="110" cy="60"  r="7" fill="var(--accent)"/>
+            <circle class="region" data-step-lit="1" cx="235" cy="150" r="6" fill="var(--accent-2)"/>
+            <circle class="region" data-step-lit="2" cx="250" cy="245" r="6" fill="var(--accent-2)"/>
+            <circle class="region" data-step-lit="3" cx="400" cy="340" r="7" fill="var(--accent)"/>
+          </g>
+          <g fill="var(--ink-muted)" font-family="IBM Plex Mono, monospace" font-size="12">
+            <text x="126" y="64"  data-step-show="0">{{DOT1}}</text>
+            <text x="251" y="154" data-step-show="1">{{DOT2}}</text>
+            <text x="150" y="249" data-step-show="2">{{DOT3}}</text>
+            <text x="270" y="344" data-step-show="3">{{DOT4}}</text>
+          </g>
+        </svg>
+        <figcaption class="stage-cap">{{SCENE_CAPTION_DEFAULT}}</figcaption>
+      </figure>
+    </div>
+    <div class="scene__steps">
+      <div class="step" data-caption="{{STEP1_CAPTION}}"><p class="step__n">01</p><h3>{{STEP1_H}}</h3><p>{{STEP1_P}}</p></div>
+      <div class="step" data-caption="{{STEP2_CAPTION}}"><p class="step__n">02</p><h3>{{STEP2_H}}</h3><p>{{STEP2_P}}</p></div>
+      <div class="step" data-caption="{{STEP3_CAPTION}}"><p class="step__n">03</p><h3>{{STEP3_H}}</h3><p>{{STEP3_P}}</p></div>
+      <div class="step" data-caption="{{STEP4_CAPTION}}"><p class="step__n">04</p><h3>{{STEP4_H}}</h3><p>{{STEP4_P}}</p></div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section class="section"><blockquote class="pullquote reveal">{{PULLQUOTE}}</blockquote></section>
+
+  <!-- SECOND SCENE: same pattern, its own id (e.g. #scene-2). -->
+
+  <!-- ATLAS SCENE (COMPONENTS.md §3): a real map. Generate every coordinate with
+       python3 scripts/mapkit.py and paste its output; never hand-place a pin. -->
+  <section class="section scene" id="scene-atlas" aria-label="{{ATLAS_LABEL}}">
+    <div class="scene__sticky">
+      <figure class="scene__stage" aria-hidden="true">
+        <svg class="stage-svg" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet">
+          <!-- mapkit output (<g class="atlas">…) + pins / labels / routes with data-step-* -->
+        </svg>
+        <figcaption class="stage-cap">{{ATLAS_CAPTION_STEP0}}</figcaption>
+      </figure>
+    </div>
+    <div class="scene__steps">
+      <div class="step" data-caption="{{CAPTION}}"><p class="step__n">01 · {{LABEL}}</p><h3>{{H}}</h3><p>{{P}}</p></div>
+      <!-- 4–6 steps -->
+    </div>
+  </section>
+
+  <!-- MILESTONES. Every card carries data-y (signed year of its start; kya/Mya → 2000 − years ago)
+       and data-y2 for spans — chrono.js draws the true-scale strip from them. The <h2> spells the
+       card count out ("Thirty-four turning points"); scripts/lint-pages.py checks both. -->
+  <section class="section" id="milestones"><div class="wrap">
+    <p class="eyebrow reveal">Milestones</p>
+    <h2 class="reveal">{{N_IN_WORDS}} turning points</h2>
+    <div class="chrono" data-chrono data-y0="{{Y0}}" data-y1="{{Y1}}" data-scale="linear" data-mode="era" aria-hidden="true"></div>
+    <div class="devgrid" style="margin-top:var(--space-l)">
+      <article class="dev reveal" data-y="{{YEAR}}" data-y2="{{END_YEAR_OR_OMIT}}"><p class="dev__date">{{DATE}}</p><h3 class="dev__name">{{NAME}}</h3><p class="dev__region">{{REGION}}</p><p class="dev__sig">{{SIGNIFICANCE}}</p></article>
+      <!-- …more… -->
+    </div>
+  </div></section>
+
+  <!-- WHY IT HAPPENED — mandatory: causation (climate, disease, demography, coerced labour, gender),
+       then a "Competing explanations" callout. Link the climate spine. -->
+  <section class="section" id="why"><div class="wrap prose">
+    <p class="eyebrow reveal">Why it happened</p>
+    <h2 class="reveal">{{WHY_HEADING}}</h2>
+    <p class="lede reveal">{{WHY_LEDE}}</p>
+    <p class="reveal">{{…see <a href="../reference/master-timeline.html#climate">the climate spine</a>…}}</p>
+    <div class="callout reveal"><p class="callout__label">Competing explanations</p><ul><li>{{…}}</li></ul></div>
+  </div></section>
+
+  <!-- AROUND THE WORLD (COMPONENTS.md §5): all sixteen regions, fixed order and fixed mini-map spots. -->
+  <section class="section" id="world" aria-labelledby="world-title"><div class="wrap">
+    <p class="eyebrow reveal">Meanwhile, everywhere</p>
+    <h2 class="reveal" id="world-title">{{WORLD_HEADING}}</h2>
+    <div class="regions">
+      <article class="regioncard reveal">
+        <svg class="regioncard__map" viewBox="0 10 360 140" aria-hidden="true"><use class="land" href="../assets/img/world.svg#land"/><ellipse class="spot" cx="225" cy="57" rx="20" ry="13"/></svg>
+        <h3 class="regioncard__name">West Asia</h3>
+        <p class="regioncard__when">{{SPAN}}</p>
+        <p>{{2–4 specific sentences}}</p>
+      </article>
+      <!-- …the other fifteen, in COMPONENTS.md order -->
+    </div>
+  </div></section>
+
+  <!-- ORDINARY LIVES (COMPONENTS.md §6): 3–4 evidence-anchored vignettes + a life-by-numbers table. -->
+  <section class="section" id="lives" aria-labelledby="lives-title"><div class="wrap">
+    <p class="eyebrow reveal">Ordinary lives</p>
+    <h2 class="reveal" id="lives-title">{{LIVES_HEADING}}</h2>
+    <div class="lives">
+      <article class="life reveal"><p class="life__where">{{PLACE · DATE}}</p><h3 class="life__who">{{WHO}}</h3><p>{{…}}</p>
+        <p class="life__evidence"><b>How we know</b> {{EVIDENCE}}</p></article>
+    </div>
+  </div></section>
+
+  <!-- IN THEIR OWN WORDS (COMPONENTS.md §7; Chapters IV–IX): verified quotations only. -->
+  <section class="section" id="voices" aria-labelledby="voices-title"><div class="wrap">
+    <p class="eyebrow reveal">In their own words</p>
+    <h2 class="reveal" id="voices-title">{{VOICES_HEADING}}</h2>
+    <div class="voices">
+      <figure class="voice reveal"><blockquote><p>{{QUOTE}}</p></blockquote>
+        <figcaption><b>{{SPEAKER}}</b>, <cite>{{WORK}}</cite>, {{DATE}}<span class="voice__note">{{CONTEXT; translation}}</span></figcaption></figure>
+    </div>
+  </div></section>
+
+  <!-- DIAGRAMS — six per chapter, each quantitative one with a real <table class="data">.
+       Remember: &lt;br/&gt; and &amp; entities inside <pre>. The heading spells the count out
+       ("Six ways to…"). End with the mandatory "How we know" callout naming the actual methods. -->
+  <section class="section" id="diagrams"><div class="wrap">
+    <p class="eyebrow reveal">Seen whole</p>
+    <h2 class="reveal">Six ways to {{…}}</h2>
+
+    <figure class="diagram reveal">
+      <figcaption><b>Timeline</b> — {{D1_CAPTION}}</figcaption>
+      <div class="diagram__scroll">
+        <pre class="mermaid">timeline
+    title {{D1_TITLE}}
+    section {{SECTION}}
+      {{DATE}} : {{EVENT}}</pre>
+        <div class="diagram__loading mono">Rendering…</div>
+      </div>
+      <details class="datatable"><summary>Data table</summary><div class="table-scroll">
+        <table class="data"><caption>{{CAPTION}}</caption>
+          <thead><tr><th>Date</th><th>Milestone</th><th>Region</th></tr></thead>
+          <tbody><tr><td class="num">{{DATE}}</td><td>{{EVENT}}</td><td>{{REGION}}</td></tr></tbody>
+        </table></div></details>
+    </figure>
+
+    <!-- Diagrams 2–6: tech tree (flowchart), network, mindmap, "Meanwhile, elsewhere" timeline,
+         trade/causal linkage — each with its own data table. -->
+
+    <div class="callout reveal" style="margin-top:var(--space-l)"><p class="callout__label">How we know</p>
+      <ul><li>{{METHOD — what it dates or proves, and its honest limit; link ../reference/how-we-know.html}}</li></ul></div>
+  </div></section>
+
+  <!-- OBJECTS (artifact shelf, 6–10 cards, polycentric) -->
+  <section class="section" id="objects">
+    <div class="wrap"><p class="eyebrow reveal">In the hand</p><h2 class="reveal">{{ARTIFACT_HEADING}}</h2></div>
+    <div class="wrap shelf" data-prep style="margin-top:var(--space-l)"><div class="shelf__track">
+      <article class="artifact">
+        <svg class="artifact__icon" viewBox="0 0 48 48"><path d="{{ICON_PATH}}"/></svg>
+        <p class="artifact__name">{{ART_NAME}}</p><p class="artifact__meta mono">{{ART_DATE}}</p>
+        <p class="artifact__desc">{{ART_DESC}}</p>
+      </article>
+    </div></div>
+  </section>
+
+  <!-- GO DEEPER -->
+  <section class="section"><div class="wrap"><div class="godeep reveal">
+    <p class="eyebrow">Go deeper</p><h3>Follow these threads across the whole tour</h3>
+    <div class="godeep__links">
+      <a class="chip" href="../reference/tech-tree.html">The human tech tree</a>
+      <a class="chip" href="../reference/master-timeline.html">Master timeline</a>
+      <a class="chip" href="../reference/master-timeline.html#climate">The climate spine</a>
+      <a class="chip" href="../reference/great-acceleration.html">The great acceleration</a>
+      <a class="chip" href="../reference/civilizations.html">Parallel civilizations</a>
+      <a class="chip" href="../reference/how-we-know.html">How we know this</a>
+    </div>
+  </div></div></section>
+
+  <!-- CHAPTER NAV (hardcoded prev/next) -->
+  <nav class="wrap chapternav" id="chapter-nav" aria-label="Chapter navigation">
+    <a href="{{PREV_HREF}}" rel="prev"><span class="dir">◂ Previous</span><span class="ttl">{{PREV_TITLE}}</span></a>
+    <a href="{{NEXT_HREF}}" rel="next" class="next"><span class="dir">Next ▸</span><span class="ttl">{{NEXT_TITLE}}</span></a>
+  </nav>
+
+</main>
+
+<footer class="site-footer"><div class="wrap">
+  <div class="site-footer__grid">
+    <div><h4>The Tour</h4><ul>
+      <li><a href="../index.html">Home &amp; overview</a></li>
+      <li><a href="01-deep-prehistory.html">I · Deep Prehistory</a></li>
+      <li><a href="09-information-age.html">IX · Information Age</a></li>
+    </ul></div>
+    <div><h4>Reference</h4><ul>
+      <li><a href="../reference/master-timeline.html">Master Timeline</a></li>
+      <li><a href="../reference/tech-tree.html">Tech Tree</a></li>
+      <li><a href="../reference/great-acceleration.html">Great Acceleration</a></li>
+      <li><a href="../reference/civilizations.html">Parallel Civilizations</a></li>
+    </ul></div>
+    <div><h4>About</h4><ul>
+      <li><a href="../reference/sources.html">Sources &amp; method</a></li>
+      <li><a href="../reference/further-reading.html">Further reading</a></li>
+    </ul></div>
+  </div>
+  <p class="site-footer__legal mono">Human History Tour · an open, animated exploration from proto-humans to the present. Dates are approximate.</p>
+</div></footer>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

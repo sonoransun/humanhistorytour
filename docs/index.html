@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en" class="no-js" data-tour-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human History Tour — from proto-humans to the present</title>
+<meta name="description" content="An animated tour through seven million years of the human story, from bipedalism to the Information Age, in nine scroll-driven chapters with real maps, sixteen world regions, ordinary lives, and data.">
+<link rel="canonical" href="https://sonoransun.github.io/humanhistorytour/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Human History Tour">
+<meta property="og:description" content="An animated tour through seven million years of the human story, in nine scroll-driven chapters.">
+<meta property="og:url" content="https://sonoransun.github.io/humanhistorytour/">
+<meta property="og:image" content="https://sonoransun.github.io/humanhistorytour/assets/img/og/home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340..660&family=Source+Serif+4:opsz,wght@8..60,400..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/tour.css">
+<link rel="stylesheet" href="assets/css/reference.css">
+<link rel="stylesheet" href="assets/css/print.css">
+<script>
+  (function () {
+    try {
+      var d = document.documentElement;
+      var t = localStorage.getItem('hht-theme'); if (t) d.setAttribute('data-theme', t);
+      if (localStorage.getItem('hht-motion') === 'reduce') d.classList.add('reduce-motion');
+    } catch (e) {}
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  })();
+</script>
+</head>
+<body data-era="1">
+
+<div class="skip-links"><a href="#main">Skip to content</a><a href="#chapters">Skip to chapters</a></div>
+
+<header class="site-header">
+  <a class="site-header__brand" href="index.html">Human&nbsp;<b>History</b>&nbsp;Tour</a>
+  <div class="site-header__spacer"></div>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="#chapters">Chapters</a>
+    <a class="site-nav__wide" href="reference/master-timeline.html">Timeline</a>
+    <a class="site-nav__wide" href="reference/tech-tree.html">Tech&nbsp;Tree</a>
+    <a class="site-nav__wide" href="reference/great-acceleration.html">Data</a>
+    <a class="site-nav__wide" href="reference/sources.html">Sources</a>
+  </nav>
+  <button class="iconbtn" data-theme-toggle aria-pressed="false" title="Toggle theme">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M5 5l1.5 1.5M17.5 17.5 19 19M3 12h2M19 12h2M5 19l1.5-1.5M17.5 6.5 19 5"/><circle cx="12" cy="12" r="4"/></svg>
+    <span class="vh">Toggle light or dark theme</span>
+  </button>
+  <button class="iconbtn" data-motion-toggle aria-pressed="false" title="Reduce motion">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M5 12l4-4M5 12l4 4"/></svg>
+    <span class="vh">Reduce motion</span>
+  </button>
+</header>
+
+<div class="grain" aria-hidden="true"></div>
+
+<main id="main">
+
+  <!-- ===================== Deep Time hero ===================== -->
+  <section class="hero" aria-labelledby="home-title">
+    <div class="hero__layer hero__stars" data-parallax="0.15"></div>
+    <div class="hero__layer hero__planet" data-parallax="0.5"></div>
+    <div class="hero__layer hero__haze" data-parallax="0.85"></div>
+    <div class="hero__inner">
+      <p class="eyebrow">An animated tour · proto-humans → present</p>
+      <h1 class="hero__title" id="home-title">Human&nbsp;<b>History</b></h1>
+      <p class="hero__sub">Seven million years — from the first upright steps in Africa
+        to machines that hold a conversation — as a single scroll.</p>
+      <p class="scroll-cue" aria-hidden="true"><span>Begin the descent</span>
+        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></p>
+    </div>
+    <span class="resume" data-resume>
+      <a href="#chapters">Resume</a>
+      <button data-resume-dismiss class="iconbtn" style="width:26px;height:26px" aria-label="Dismiss resume">
+        <svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </span>
+  </section>
+
+  <!-- ===================== The compression conceit ===================== -->
+  <section class="section home-intro">
+    <div class="wrap prose reveal">
+      <p class="eyebrow">Why this is hard to picture</p>
+      <h2>All of history is the last minute of the day</h2>
+      <p class="lede">If the seven-million-year lineage of our ancestors were compressed into a single
+        24-hour day, anatomically modern humans appear only at <b class="mono">11:00 pm</b>. Farming begins at
+        <b class="mono">11:57</b>. Everything we call recorded history — every pharaoh, empire, war, and invention —
+        is the final <b class="mono">62 seconds</b> before midnight.</p>
+      <p>This tour solves that vertigo with a persistent timeline rail that shows two scales at once: where you
+        are on the <i>page</i>, and where you are in <i>actual time</i>. Nine chapters carry you from bipedal apes
+        to the Anthropocene — each roughly equal in reading length, even though the first spans millions of years
+        and the last barely a single human lifetime.</p>
+    </div>
+  </section>
+
+  <!-- ===================== The four revolutions ===================== -->
+  <section class="revband" aria-labelledby="rev-title">
+    <div class="wrap">
+      <p class="eyebrow reveal">The shape of the story</p>
+      <h2 id="rev-title" class="reveal">Four revolutions that remade everything</h2>
+      <div class="rev-grid">
+        <article class="rev reveal"><p class="rev__n">01</p><h3>Cognitive</h3>
+          <p>Symbolic language, art, trade, and shared fictions let strangers cooperate in the thousands.</p>
+          <p class="rev__when mono">~100,000–50,000 years ago</p></article>
+        <article class="rev reveal"><p class="rev__n">02</p><h3>Agricultural</h3>
+          <p>Domestication ties us to the land, multiplies our numbers, invents surplus and cities, and turns inequality into property — stored, owned, and inherited.</p>
+          <p class="rev__when mono">~12,000 years ago</p></article>
+        <article class="rev reveal"><p class="rev__n">03</p><h3>Industrial</h3>
+          <p>Fossil energy shatters the Malthusian ceiling; population, wealth, and speed all turn vertical.</p>
+          <p class="rev__when mono">~250 years ago</p></article>
+        <article class="rev reveal"><p class="rev__n">04</p><h3>Information</h3>
+          <p>Silicon and networks compress distance to nothing and hand thinking itself to machines.</p>
+          <p class="rev__when mono">~70 years ago</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== The polycentric thesis ===================== -->
+  <section class="section" aria-labelledby="poly-title">
+    <div class="wrap">
+      <p class="eyebrow reveal">No centre of the world</p>
+      <h2 id="poly-title" class="reveal">History did not happen in one place</h2>
+      <p class="reveal" style="color:var(--ink-muted);max-width:56ch;margin-top:var(--space-s)">The
+        familiar story is a single torch passed from Sumer to Egypt to Greece to Rome to Europe. Run the
+        clock globally and it dissolves: at almost any date in the last ten thousand years, people on several continents were farming,
+        building, trading and inventing at once, and several of the biggest ideas were invented more than once,
+        by people who never met.</p>
+      <div class="rev-grid">
+        <article class="rev reveal"><p class="rev__n">01</p><h3>Invented more than once</h3>
+          <p>Farming arose independently roughly a dozen times — in Asia, Africa, New Guinea and both Americas.
+            Writing was invented from scratch at least three times. Zero appeared at least twice, in worlds that
+            never met: Mesoamerica and India.</p>
+          <p class="rev__when mono"><a href="reference/civilizations.html#thesis">Parallel civilizations</a></p></article>
+        <article class="rev reveal"><p class="rev__n">02</p><h3>Older than the pyramids</h3>
+          <p>At Budj Bim in Victoria, Gunditjmara engineers had begun cutting eel channels and traps into volcanic
+            rock by about 4600 BCE — at least 6,600 years ago — one of the oldest aquaculture systems on Earth, and still there.</p>
+          <p class="rev__when mono"><a href="reference/civilizations.html#region-australia-arctic">Australia &amp; the Arctic</a></p></article>
+        <article class="rev reveal"><p class="rev__n">03</p><h3>We were not alone</h3>
+          <p>For more than three million years — until only about 40,000 years ago, and perhaps 30,000 for the
+            last Denisovans — the Earth carried more than one kind of human at once: Neanderthals, Denisovans,
+            <i>naledi</i>, <i>floresiensis</i>. We have been the only kind for about a hundredth as long; being
+            the only one is the anomaly.</p>
+          <p class="rev__when mono"><a href="reference/human-family.html">The human family</a></p></article>
+        <article class="rev reveal"><p class="rev__n">04</p><h3>How anyone knows</h3>
+          <p>Every date here rests on a method — a calibration curve, a tree ring, an ice core, a
+            protein, a genome. The error bars are real, and the oldest "firsts" keep getting older.</p>
+          <p class="rev__when mono"><a href="reference/how-we-know.html">How we know</a></p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Chapter grid ===================== -->
+  <section class="section" id="chapters" aria-labelledby="ch-title">
+    <div class="wrap">
+      <p class="eyebrow reveal">Nine chapters</p>
+      <h2 class="reveal" id="ch-title">Choose where to begin</h2>
+      <p class="reveal" style="color:var(--ink-muted);max-width:56ch;margin-top:var(--space-s)">Start at the beginning for the full descent, or jump to any era. Every chapter stands alone: it draws its world on a real map, lays its turning points on a true-scale strip, and asks why they happened. Each also checks in on sixteen regions at once — the Arctic and the Caribbean as much as the Nile — and on ordinary lives, and from Chapter IV on, people speak in their own words.</p>
+      <div class="chapter-grid">
+        <a class="chapcard reveal" href="tour/01-deep-prehistory.html" style="--c-bg:#140f0c;--c-accent:#c1502e">
+          <span class="chapcard__n">Chapter I · ~7 Mya–300 kya</span>
+          <span class="chapcard__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="chapcard__t">Deep Prehistory &amp; Human Origins</span>
+          <span class="chapcard__s">Bipedalism · stone tools · fire · out of Africa</span>
+        </a>
+        <a class="chapcard reveal" href="tour/02-paleolithic.html" style="--c-bg:#191310;--c-accent:#cf6a3c">
+          <span class="chapcard__n">Chapter II · 300 kya–12,000 BCE</span>
+          <span class="chapcard__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="chapcard__t">Paleolithic &amp; the Cognitive Revolution</span>
+          <span class="chapcard__s">Language · art · peopling the whole Earth</span>
+        </a>
+        <a class="chapcard reveal" href="tour/03-neolithic.html" style="--c-bg:#20261a;--c-accent:#d9a441">
+          <span class="chapcard__n">Chapter III · 12,000–3500 BCE</span>
+          <span class="chapcard__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="chapcard__t">The Neolithic Revolution</span>
+          <span class="chapcard__s">Farming invented a dozen times over</span>
+        </a>
+        <a class="chapcard reveal" href="tour/04-first-civilizations.html" style="--c-bg:#241f19;--c-accent:#4f86c6">
+          <span class="chapcard__n">Chapter IV · 3500–1200 BCE</span>
+          <span class="chapcard__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="chapcard__t">First Civilizations &amp; the Bronze Age</span>
+          <span class="chapcard__s">Cities · writing · law · the first collapse</span>
+        </a>
+        <a class="chapcard reveal" href="tour/05-classical-antiquity.html" style="--c-bg:#22222a;--c-accent:#5b8fc4">
+          <span class="chapcard__n">Chapter V · 1200 BCE–500 CE</span>
+          <span class="chapcard__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="chapcard__t">Classical Antiquity &amp; the Iron Age</span>
+          <span class="chapcard__s">Iron · alphabet · coin · the Axial Age</span>
+        </a>
+        <a class="chapcard reveal" href="tour/06-medieval.html" style="--c-bg:#241d1a;--c-accent:#d0ab34">
+          <span class="chapcard__n">Chapter VI · 500–1450 CE</span>
+          <span class="chapcard__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="chapcard__t">The Post-Classical &amp; Medieval World</span>
+          <span class="chapcard__s">Baghdad · Kaifeng · Mali · Angkor · the Mongols</span>
+        </a>
+        <a class="chapcard reveal" href="tour/07-early-modern.html" style="--c-bg:#201c21;--c-accent:#c25236">
+          <span class="chapcard__n">Chapter VII · 1450–1750 CE</span>
+          <span class="chapcard__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="chapcard__t">The Early Modern Age</span>
+          <span class="chapcard__s">Oceans joined · silver · slavery · print · gunpowder</span>
+        </a>
+        <a class="chapcard reveal" href="tour/08-industrial.html" style="--c-bg:#191b1f;--c-accent:#ef6a3d">
+          <span class="chapcard__n">Chapter VIII · 1750–1945 CE</span>
+          <span class="chapcard__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="chapcard__t">The Industrial &amp; Modern Age</span>
+          <span class="chapcard__s">Fossil energy · revolutions · world wars · the atom</span>
+        </a>
+        <a class="chapcard reveal" href="tour/09-information-age.html" style="--c-bg:#0e1116;--c-accent:#22d3ee">
+          <span class="chapcard__n">Chapter IX · 1945–present</span>
+          <span class="chapcard__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="chapcard__t">The Contemporary &amp; Information Age</span>
+          <span class="chapcard__s">Nuclear · silicon · networks · intelligence</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Reference layer ===================== -->
+  <section class="section" aria-labelledby="ref-title">
+    <div class="wrap">
+      <p class="eyebrow reveal">Go deeper</p>
+      <h2 class="reveal" id="ref-title">The reference layer</h2>
+      <p class="reveal" style="color:var(--ink-muted);max-width:54ch;margin-top:var(--space-s)">Eight documentation pages hold the whole-tour view: cross-era timelines, the human tech tree, our extinct relatives, the data behind the story, how any of it is known, and the sources.</p>
+      <div class="chapter-grid" style="margin-top:var(--space-l)">
+        <a class="chapcard reveal" href="reference/master-timeline.html" style="--c-bg:#1a1712;--c-accent:#c1502e;min-height:150px">
+          <span class="chapcard__n">Reference</span>
+          <span class="chapcard__t" style="font-size:var(--step-1)">The Master Timeline</span>
+          <span class="chapcard__s">A logarithmic spine + the 24-hour clock of history</span>
+        </a>
+        <a class="chapcard reveal" href="reference/tech-tree.html" style="--c-bg:#181a1e;--c-accent:#5e86bd;min-height:150px">
+          <span class="chapcard__n">Reference</span>
+          <span class="chapcard__t" style="font-size:var(--step-1)">The Human Tech Tree</span>
+          <span class="chapcard__s">From Oldowan flakes to artificial intelligence</span>
+        </a>
+        <a class="chapcard reveal" href="reference/great-acceleration.html" style="--c-bg:#0e1116;--c-accent:#22d3ee;min-height:150px">
+          <span class="chapcard__n">Reference</span>
+          <span class="chapcard__t" style="font-size:var(--step-1)">The Great Acceleration</span>
+          <span class="chapcard__s">Population, energy, GDP, CO₂ &amp; the Anthropocene</span>
+        </a>
+        <a class="chapcard reveal" href="reference/civilizations.html" style="--c-bg:#241d1a;--c-accent:#d0ab34;min-height:150px">
+          <span class="chapcard__n">Reference</span>
+          <span class="chapcard__t" style="font-size:var(--step-1)">Parallel Civilizations</span>
+          <span class="chapcard__s">The world&rsquo;s regions, side by side, era by era</span>
+        </a>
+        <a class="chapcard reveal" href="reference/human-family.html" style="--c-bg:#140f0c;--c-accent:#c1502e;min-height:150px">
+          <span class="chapcard__n">Reference</span>
+          <span class="chapcard__t" style="font-size:var(--step-1)">The Human Family</span>
+          <span class="chapcard__s">Our extinct relatives &amp; what they taught us</span>
+        </a>
+        <a class="chapcard reveal" href="reference/how-we-know.html" style="--c-bg:#191b1f;--c-accent:#3fa7a0;min-height:150px">
+          <span class="chapcard__n">Reference</span>
+          <span class="chapcard__t" style="font-size:var(--step-1)">How We Know</span>
+          <span class="chapcard__s">Dating, evidence &amp; the limits of the record</span>
+        </a>
+        <a class="chapcard reveal" href="reference/further-reading.html" style="--c-bg:#20261a;--c-accent:#6b8f3c;min-height:150px">
+          <span class="chapcard__n">Reference</span>
+          <span class="chapcard__t" style="font-size:var(--step-1)">Further Reading</span>
+          <span class="chapcard__s">Curated books &amp; links, by era</span>
+        </a>
+        <a class="chapcard reveal" href="reference/sources.html" style="--c-bg:#201c21;--c-accent:#359a7e;min-height:150px">
+          <span class="chapcard__n">Reference</span>
+          <span class="chapcard__t" style="font-size:var(--step-1)">Sources &amp; Method</span>
+          <span class="chapcard__s">Citations, data provenance &amp; dating caveats</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Epilogue: one second to midnight ===================== -->
+  <section class="epilogue reveal" aria-labelledby="epi-title">
+    <div class="wrap center" style="min-width:0">
+      <p class="eyebrow">One second to midnight</p>
+      <h2 id="epi-title">The whole of it, to scale</h2>
+      <p style="color:var(--ink-muted);max-width:46ch;margin:var(--space-s) auto 0">
+        Below, the nine eras sized by <i>real duration</i>. Deep prehistory swallows almost the entire bar, and
+        the paler cap on the right is <i>Homo sapiens</i> before farming. All of recorded history, from the first
+        writing onward, is narrower than a single pixel at the very end.</p>
+
+      <div class="epilogue__now" style="margin-top:var(--space-xl);width:min(100%, 900px)">
+        <div class="epilogue__bar" style="width:100%" role="img" aria-label="Timeline of human history by real duration: deep prehistory occupies about 96 percent; all of recorded history is less than a pixel wide at the end.">
+          <span class="epilogue__seg" style="flex:6700000;background:#c1502e"></span>
+          <span class="epilogue__seg" style="flex:286000;background:#cf6a3c"></span>
+          <span class="epilogue__seg" style="flex:8500;background:#d9a441"></span>
+          <span class="epilogue__seg" style="flex:2300;background:#4f86c6"></span>
+          <span class="epilogue__seg" style="flex:1700;background:#5b8fc4"></span>
+          <span class="epilogue__seg" style="flex:950;background:#d0ab34"></span>
+          <span class="epilogue__seg" style="flex:300;background:#c25236"></span>
+          <span class="epilogue__seg" style="flex:195;background:#ef6a3d"></span>
+          <span class="epilogue__seg" style="flex:81;background:#22d3ee"></span>
+        </div>
+        <div style="position:relative"><span class="epilogue__sweep" aria-hidden="true"></span></div>
+      </div>
+      <p class="epilogue__note">7,000,000 years ago &nbsp;←&nbsp; the marker sweeps a single day &nbsp;→&nbsp; now</p>
+
+      <details class="datatable" style="max-width:40rem;margin:var(--space-m) auto 0;text-align:left"><summary>The bar as numbers</summary>
+        <div class="table-scroll"><table class="data">
+          <caption>Each chapter&rsquo;s span in years, its share of the bar, and its width when the bar is drawn at its widest (about 900 px). Spans follow the chapter boundaries; deep-time edges are approximate.</caption>
+          <thead><tr><th>Chapter</th><th>Span</th><th class="num">Years</th><th class="num">Share</th><th class="num">Width (px)</th></tr></thead>
+          <tbody>
+            <tr><td>I · Deep Prehistory</td><td>~7 Mya – 300 kya</td><td class="num">6,700,000</td><td class="num">95.7%</td><td class="num">861</td></tr>
+            <tr><td>II · Paleolithic</td><td>300 kya – 12,000 BCE</td><td class="num">286,000</td><td class="num">4.1%</td><td class="num">37</td></tr>
+            <tr><td>III · Neolithic</td><td>12,000 – 3500 BCE</td><td class="num">8,500</td><td class="num">0.12%</td><td class="num">1.1</td></tr>
+            <tr><td>IV · First Civilizations</td><td>3500 – 1200 BCE</td><td class="num">2,300</td><td class="num">0.033%</td><td class="num">0.30</td></tr>
+            <tr><td>V · Classical Antiquity</td><td>1200 BCE – 500 CE</td><td class="num">1,700</td><td class="num">0.024%</td><td class="num">0.22</td></tr>
+            <tr><td>VI · Post-Classical &amp; Medieval</td><td>500 – 1450 CE</td><td class="num">950</td><td class="num">0.014%</td><td class="num">0.12</td></tr>
+            <tr><td>VII · Early Modern</td><td>1450 – 1750 CE</td><td class="num">300</td><td class="num">0.0043%</td><td class="num">0.04</td></tr>
+            <tr><td>VIII · Industrial &amp; Modern</td><td>1750 – 1945 CE</td><td class="num">195</td><td class="num">0.0028%</td><td class="num">0.03</td></tr>
+            <tr><td>IX · Contemporary &amp; Information</td><td>1945 – present</td><td class="num">81</td><td class="num">0.0012%</td><td class="num">0.01</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <div class="clock-teaser reveal" style="margin:var(--space-2xl) auto 0;text-align:left">
+        <p class="big">If it were one day…</p>
+        <p style="color:var(--ink-muted)"><span class="mono" style="color:var(--accent)">10:58:17 pm</span> — <i>Homo sapiens</i> appears ·
+          <span class="mono" style="color:var(--accent)">11:57:32</span> — farming begins ·
+          <span class="mono" style="color:var(--accent)">11:58:58</span> — writing ·
+          <span class="mono" style="color:var(--accent)">11:59:57</span> — the Industrial Revolution ·
+          <span class="mono" style="color:var(--accent)">11:59:59.6</span> — the World Wide Web.</p>
+      </div>
+
+      <p style="margin-top:var(--space-xl);display:flex;gap:var(--space-s);justify-content:center;flex-wrap:wrap">
+        <a class="btn" href="tour/01-deep-prehistory.html">Begin the tour</a>
+        <button class="btn btn--ghost" data-replay>Replay the sweep</button>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer"><div class="wrap">
+  <div class="site-footer__grid">
+    <div><h4>The Tour</h4><ul>
+      <li><a href="tour/01-deep-prehistory.html">I · Deep Prehistory</a></li>
+      <li><a href="tour/03-neolithic.html">III · The Neolithic Revolution</a></li>
+      <li><a href="tour/06-medieval.html">VI · The Medieval World</a></li>
+      <li><a href="tour/09-information-age.html">IX · The Information Age</a></li>
+    </ul></div>
+    <div><h4>Reference</h4><ul>
+      <li><a href="reference/master-timeline.html">Master Timeline</a></li>
+      <li><a href="reference/tech-tree.html">Tech Tree</a></li>
+      <li><a href="reference/great-acceleration.html">Great Acceleration</a></li>
+      <li><a href="reference/civilizations.html">Parallel Civilizations</a></li>
+      <li><a href="reference/human-family.html">The Human Family</a></li>
+      <li><a href="reference/how-we-know.html">How We Know</a></li>
+    </ul></div>
+    <div><h4>About</h4><ul>
+      <li><a href="reference/sources.html">Sources &amp; method</a></li>
+      <li><a href="reference/further-reading.html">Further reading</a></li>
+      <li><a href="reference/sources.html#dating">Dating &amp; uncertainty</a></li>
+    </ul></div>
+  </div>
+  <p class="site-footer__legal mono">Human History Tour · an open, animated exploration from proto-humans to the present.
+    Built as a zero-dependency static site for GitHub Pages. Dates are approximate; deep-time figures especially so.</p>
+</div></footer>
+
+<script type="module" src="assets/js/main.js"></script>
+<script>
+  // Epilogue replay button (progressive enhancement)
+  document.querySelector("[data-replay]")?.addEventListener("click", () => {
+    const ep = document.querySelector(".epilogue");
+    ep.classList.remove("replay"); void ep.offsetWidth; ep.classList.add("replay");
+  });
+</script>
+</body>
+</html>

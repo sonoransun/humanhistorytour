@@ -1,0 +1,31 @@
+/* ============================================================================
+   print.css — collapse the experience into a readable document
+   ========================================================================== */
+@media print {
+  :root { --header-h: 0px; --rail-w: 0px; }
+  /* Paper palette. Declared on the same selectors tokens.css derives from, with
+     equal-or-higher specificity and later order, so --surface/--ink-muted/--line
+     all recompute from these values instead of printing near-black on white. */
+  :root, :root[data-theme], body[data-era] {
+    color-scheme: light;
+    --bg: #ffffff; --ink: #151311; --accent: #8a3b1a; --accent-2: #2f5f6e; --grain: 0;
+  }
+  .site-header, .rail, .mrail, .mchip, .scroll-cue, .grain, .thread,
+  .resume, .skip-links, .sheet, .epilogue__sweep { display: none !important; }
+  html, body { background: #fff !important; color: #111 !important; }
+  .tour, .doc { padding: 0 !important; }
+  .hero, .titlecard, .epilogue { min-height: auto !important; page-break-inside: avoid; padding: 1.5rem 0 !important; }
+  .scene, html.js .scene { display: block !important; }
+  .scene__sticky, html.js .scene__sticky { position: static !important; height: auto !important; min-height: 0 !important; }
+  html.js .step { min-height: 0 !important; opacity: 1 !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  figure.diagram { break-inside: avoid; border: 1px solid #ccc; }
+  a { color: #111 !important; text-decoration: underline; }
+  .chapcard, .dev, .rev { border: 1px solid #ccc !important; break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; color: #111 !important; }
+  .jumpnav, .chrono, .godeep, .chapternav { display: none !important; }
+  .regioncard, .life, .voice, .stat, .artifact { break-inside: avoid; }
+  details.datatable > *:not(summary) { display: block; }  /* print the data behind every figure */
+  .shelf { overflow: visible !important; }
+  .shelf__track { width: auto !important; flex-wrap: wrap; }
+}

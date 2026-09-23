@@ -1,0 +1,597 @@
+/* ============================================================================
+   tour.css — scrollytelling engine styles (hero, title cards, scenes, rail)
+   All motion rides transform/opacity only. Base state is VISIBLE; JS adds
+   html.js so hidden-until-revealed states only apply when JS is present.
+   ========================================================================== */
+
+/* Give fixed chrome breathing room; offset anchor targets under the header. */
+.tour main { --anchor-offset: calc(var(--header-h) + 12px); }
+:target { scroll-margin-top: var(--anchor-offset); }
+[id] { scroll-margin-top: var(--anchor-offset); }
+
+.tour { padding-left: 0; }
+@media (min-width: 900px) {
+  .tour { padding-left: var(--rail-w); }
+}
+
+/* ---------------------------------------------------------------- Reveal -- */
+.reveal { }
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 80ms);
+  will-change: opacity, transform;
+}
+html.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal { opacity: 1 !important; transform: none !important; transition: opacity 300ms ease; }
+}
+html.reduce-motion .reveal { opacity: 1 !important; transform: none !important; }
+
+/* --------------------------------------------------------------- Hero ----- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: clip;
+  isolation: isolate;
+}
+.hero__layer { position: absolute; inset: -8% -2%; z-index: -1; will-change: transform; }
+.hero__stars { background:
+    radial-gradient(1.5px 1.5px at 20% 30%, #fff 40%, transparent 42%),
+    radial-gradient(1px 1px at 70% 20%, #fff 40%, transparent 42%),
+    radial-gradient(1.5px 1.5px at 40% 70%, #fbe9c9 40%, transparent 42%),
+    radial-gradient(1px 1px at 85% 60%, #fff 40%, transparent 42%),
+    radial-gradient(1px 1px at 55% 45%, #cfe0ff 40%, transparent 42%),
+    radial-gradient(1.5px 1.5px at 12% 82%, #fff 40%, transparent 42%),
+    radial-gradient(1px 1px at 92% 88%, #fff 40%, transparent 42%),
+    radial-gradient(1px 1px at 33% 12%, #fff 40%, transparent 42%);
+  background-color: #05060a;
+}
+.hero__planet {
+  background: radial-gradient(120% 90% at 50% 118%, #c1502e 0%, #7a2f1e 24%, #241612 52%, transparent 74%);
+  opacity: 0.9;
+}
+.hero__haze { background: radial-gradient(90% 60% at 50% 120%, color-mix(in oklab, #e8dfd3 30%, transparent), transparent 70%); }
+.hero__inner { z-index: 1; padding: var(--space-l); max-width: 40rem; }
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--display);
+  font-weight: 340;
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 144;
+}
+.hero__title b { font-weight: 640; color: var(--accent); }
+.hero__sub { margin-top: var(--space-m); color: var(--ink-muted); font-size: var(--step-1); }
+.scroll-cue {
+  margin-top: var(--space-xl);
+  display: inline-flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  font-family: var(--font-mono); font-size: var(--step--1);
+  letter-spacing: 0.08em; color: var(--ink-muted);
+}
+.scroll-cue svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.7; animation: cue 1.8s var(--ease-in-out) infinite; }
+@keyframes cue { 0%,100% { transform: translateY(0); opacity: 0.6; } 50% { transform: translateY(6px); opacity: 1; } }
+
+/* --------------------------------------------------- Chapter title card --- */
+.chapter { position: relative; }
+.titlecard {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: clip;
+  isolation: isolate;
+  padding: var(--space-2xl) var(--space-l);
+}
+.titlecard__bg { position: absolute; inset: 0; z-index: -2; }
+.titlecard__bg::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(80% 60% at 50% 8%, var(--accent-soft), transparent 60%),
+    linear-gradient(180deg, color-mix(in oklab, var(--bg) 60%, #000), var(--bg));
+}
+.titlecard__num {
+  font-family: var(--font-mono); color: var(--accent);
+  letter-spacing: 0.3em; font-size: var(--step-0); text-transform: uppercase;
+}
+.titlecard__title {
+  font-family: var(--font-display);
+  font-size: var(--display);
+  font-weight: 400;
+  line-height: 0.95;
+  margin-top: var(--space-s);
+  font-variation-settings: "opsz" 120;
+}
+.titlecard__span { margin-top: var(--space-m); font-family: var(--font-mono); color: var(--ink-muted); font-size: var(--step-1); letter-spacing: 0.02em; }
+.titlecard__hook { margin-top: var(--space-l); max-width: 42rem; margin-inline: auto; font-size: var(--step-1); color: var(--ink); line-height: 1.5; }
+
+/* --------------------------------------------------- Sticky-graphic scene - */
+.scene { position: relative; }
+@media (min-width: 900px) {
+  html.js .scene { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: start; }
+}
+.scene__sticky {
+  position: relative;
+  top: 0;
+  min-height: 60svh;
+}
+html.js .scene__sticky {
+  position: sticky;
+  top: var(--header-h);
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-l);
+}
+.scene__stage {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 5 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--bg) 70%, #000);
+  box-shadow: var(--shadow);
+}
+.scene__steps { }
+html.js .scene__steps { padding-block: 8svh; }
+.step {
+  padding: var(--space-l);
+  border-radius: var(--radius);
+}
+html.js .step {
+  min-height: 82svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 34rem;
+}
+html.js .scene .step { opacity: 0.32; transition: opacity 500ms ease; }
+html.js .scene[data-step] .step.is-active { opacity: 1; }
+.step__n { font-family: var(--font-mono); color: var(--accent); font-size: var(--step--1); letter-spacing: 0.1em; }
+.step h3 { margin-top: 0.4rem; }
+.step p { margin-top: var(--space-xs); color: var(--ink-muted); }
+html.js .scene[data-step] .step.is-active p { color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .scene { display: block; }
+  html.js .scene__sticky { position: relative; height: auto; min-height: 0; }
+  html.js .scene .step { opacity: 1; }
+}
+
+/* Scene stage layers (SVG generative art) */
+.stage-layer { position: absolute; inset: 0; }
+.stage-svg { width: 100%; height: 100%; }
+.stage-cap {
+  position: absolute; left: 12px; bottom: 10px; right: 12px;
+  font-family: var(--font-mono); font-size: var(--step--1);
+  color: var(--ink); text-shadow: 0 1px 6px #000;
+  background: color-mix(in oklab, var(--bg) 55%, transparent);
+  backdrop-filter: blur(3px);
+  padding: 0.35rem 0.55rem; border-radius: 6px;
+  border: 1px solid var(--line);
+}
+/* path-draw primitive */
+.draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+html.js .draw.is-drawn { transition: stroke-dashoffset 1400ms var(--ease-out); stroke-dashoffset: 0; }
+html:not(.js) .draw { stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: reduce) { .draw { stroke-dashoffset: 0 !important; transition: none; } }
+/* region illumination primitive */
+.region { fill-opacity: 0; transition: fill-opacity 500ms ease; }
+html.js .region.is-lit { fill-opacity: 0.8; }
+html:not(.js) .region { fill-opacity: 0.8; }
+[data-step-show] { opacity: 1; transition: opacity 500ms ease; }
+
+/* Reduced-motion / motion-off: scenes rest in their final revealed state */
+@media (prefers-reduced-motion: reduce) {
+  html.js .region { fill-opacity: 0.8 !important; }
+  html.js [data-step-show] { opacity: 1 !important; }
+}
+html.reduce-motion .region { fill-opacity: 0.8 !important; }
+html.reduce-motion [data-step-show] { opacity: 1 !important; }
+html.reduce-motion .draw { stroke-dashoffset: 0 !important; }
+
+/* ------------------------------------------------------------ Counters ---- */
+.counter { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 600; color: var(--accent); font-size: var(--step-4); line-height: 1; }
+.counter__bar { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; margin-top: var(--space-xs); }
+.counter__fill { height: 100%; width: 0; background: var(--accent); border-radius: 999px; transition: width 1200ms var(--ease-out); }
+@media (prefers-reduced-motion: reduce) { .counter__fill { transition: none; } }
+
+/* --------------------------------------------------- Key developments ----- */
+.devgrid { display: grid; gap: var(--space-s); grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.dev {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-m);
+  background: var(--surface);
+  transition: border-color 200ms ease, transform 200ms var(--ease-out);
+}
+.dev:hover { border-color: var(--accent-soft); transform: translateY(-2px); }
+.dev__date { font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent); letter-spacing: 0.03em; }
+.dev__name { font-family: var(--font-display); font-size: var(--step-1); margin-top: 0.2rem; font-weight: 540; }
+.dev__region { font-family: var(--font-mono); font-size: var(--step--1); color: var(--ink-faint); margin-top: 0.15rem; }
+.dev__sig { margin-top: var(--space-2xs); color: var(--ink-muted); font-size: var(--step-0); }
+
+/* ----------------------------------------------------- Artifact shelf ----- */
+.shelf { overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: var(--space-s); }
+.shelf__track { display: flex; gap: var(--space-m); width: max-content; padding-inline: var(--space-3xs); }
+.artifact {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  width: min(78vw, 260px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: var(--space-m);
+}
+.artifact__icon { width: 46px; height: 46px; stroke: var(--accent); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.artifact__name { font-family: var(--font-display); font-size: var(--step-1); margin-top: var(--space-s); font-weight: 540; }
+.artifact__meta { font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent); margin-top: 0.2rem; }
+.artifact__desc { color: var(--ink-muted); font-size: var(--step-0); margin-top: var(--space-2xs); }
+
+/* --------------------------------------------- "Go deeper" + chapter nav -- */
+.godeep {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--surface), color-mix(in oklab, var(--bg) 82%, var(--accent) 18%));
+  padding: var(--space-l);
+}
+.godeep h3 { font-size: var(--step-2); }
+.godeep__links { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-top: var(--space-s); }
+
+.chapternav { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-m); margin-top: var(--space-2xl); }
+.chapternav a {
+  display: block; text-decoration: none;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: var(--space-m); background: var(--surface);
+  transition: border-color 200ms ease, transform 200ms var(--ease-out);
+}
+.chapternav a:hover { border-color: var(--accent-soft); transform: translateY(-2px); }
+.chapternav .dir { font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; }
+.chapternav .ttl { font-family: var(--font-display); font-size: var(--step-1); margin-top: 0.3rem; color: var(--ink); font-weight: 540; }
+.chapternav .next { text-align: right; }
+@media (max-width: 620px) { .chapternav { grid-template-columns: 1fr; } }
+
+/* ------------------------------------------------ Thread of time (spine) -- */
+.thread {
+  position: absolute;
+  left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, var(--accent) 6%, var(--accent) 94%, transparent);
+  opacity: 0.32;
+}
+@media (min-width: 900px) { .thread { left: calc(50% + var(--rail-w) / 2); } }
+
+/* ============================================================================
+   Global timeline rail
+   ========================================================================== */
+.rail {
+  position: fixed;
+  top: var(--header-h); left: 0;
+  width: var(--rail-w);
+  height: calc(100svh - var(--header-h));
+  z-index: 80;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-block: var(--space-s);
+  gap: var(--space-2xs);
+  background: color-mix(in oklab, var(--bg) 80%, transparent);
+  backdrop-filter: blur(8px);
+  border-right: 1px solid var(--line);
+  transition: transform 500ms var(--ease-out), background-color var(--dur-cross) ease;
+}
+@media (min-width: 900px) { .tour .rail { display: flex; } }
+html.js .rail { transform: translateX(-100%); }
+html.js .rail.is-in { transform: none; }
+
+.rail__year {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+  color: var(--ink);
+  text-align: center;
+  line-height: 1.15;
+  min-height: 2.4em;
+  letter-spacing: -0.02em;
+  white-space: pre-line;
+}
+.rail.is-spinning .rail__year { filter: blur(0.4px); color: var(--accent); }
+
+.rail__body { position: relative; flex: 1; display: flex; gap: 5px; padding-block: var(--space-2xs); }
+/* page-share track */
+.rail__track {
+  position: relative;
+  width: 6px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+}
+.rail__fill {
+  position: absolute; left: 0; top: 0; right: 0;
+  height: 0;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  transition: height 90ms linear;
+}
+/* true-time sliver */
+.rail__true {
+  position: relative;
+  width: 4px;
+  border-radius: 999px;
+  overflow: hidden;
+  opacity: 0.85;
+}
+.rail__true-seg { position: absolute; left: 0; right: 0; }
+.rail__true-now {
+  position: absolute; left: -2px; right: -2px;
+  height: 2px; background: var(--ink);
+  box-shadow: 0 0 0 1px var(--bg);
+}
+
+.rail__nodes { position: absolute; inset: 0; }
+.rail__node {
+  position: absolute;
+  left: 3px;
+  width: 26px; height: 26px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  color: var(--ink-muted);
+  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+.rail__node svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+.rail__node:hover { color: var(--ink); border-color: var(--accent); }
+.rail__node[aria-current="true"] {
+  color: var(--bg); background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.rail__tip {
+  position: absolute; left: 44px; top: 50%; transform: translateY(-50%);
+  white-space: nowrap;
+  font-family: var(--font-mono); font-size: 11px;
+  background: var(--ink); color: var(--bg);
+  padding: 0.25rem 0.5rem; border-radius: 5px;
+  opacity: 0; pointer-events: none; transition: opacity 160ms ease;
+}
+.rail__node:hover .rail__tip, .rail__node:focus-visible .rail__tip { opacity: 1; }
+
+/* ---- Mobile timeline bar + year chip + sheet ---- */
+.mrail {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 80;
+  height: 5px; display: none;
+  background: var(--line);
+}
+.mrail__fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width 90ms linear; }
+.mchip {
+  position: fixed; right: 12px; bottom: 16px; z-index: 82;
+  display: none; align-items: center; gap: 0.4rem;
+  font-family: var(--font-mono); font-size: 12px; font-variant-numeric: tabular-nums;
+  background: var(--ink); color: var(--bg);
+  padding: 0.5rem 0.8rem; border-radius: 999px; border: none;
+  box-shadow: var(--shadow);
+  min-height: 44px;
+}
+@media (max-width: 899px) {
+  .tour .mrail { display: block; }
+  .tour .mchip { display: inline-flex; }
+}
+.sheet { border: none; padding: 0; border-radius: var(--radius-lg) var(--radius-lg) 0 0; width: min(100%, 520px); margin: auto auto 0; background: var(--surface); color: var(--ink); }
+.sheet::backdrop { background: rgb(0 0 0 / 0.55); backdrop-filter: blur(2px); }
+.sheet__inner { padding: var(--space-l); }
+.sheet h2 { font-size: var(--step-2); }
+.sheet ol { list-style: none; padding: 0; margin-top: var(--space-s); display: grid; gap: 0.4rem; }
+.sheet a { display: flex; justify-content: space-between; gap: 1rem; text-decoration: none; color: var(--ink); padding: 0.7rem 0.8rem; border: 1px solid var(--line); border-radius: 8px; }
+.sheet a:hover { border-color: var(--accent); }
+.sheet .sp { font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); }
+
+/* ---- aria-live announcer ---- */
+.announcer { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* ---- Resume chip (landing / 404) ---- */
+.resume {
+  display: none; align-items: center; gap: 0.6rem;
+  border: 1px solid var(--accent-soft); background: var(--surface);
+  border-radius: 999px; padding: 0.5rem 0.9rem 0.5rem 0.7rem;
+  font-family: var(--font-mono); font-size: var(--step--1);
+}
+.resume.is-shown { display: inline-flex; }
+.resume a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.resume button { color: var(--ink-faint); display: grid; place-items: center; }
+
+/* ============================================================================
+   Landing-page components (index.html)
+   ========================================================================== */
+.revband { padding-block: var(--space-3xl); background: var(--surface); border-block: 1px solid var(--line); }
+.rev-grid { display: grid; gap: var(--space-l); grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); margin-top: var(--space-xl); }
+.rev {
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-l); background: var(--bg);
+}
+.rev__n { font-family: var(--font-mono); color: var(--accent); font-size: var(--step--1); letter-spacing: 0.1em; }
+.rev h3 { font-size: var(--step-2); margin-top: 0.3rem; }
+.rev p { color: var(--ink-muted); margin-top: var(--space-2xs); font-size: var(--step-0); }
+.rev__when { font-family: var(--font-mono); font-size: var(--step--1); color: var(--ink-faint); margin-top: var(--space-xs); }
+
+.chapter-grid { display: grid; gap: var(--space-m); grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); margin-top: var(--space-xl); }
+.chapcard {
+  position: relative;
+  display: flex; flex-direction: column;
+  text-decoration: none; color: inherit;
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-l);
+  overflow: hidden;
+  min-height: 210px;
+  isolation: isolate;
+  transition: transform 220ms var(--ease-out), border-color 220ms ease;
+}
+.chapcard::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: radial-gradient(120% 90% at 0% 0%, var(--c-accent), transparent 55%),
+              linear-gradient(160deg, var(--c-bg), color-mix(in oklab, var(--c-bg) 60%, #000));
+  opacity: 0.9;
+}
+.chapcard:hover { transform: translateY(-4px); border-color: var(--c-accent); }
+.chapcard__n { font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: 0.12em; color: color-mix(in oklab, var(--c-accent) 80%, #fff); padding-right: 2rem; }
+.chapcard__t { font-family: var(--font-display); font-size: var(--step-2); margin-top: auto; color: #f4efe6; font-weight: 520; text-wrap: balance; }
+.chapcard__s { font-family: var(--font-mono); font-size: var(--step--1); color: #d7cfc2; margin-top: 0.4rem; }
+.chapcard__arrow { position: absolute; top: var(--space-l); right: var(--space-l); color: color-mix(in oklab, var(--c-accent) 80%, #fff); }
+.chapcard__arrow svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+
+/* Epilogue */
+.epilogue { position: relative; min-height: 100svh; display: grid; place-items: center; text-align: center; padding: var(--space-3xl) var(--space-l); overflow: clip; }
+.epilogue__bar { width: min(92vw, 900px); height: 46px; border-radius: 999px; overflow: hidden; display: flex; border: 1px solid var(--line); margin-inline: auto; }
+.epilogue__seg { height: 100%; }
+.epilogue__now {
+  position: relative; width: min(92vw, 900px); height: 22px; margin: 0.5rem auto 0;
+}
+.epilogue__sweep { position: absolute; top: -54px; width: 2px; height: 54px; background: var(--ink); left: 0; }
+.epilogue__sweep::after { content: ""; position: absolute; top: -6px; left: -4px; width: 10px; height: 10px; border-radius: 50%; background: var(--ink); }
+.epilogue__note { font-family: var(--font-mono); font-size: var(--step--1); color: var(--ink-muted); margin-top: var(--space-m); }
+
+/* Epilogue sweep animation (runs on reveal; replay re-triggers) */
+@keyframes sweep { from { left: 0; } to { left: 100%; } }
+.epilogue.is-visible .epilogue__sweep,
+.epilogue.replay .epilogue__sweep { animation: sweep 7s var(--ease-in-out) forwards; }
+@media (prefers-reduced-motion: reduce) { .epilogue__sweep { animation: none !important; left: 99% !important; } }
+html.reduce-motion .epilogue__sweep { animation: none !important; left: 99% !important; }
+
+/* Deep-time hero specifics for the landing page */
+.hero__scrollhint { position: absolute; bottom: var(--space-l); left: 50%; transform: translateX(-50%); }
+.home-intro { position: relative; z-index: 2; }
+.clock-teaser { display: grid; gap: var(--space-s); max-width: 40rem; }
+.clock-teaser .big { font-family: var(--font-display); font-size: var(--step-3); color: var(--accent); }
+
+/* ============================================================================
+   Expansion components (Sept 2026). Each is authored visible-by-default; JS only
+   adds motion. Contracts and paste-ready markup live in templates/COMPONENTS.md.
+   ========================================================================== */
+
+/* ---- In-chapter jump navigation (chapters only; reference pages use .toc) -- */
+.jumpnav { display: flex; flex-wrap: wrap; gap: var(--space-2xs); margin-top: var(--space-m); }
+.jumpnav a { text-decoration: none; }
+.jumpnav a:hover { border-color: var(--accent); color: var(--ink); }
+
+/* ---- Atlas scenes: real coastlines from assets/img/world.svg -----------------
+   Markup comes from scripts/mapkit.py. <use> content inherits fill/stroke from
+   these classes; the basemap paths are vector-effect:non-scaling-stroke, so
+   stroke widths below are in stage pixels whatever the zoom. */
+.atlas__sea { fill: color-mix(in oklab, var(--bg) 78%, #000); }
+.atlas__land { fill: color-mix(in oklab, var(--bg) 80%, var(--ink)); stroke: var(--line-strong); stroke-width: 0.7; }
+.atlas__iceland { fill: color-mix(in oklab, var(--bg) 76%, var(--ink)); }
+.atlas__coast-now { fill: none; stroke: var(--ink-faint); stroke-width: 0.7; stroke-dasharray: 2 3; }
+.atlas__lakes { fill: color-mix(in oklab, var(--bg) 78%, #000); stroke: none; }
+.atlas__rivers { fill: none; stroke: var(--accent-2); stroke-width: 0.8; stroke-opacity: 0.45; }
+.atlas__river { fill: none; stroke: var(--accent-2); stroke-width: 2.2; stroke-linecap: round; }
+.atlas__pin { fill: var(--accent); stroke: var(--bg); stroke-width: 1.5; }
+.atlas__pin--alt { fill: var(--accent-2); }
+.atlas__halo { fill: var(--accent); fill-opacity: 0.22; }
+.atlas__route { fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.atlas__route--alt { stroke: var(--accent-2); }
+.atlas__area { fill: var(--accent); fill-opacity: 0.18; stroke: var(--accent); stroke-width: 1; stroke-dasharray: 3 3; }
+.atlas__label {
+  fill: var(--ink); font-family: var(--font-mono); font-size: 10.5px;
+  paint-order: stroke; stroke: color-mix(in oklab, var(--bg) 70%, #000); stroke-width: 3px; stroke-linejoin: round;
+}
+.atlas__label--small { font-size: 9px; fill: var(--ink-muted); }
+.atlas__label--sea { font-size: 9px; fill: var(--ink-faint); font-style: italic; letter-spacing: 0.12em; stroke: none; }
+/* On phones the 500-unit stage renders ~350 px wide: secondary labels drop below legibility, so hide them */
+@media (max-width: 600px) { .atlas__label--small, .atlas__label--sea { display: none; } }
+
+/* ---- "Meanwhile, everywhere": the sixteen-region panel -------------------- */
+/* 16 cards → 1 or 2 columns. Never 3 (strands the sixteenth card alone) and not 4: the cards run
+   ~100–130 words, and at four columns they become narrow towers that make the section taller. */
+.regions { display: grid; gap: var(--space-s); grid-template-columns: 1fr; margin-top: var(--space-l); }
+@media (min-width: 640px) { .regions { grid-template-columns: repeat(2, 1fr); } }
+.regioncard {
+  position: relative;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface);
+  padding: var(--space-s) var(--space-m) var(--space-m);
+  display: flex; flex-direction: column;
+}
+.regioncard__map { width: min(100%, 150px); height: auto; aspect-ratio: 18 / 7; margin-bottom: var(--space-2xs); border-radius: 6px; background: color-mix(in oklab, var(--bg) 78%, #000); }  /* a locator, not a map: small keeps 144 cards from adding screens of height */
+.regioncard__map .land { fill: color-mix(in oklab, var(--bg) 70%, var(--ink)); }
+.regioncard__map .spot { fill: var(--accent); fill-opacity: 0.55; stroke: var(--accent); stroke-width: 1.2; }
+.regioncard__name { font-family: var(--font-display); font-size: var(--step-1); font-weight: 540; }
+.regioncard__when { font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent-ink); margin-top: 0.1rem; }
+.regioncard p:not([class]) { margin-top: var(--space-2xs); color: var(--ink-muted); font-size: var(--step-0); }
+.regioncard--empty { border-style: dashed; background: transparent; }
+.regioncard--empty .regioncard__when { color: var(--ink-faint); }
+
+/* ---- Ordinary lives ------------------------------------------------------- */
+.lives { display: grid; gap: var(--space-m); grid-template-columns: 1fr; margin-top: var(--space-l); }
+@media (min-width: 760px) { .lives { grid-template-columns: repeat(2, 1fr); } }  /* four vignettes: 2 × 2, never 3 + 1 */
+.life {
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, var(--surface), color-mix(in oklab, var(--bg) 90%, var(--accent) 10%));
+  padding: var(--space-m);
+}
+.life__where { font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent-ink); }
+.life__who { font-family: var(--font-display); font-size: var(--step-2); margin-top: 0.25rem; font-weight: 520; }
+.life p:not([class]) { margin-top: var(--space-2xs); color: var(--ink-muted); }
+.life__evidence { margin-top: var(--space-s); padding-top: var(--space-2xs); border-top: 1px solid var(--line); font-size: var(--step--1); color: var(--ink-muted); }
+.life__evidence b { font-family: var(--font-mono); font-weight: 500; color: var(--accent-ink); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85em; }
+
+/* ---- In their own words (primary sources) -------------------------------- */
+.voices { display: grid; gap: var(--space-l); grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); margin-top: var(--space-l); }
+.voice { border-inline-start: 3px solid var(--accent); padding: var(--space-2xs) 0 var(--space-2xs) var(--space-m); }
+.voice blockquote { font-family: var(--font-display); font-size: var(--step-1); line-height: 1.4; font-weight: 420; color: var(--ink); }
+.voice blockquote p + p { margin-top: var(--space-2xs); }
+/* Quote marks hang on the first/last <p>: on the blockquote itself they would sit
+   on lines of their own, because the contract markup wraps the text in block <p>s. */
+.voice blockquote > p:first-child::before { content: "\201C"; color: var(--accent); }
+.voice blockquote > p:last-child::after { content: "\201D"; color: var(--accent); }
+.voice figcaption { margin-top: var(--space-xs); font-family: var(--font-mono); font-size: var(--step--1); color: var(--ink-muted); }
+.voice figcaption b { color: var(--ink); font-weight: 500; }
+.voice figcaption cite { font-style: italic; }
+.voice__note { display: block; margin-top: 0.3rem; font-family: var(--font-body); font-size: var(--step--1); color: var(--ink-muted); }
+
+/* ---- The world at a glance: stat strip (uses the counter engine) ---------- */
+.stats {
+  display: grid; gap: var(--space-s);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  border-block: 1px solid var(--line);
+  padding-block: var(--space-l);
+}
+.stat__label { font-family: var(--font-mono); font-size: var(--step--1); color: var(--ink-muted); letter-spacing: 0.04em; text-transform: uppercase; }
+.stat .counter { font-size: var(--step-3); margin-top: 0.3rem; }
+.stat__note { margin-top: 0.35rem; font-size: var(--step--1); color: var(--ink-muted); }
+.stat__src { display: block; margin-top: 0.2rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-faint); }
+
+/* ---- The chapter at true scale (chrono strip, built by chrono.js) ---------
+   Enhancement only: the milestone cards below it are the accessible content. */
+.chrono { margin-top: var(--space-l); }
+.chrono__frame { border: 1px solid var(--line); border-radius: var(--radius); background: color-mix(in oklab, var(--bg) 88%, #000); padding: var(--space-xs) var(--space-s) var(--space-2xs); }
+.chrono__head { display: flex; justify-content: space-between; gap: var(--space-s); font-family: var(--font-mono); font-size: var(--step--1); color: var(--ink-muted); }
+.chrono__head b { color: var(--accent-ink); font-weight: 500; }
+.chrono svg { width: 100%; height: auto; overflow: visible; }
+.chrono .c-axis { stroke: var(--line-strong); stroke-width: 1; }
+.chrono .c-thread { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; }
+.chrono .c-tick { stroke: var(--line); stroke-width: 1; }
+.chrono .c-ticklbl { fill: var(--ink-muted); font-family: var(--font-mono); font-size: 10px; }
+.chrono .c-span { stroke: var(--accent-2); stroke-width: 2; stroke-linecap: round; stroke-opacity: 0.4; }
+.chrono .c-dot { fill: var(--accent); stroke: var(--bg); stroke-width: 1.5; cursor: pointer; transform-box: fill-box; transform-origin: center; transition: transform 150ms ease; }
+.chrono a:hover .c-dot, .chrono a:focus .c-dot { transform: scale(1.45); }
+.chrono .c-hint { fill: var(--ink); font-family: var(--font-mono); font-size: 10.5px; paint-order: stroke; stroke: var(--bg); stroke-width: 3px; pointer-events: none; opacity: 0; transition: opacity 150ms ease; }
+.chrono a:hover .c-hint, .chrono a:focus .c-hint { opacity: 1; }
+.dev:target { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+/* ---- Reduced motion: parity between the OS setting and the header toggle -- */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue svg { animation: none; }
+  .dev:hover, .chapternav a:hover, .chapcard:hover { transform: none; }
+}
+html.reduce-motion .dev:hover, html.reduce-motion .chapternav a:hover, html.reduce-motion .chapcard:hover { transform: none; }
+html.reduce-motion .scene .step { opacity: 1; }

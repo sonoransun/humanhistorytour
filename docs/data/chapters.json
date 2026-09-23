@@ -1,0 +1,97 @@
+{
+  "title": "Human History Tour",
+  "description": "An animated, scroll-driven tour through ~7 million years of human history.",
+  "chapters": [
+    {
+      "n": 1, "roman": "I", "icon": "footprints",
+      "slug": "01-deep-prehistory", "href": "tour/01-deep-prehistory.html",
+      "title": "Deep Prehistory & Human Origins", "short": "Deep Prehistory",
+      "span": "~7 Mya – 300 kya", "mode": "ago",
+      "y0": -6998000, "y1": -298000, "durationYears": 6700000,
+      "accent": "#c1502e",
+      "hook": "We stood up long before we grew clever — bipedalism, fire, and stone tools accrued over millions of years, and for this entire span it is an African story with the Americas and Australia still empty."
+    },
+    {
+      "n": 2, "roman": "II", "icon": "hand",
+      "slug": "02-paleolithic", "href": "tour/02-paleolithic.html",
+      "title": "Paleolithic & the Cognitive Revolution", "short": "Paleolithic",
+      "span": "300 kya – 12,000 BCE", "mode": "ago",
+      "y0": -298000, "y1": -12000, "durationYears": 286000,
+      "accent": "#cf6a3c",
+      "hook": "For nine-tenths of our history being human meant sharing the planet with other humans — and the oldest painted animal we have found is a wild pig on a Sulawesi cave wall, not a European bison."
+    },
+    {
+      "n": 3, "roman": "III", "icon": "wheat",
+      "slug": "03-neolithic", "href": "tour/03-neolithic.html",
+      "title": "The Neolithic Revolution", "short": "Neolithic",
+      "span": "12,000 – 3500 BCE", "mode": "era",
+      "y0": -12000, "y1": -3500, "durationYears": 8500,
+      "accent": "#d9a441",
+      "hook": "Farming was invented not once but at least a dozen times by peoples who never met — a bargain that bought more food and more people at the price of labour, crowd disease, and the hardening of inequality."
+    },
+    {
+      "n": 4, "roman": "IV", "icon": "ziggurat",
+      "slug": "04-first-civilizations", "href": "tour/04-first-civilizations.html",
+      "title": "First Civilizations & the Bronze Age", "short": "First Civilizations",
+      "span": "3500 – 1200 BCE", "mode": "era",
+      "y0": -3500, "y1": -1200, "durationYears": 2300,
+      "accent": "#4f86c6",
+      "hook": "In two dozen centuries humans invented the city, writing, law, and empire on four continents at once — then watched the first globalized world shatter in the Late Bronze Age Collapse."
+    },
+    {
+      "n": 5, "roman": "V", "icon": "column",
+      "slug": "05-classical-antiquity", "href": "tour/05-classical-antiquity.html",
+      "title": "Classical Antiquity & the Iron Age", "short": "Classical Antiquity",
+      "span": "1200 BCE – 500 CE", "mode": "era",
+      "y0": -1200, "y1": 500, "durationYears": 1700,
+      "accent": "#5b8fc4",
+      "hook": "Cheap iron, a learnable alphabet, and coined money rebuilt the world, and from the Aegean to the Ganges to the Yellow River sages independently asked what a good life and a just society are."
+    },
+    {
+      "n": 6, "roman": "VI", "icon": "spice",
+      "slug": "06-medieval", "href": "tour/06-medieval.html",
+      "title": "The Post-Classical / Medieval World", "short": "Medieval World",
+      "span": "500 – 1450 CE", "mode": "era",
+      "y0": 500, "y1": 1450, "durationYears": 950,
+      "accent": "#d0ab34",
+      "hook": "The so-called Dark Age was the golden age of Baghdad, Kaifeng, and Angkor — until the very trade roads that carried paper and algebra also carried the Black Death."
+    },
+    {
+      "n": 7, "roman": "VII", "icon": "compass",
+      "slug": "07-early-modern", "href": "tour/07-early-modern.html",
+      "title": "The Early Modern Age", "short": "Early Modern",
+      "span": "1450 – 1750 CE", "mode": "era",
+      "y0": 1450, "y1": 1750, "durationYears": 300,
+      "accent": "#c25236",
+      "hook": "Iberian ships stitched the hemispheres into one entangled world, as silver, print, and gunpowder built the first global economy atop the Columbian Exchange and the transatlantic slave trade."
+    },
+    {
+      "n": 8, "roman": "VIII", "icon": "gear",
+      "slug": "08-industrial", "href": "tour/08-industrial.html",
+      "title": "The Industrial & Modern Age", "short": "Industrial Age",
+      "span": "1750 – 1945 CE", "mode": "era",
+      "y0": 1750, "y1": 1945, "durationYears": 195,
+      "accent": "#ef6a3d",
+      "hook": "In under two centuries humanity harnessed fossil energy and rights-of-man revolutions — closing with the deadliest wars ever fought and a weapon that put civilization's survival in human hands."
+    },
+    {
+      "n": 9, "roman": "IX", "icon": "chip",
+      "slug": "09-information-age", "href": "tour/09-information-age.html",
+      "title": "The Contemporary & Information Age", "short": "Information Age",
+      "span": "1945 CE – present", "mode": "era",
+      "y0": 1945, "y1": 2026, "durationYears": 81,
+      "accent": "#22d3ee",
+      "hook": "One human lifetime from the first nuclear flash to machines that hold conversations — the age of acceleration, written as much in Delhi, Accra, and Shenzhen as in Washington and Moscow."
+    }
+  ],
+  "reference": [
+    { "href": "reference/master-timeline.html", "title": "The Master Timeline", "short": "Master Timeline" },
+    { "href": "reference/tech-tree.html", "title": "The Human Tech Tree", "short": "Tech Tree" },
+    { "href": "reference/great-acceleration.html", "title": "The Great Acceleration", "short": "Great Acceleration" },
+    { "href": "reference/civilizations.html", "title": "Parallel Civilizations", "short": "Civilizations" },
+    { "href": "reference/human-family.html", "title": "The Human Family", "short": "Human Family" },
+    { "href": "reference/how-we-know.html", "title": "How We Know", "short": "How We Know" },
+    { "href": "reference/further-reading.html", "title": "Further Reading", "short": "Further Reading" },
+    { "href": "reference/sources.html", "title": "Sources & Method", "short": "Sources" }
+  ]
+}
