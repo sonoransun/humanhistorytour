@@ -1,8 +1,8 @@
 # Human History Tour
 
 An expansive, animated exploration of the historically significant developments of
-proto-humans to the present day — built as a zero-dependency static website, ready to
-publish on **GitHub Pages** from the [`/docs`](docs) directory.
+proto-humans to the present day — 
+<a href="https://sonoransun.github.io/humanhistorytour/"><b>View it Live in your Browser!</b></a>
 
 Seven million years, from the first upright step in the African Rift to machines that
 hold a conversation, told as a single scroll: nine scroll-driven chapters with real-map
